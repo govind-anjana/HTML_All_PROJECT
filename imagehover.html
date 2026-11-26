@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+.container{
+    width:99%;
+    height:99vh;
+    border:2px solid red;
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap:10px;
+    padding:10px
+}
+.box{
+    width:20%;
+    height:400px;
+    /* border:2px solid black; */
+    position: relative;
+    z-index: 5px;
+}
+img{
+    width:100%;
+    height:100%;
+    /* border:2px solid red; */
+    border-radius:10px 10px 0  0 ;
+     z-index:10;
+}
+.content{
+    position: absolute;
+    /* top:270px; */
+    bottom:0;
+    background-color: rgb(40, 30, 50);
+    width:100%; 
+    height:250px;
+    padding:10px;
+    border-radius:0 0 10px 10px ;
+    /* display: none; */
+    /* border-radius:10px; */
+    z-index: -1;
+    overflow: scroll;
+}
+.content::-webkit-scrollbar{
+    display: none;
+}
+h2{
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+}
+p{
+
+    color:white;
+    font-size: 20px;
+    text-align: justify;
+    padding:15px;
+}
+.box:nth-child(odd):hover {
+      transform: translateY(-50px);
+      transition: 2s;
+}
+.box:nth-child(even):hover {
+      transform: translateY(100px);
+      transition: 2s;
+}
+.box:nth-child(even):hover .content{
+    transition: 2s;
+    display: block;
+     bottom:390px;
+
+}
+.box:nth-child(odd):hover .content{
+    transition: 2s;
+    display: block;
+     bottom:-250px;
+
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="box a1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyxt28KuA4w331CzBrdi2iTKF7OwAuL8513g8WEa5ZkAu_tYOvykMUZJv7dE_L3fkOQE4&usqp=CAU" >
+        <div class="content">
+            <h2>दिल्ली – दिलवालों का शहर</h2>
+            <p>भारत की राजधानी दिलवालों की दिल्ली के नाम से मशहूर है। यह शहर यहाँ मौजूदा ऐतिहासिक इमारतों, मंदिरों, बाज़ारों आदि के लिए पूरे देशभर में विख्यात है। कहीं से भी आने वाला व्यक्ति दिल्ली अवश्य आता है और इसका ये कारण है कि उन्हें यहाँ का वातावरण मैत्रीपूर्ण लगता है। अगर आप कुछ पल शांति के बिताना चाहते हैं </p>
+        </div>
+        </div>
+        <div class="box a2"><img src="https://c4.wallpaperflare.com/wallpaper/374/240/843/taj-mahal-4k-background-wallpaper-preview.jpg" alt="tuorist places images"><div class="content"><h2>आगरा – ताजमहल का शहर</h3>
+            <p>भारत दर्शनीय स्थल में आगरा का नाम बेझिझक लिया जाता है क्योंकि दुनिया के सात अजूबों में से एक अजूबा यहीं स्थित है। ताजमहल की असीम सुंदरता प्रेम की दास्तान बयान करती है। सफ़ेद संगमरमर से बने ताजमहल को शाहजहाँ ने अपनी बेग़म मुमताज महल की स्मृति में बनवाया था
+                </p>
+                </div>
+                </div>
+                <div class="box"><img src="https://t3.ftcdn.net/jpg/02/56/53/38/360_F_256533834_Chxhh4CkOk6YVnvAKGPSN3jc40rSTFaV.jpg"><div class="content"><h2>जयपुर – गुलाबी शहर</h2> <p>“गुलाबी शहर” के नाम से जाना जाने वाला यह शहर राजस्थान में स्थित है। यह शहर विभिन्न प्रकार के किलों एवं प्राचीन इमारतों से भरा पड़ा है। भारत के पर्यटक स्थलों में जयपुर एक अभिन्न हिस्सा है। लोगों के बीच सबसे ज़्यादा प्रख्यात है हवा महल।अगर यहाँ आकर आपने हवा महल नहीं देखा तो आपकी यात्रा अधूरी है।
+                    </p>
+                    </div>
+                    </div>
+                    <div class="box"><img src="https://www.seecitydestination.com/images/Darjeeling05.jpg" alt="tuorist places images"><div class="content"><h3>दार्जिलिंग – पहाड़ों की रानी</h3> <p>भारत के प्रमुख पर्यटन स्थल में से एक दार्जिलिंग भी है जिसे “पहाड़ियों की रानी” भी कहा जाता है। एक ओर मन को विलुप्त करने वाले पहाड़ हैं तो दूसरी तरफ हरे-भरे खूबसूरत चाय के बागान।यह विश्व की सर्वश्रेष्ठ चाय का उत्पादन करने वाला क्षेत्र है। अन्य आकर्षित स्थान हैं- टाइगर हिल, टॉय ट्रेन, पद्मजा नायडू हिमालयन जू़लॉजिकल पार्क और हैप्पी वैली टी एस्टेट।</p>
+                        </div>
+                        </div>
+                        <div class="box"><img src="https://www.savaari.com/blog/wp-content/uploads/2021/11/32800077095_8ebcdaeeb6_k-1.jpg" alt="tuorist places images"><div class="content"><h3>कन्याकुमारी – असीमित जल का क्षेत्र</h3><p>कन्याकुमारी तीनों ओर से असीमित पानी से घिरा हुआ है। एक ओर अरब सागर है, दूसरी ओर हिन्द महासागर और तीसरी तरफ बंगाल की खाड़ी। यहाँ सूर्यास्त होने का नज़ारा एक अनोखा अनुभव है जिसे शब्दों में बयान नहीं किया जा सकता।यहाँ आपको दक्षिण भारतीय संस्कृति देखने को मिलेगी। अगर आप दक्षिण भारतीय लजी़ज़ पकवानों के शौकीन हैं तो यहाँ ज़रूर आइए। कुछ अन्य जगह भी हैं जो पर्यटकों के आकर्षण का केंद्र बनी हुई हुई हैं जैसे विवेकानंद रॉक मैमोरियल, थिरुवल्लुवर मूर्ति, भगवती अम्मन मंदिर, कन्याकुमारी बीच और पदम्नाभापुरम महल।</p>
+                            </div></div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Device</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 1;
+        box-sizing: border-box;
+    }
+    .main{
+        /* border:2px solid red; */
+        width:75%;
+        margin: auto;
+        padding:25px;
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+    }
+    .mainbox{
+        /* border:3px solid purple; */
+        /* display: inline-block; */
+        padding:10px;
+    }
+    h2{
+        border:2px solid black;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+    }
+    .head{
+        width:400px;
+        height:450px;
+        /* border:2px solid red; */
+        background-color:black;
+        color:white;
+        display: flex;
+        overflow-x: scroll;
+        gap:20px;
+        border-radius: 10px;
+
+        /* aspect-ratio: 1/1; */
+        /* flex-direction: column; */
+        scroll-snap-type: x mandatory;
+    }
+    .box{  
+        width:400px;
+        height:440px;
+        /* background-color: red; */
+        scroll-snap-align: center;
+        overflow: scroll;
+        flex-shrink: 0;
+        /* aspect-ratio: 1/1; */
+        box-sizing: border-box;
+        /* text-align:center; */
+    }
+    h1{
+        text-align: center;
+        text-transform: capitalize;
+        color:red;
+        text-decoration: underline solid white;
+        text-underline-offset: 15px;
+    }
+    h1::before{
+        content: "👉";
+    }
+    p{
+        font-size: 23px;
+        line-height: 30px;;
+        padding:0px 15px;
+        text-align:justify;
+    }
+    .head::-webkit-scrollbar,.box::-webkit-scrollbar{
+        display: none;
+    }
+    @media screen and (max-width:600px) {
+        .main{
+            width:100vw;
+            display: block;
+            padding:1px;
+        }
+        .head{
+        width:330px;
+    }
+    .box{
+        width:330px;
+    }
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="mainbox">
+            <h2>Input Device</h2>
+    <div class="head"> 
+        <div class="box">
+            <h1>keyboard</h1>
+             <p>For entering data into a computer, the keyboard is the most common and commonly used input device. It contains various keys for entering letters, numbers, and characters. Although there are some additional keys for completing various activities, the keyboard layout is identical to that of a standard typewriter. It is generally available in two different sizes 84 keys or 101/102 keys and for Windows and the Internet, it is also available with 104 keys or 108 keys. It is connected to a computer system with the help of a USB or a Bluetooth device. 
+
+                The keys on the keyboard are
+                
+                Numeric Keys: These keys are used to enter numeric data and move the cursor. It is typically made up of 17 keys.
+                Keyboard Shortcuts: These keys include the letter keys (A-Z) and the number keys (09).
+                Control Keys: The pointer and the screen are controlled by these keys. It comes with four directional arrow keys. Control keys include Home, End, Insert, Alternate(Alt), Delete, Control(Ctrl), and Escape.
+                Special Keys: Enter, Shift, Caps Lock, NumLk, Tab, and Print Screen are some of the special function keys on the keyboard.
+                Function Keys: The 12 keys from F1 to F12 are on the topmost row of the keyboard.
+                Generally, the keyboard is of three types:
+                
+                QWERTY Keyboard
+                AZERTY Keyboard
+                DVORAK Keyboard
+                Characteristics of Keyboard
+                The keyboard has various functions keys for a different purpose
+                Instead of using the mouse, we can utilize the arrow keys on the keyboard to do the same purpose as the mouse.
+                The main keyboard, cursor keys, numeric keypad, and function keys are the four primary components of a keyboard.
+                Keyboards are more affordable.</p>
+        </div>
+        <div class="box">
+            <h1>Mouse</h1>
+            <p>The mouse is the most used pointing device. While clicking and dragging, the mouse moves a little cursor across the screen. If you let off of the mouse, the cursor will come to a halt. You must move the mouse for the computer to move; it will not move on its own. As a result, it’s a device that accepts input. Or we can say that a mouse is an input device that allows you to control the coordinates and movement of the on-screen cursor/pointer by moving the mouse on a flat surface. The left mouse button can be used to pick or move items, while the right mouse button displays additional menus when clicked. It was invented in 1963 by Douglas C. Engelbart. 
+
+                Generally, the mouse is of four types
+                
+                Trackball Mouse
+                Mechanical Mouse
+                Optical Mouse
+                Wireless Mouse</p>
+        </div>
+        <div class="box">
+            <h1>Joystick</h1>
+             <p>A pointing device used to move the cursor around the screen is the joystick. Both the bottom and top ends of the stick have a spherical ball affixed to them. A socket contains the lower spherical ball. You can adjust the joystick in all directions. Trackballs became quite popular in laptops and PCs since they fit neatly inside the case and take up less room when in use. They are more precise and long-lasting than a mouse, which is why they are still utilized. It is invented by C.B.Mirick. 
+
+                Characteristics of Joystick
+                It’s utilized to regulate the cursor’s position across a display screen.
+                It’s utilized in computer games to move the characters and symbols around.
+                It commonly features one or more push buttons, the condition of which can be controlled by the computer as well.</p>
+                </div>
+        <div class="box">
+            <h1>Light Pen</h1>
+             <p>A light pen is a pointing device that has the appearance of a pen. It can be used to draw on the monitor screen or to pick a menu item. In a small tube, a photocell and an optical system are housed. The photocell sensor element determines the screen location and sends a signal to the CPU when the tip of a light pen is moved across a monitor screen while the pen button is pressed.
+
+                Characteristics of Light Pen
+                When drawing graphics, a light pen comes in very handy.
+                Objects on the display screen are selected with a light pen.</p>
+        </div>
+    </div>
+    </div>
+    <hr>
+        <div class="mainbox">
+            <h2>Output Device</h2>
+    <div class="head"> 
+        <div class="box">
+            <h1> Monitor </h1>
+            <p>A computer’s principal output device is a monitor, often known as a visual display unit (VDU). It displays the processed data like text, images, videos, audios, etc. It makes images by arranging microscopic dots in a rectangular pattern, known as pixels. The sharpness of an image is determined by the number of pixels. There are two types of monitor viewing screens: 
+
+                Cathode-Ray Tube (CRT): This type of monitor is based on a cathode ray tube. In which the cathode ray tube generates a beam of electrons with the help of electron guns they strike on the inner surface of phosphorescent of the screen to generate images. The CRT monitor holds millions of phosphorus dotes in three different colors, i.e., red, blue, and green. These dots glow when the beam struck on them and create an image. The main parts of the CRT monitor are the electron gun, fluorescent screen, glass envelope, deflection plate assembly, and base.
+                Display on a Flat Panel Monitor with a Cathode-Ray Tube (CRT): A flat-panel display is a type of video display with less volume, weight, and power consumption than a CRT. They can be put on the wrist or hang on the wall. Calculators, video games, monitors, laptop, and graphical displays all use flat-panel displays.
+                Plasma Monitor: It is also a flat panel display but it is based on plasma display technology. In a plasma monitor, a small cell is present in between two glass surfaces and these cells contain a solution of noble gases and mercury. So when the electricity supply on the gas present in the cell converts into plasma and produces UV light that creates an image. It is much better than an LCD monitor. The resolution of this monitor is also high up to 1920 x 1920. It has a good contrast ratio, high refresh rate, etc. 
+                Characteristics of Monitor:
+                
+                Resolution pixels: Pixels are the smallest element of any image
+                Size: The size of the monitor is diagonal measurement of a desktop screen is typically 14 to 25 inches.
+                Refresh Rate: Total number of times per second that an image on a display is repainted or refreshed.</p>
+        </div>
+        <div class="box">
+            <h1>Printer</h1>
+            <p>Printers are information output devices that allow you to print data on paper. Or in other words, it is an output device that creates a hard copy of the processed data or information. Printers are divided into two categories: 
+
+                Impact Printer: In impact printers, characters are printed on the ribbon, which is then smashed on the paper. Or we can say that such type of printer uses a print head or hammer to print the data on the paper. Here to print the paper the hammer or print head strikes an ink ribbon against the paper and the character starts printing. Some of the types of impact printers are:
+                Dot matrix printer
+                Daisy wheel printer
+                Line printer
+                Chain printer
+                Impact printers have the following characteristics: 
+                Extremely low consumable costs.
+                Fairly noisy
+                It’s perfect for large-scale printing because of its inexpensive cost.
+                Physical contact with the paper is required to form an image.
+                Non-Impact Printers: Non-impact printers print characters without the use of a ribbon. These printers are often known as page printers because they print a full page at a time. Some of the types of non-impact printers are:
+                Laser printer
+                Inkjet printer
+                Non-impact printers have the following characteristics: 
+                Quicker.
+                They don’t produce much noise.
+                Superior quality.
+                Supports a wide range of fonts and character sizes.</p>
+        </div>
+        <div class="box">
+            <h1>Speakers </h1>
+            <p>Speakers are connected to computers to allow sound to be output. For the working of speakers, sound cards are required. From simple two-speaker output devices to surround-sound multi-channel sets, speakers come in a variety of shapes and sizes. They take audio input from the computer’s sound card and output sound waves as audio output.
+
+                Characteristics of Speakers:
+                
+                Speakers are available in a wide range of qualities and prices.
+                Small, plastic computer speakers with low sound quality are often included with computer systems.
+                </p>
+        </div>
+        <div class="box">
+            <h1>Headphones</h1>
+           <p>To hear the sound, use earbuds with your computer, laptop, or smartphone. It enables you to hear the sound without causing any inconvenience to others. To translate electronic signals into sounds without causing inconvenience to others. They can be wired or wireless and can be connected to computers, laptops, mobile phones, etc. They are connected with the devices via Bluetooth.
+
+            Characteristics of Headphones:
+            
+            Stereo phones and headsets are other names for them.
+            Earphones or earbuds are the names for the in-ear variants.
+            The term headset denotes a combination of headphones and a microphone used for two-way communication, such as using a telephone.</p>
+        </div>
+        </div>
+    </div> 
+    </div>
+</body>
+</html> 

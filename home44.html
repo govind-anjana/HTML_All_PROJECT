@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    .main{
+        width:25%;
+        height:8vh;
+        background-color:red;
+        margin:auto;
+        margin-top:10%;
+        padding:20px;
+    }
+    span{
+        width:50px;
+        height:50px;
+        display:inline-block;
+        border-radius: 50%;;
+       border:2px solid white;
+       margin-left:10px;;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="ans">
+       
+    </div>
+</body>
+<script>
+    function bgcolor(color){
+         
+        let colorarray=["red","pink","silver","black"];
+        document.body.style.background=colorarray[color];
+    }
+    let colorarray=["red","pink","silver","black"];
+    let ans=document.getElementById("ans");
+    colorarray.forEach(function(value,index){
+        span=document.createElement("span");
+         
+        span.style.backgroundColor=value;
+        span.addEventListener("click",function(){
+             
+        bgcolor(index);
+       })
+       ans.appendChild(span);
+    })
+</script>
+</html>

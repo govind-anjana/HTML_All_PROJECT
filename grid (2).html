@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .contoner
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+            grid-gap: 10px;
+            grid-auto-rows: minmax(50px,auto);
+            grid-auto-columns: minmax(10px,auto);
+        }
+        .item{
+            background-color:blue;
+            color:red;
+            border-radius: 10px;
+            border:2px solid black;
+        }
+        #item1{
+            grid-row-start: 1;
+            grid-row-end: 8;
+        }
+        #item2{
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+        #item3{
+            grid-row-start: 5;
+            grid-row-end: 8;
+        }
+        #item4{
+            grid-row-start: 1;
+            grid-row-end: 4;
+           
+        }
+        #item5{
+            grid-row-start: 4;
+            grid-row-end: 6;
+           
+        }
+        #item6{
+            grid-row-start: 6;
+            grid-row-end: 8;    
+        }
+           
+        #item7{
+            grid-row-start: 1;
+            grid-row-end: 3;    
+        }
+           
+        #item8{
+            grid-row-start: 3;
+            grid-row-end: 5;       
+        }
+        #item9{
+            grid-row-start: 5;
+            grid-row-end: 7;    
+        }
+        #item10{
+            grid-row-start: 7;
+            grid-row-end: 8;    
+        }
+           
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contoner">
+         <div class="item" id="item1">Dobba 1</div>
+         <div class="item" id="item2">Dobba 2</div>
+         <div class="item" id="item3">Dobba 3</div>
+         <div class="item" id="item4">Dobba 4</div>
+         <div class="item" id="item5">Dobba 5</div>
+         <div class="item" id="item6">Dobba 6</div>
+         <div class="item" id="item7">Dobba 7</div>
+         <div class="item" id="item8">Dobba 8</div>
+         <div class="item" id="item9">Dobba 9</div>
+         <div class="item" id="item10">Dobba 10</div>
+    </div>
+</body>
+</html>

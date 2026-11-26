@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            
+        }
+
+        .mean
+        {
+            width:100%;
+            height:96vh;
+            background-image: url("image.jpg");
+            background-size:cover;
+        }
+        .a{
+            width:100%;
+            height:100%;  
+            display:flex;
+            flex-direction: column; 
+            text-align:center;   
+        }
+        .title
+        {
+            font-size:30px;
+             margin:10px;
+             color:white;
+        }
+        .b{
+            width:40%;
+            display:flex;
+            font-size:24px;
+           
+            border:3px groove black;
+            margin:10px auto;
+            color:white;
+            padding:10px;
+            border-radius: 20px;
+            box-shadow:8px 9px  10px gold,inset -4px -4px 40px red;
+        
+        }
+        input[type="text"]{
+            width:80px;
+            height:30px;
+            font-size: 30px;
+            outline:none;
+            border:none;    
+            padding-left:30px;
+            margin-left:30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mean">
+        <div class="a">
+            <div class="title">We Are Comming Soon</div>
+            <div class="title" id="dend">20 March 2022 10:00 PM</div>
+            <div class="b">
+                <div class="d">
+                <input type="text" readonly="" value="0">
+                <label>Day</label>
+            </div>
+            <div class="d">
+                <input type="text" readonly="" value="0">
+                <label>Hours</label>
+            </div>
+            <div class="d">
+                <input type="text" readonly="" value="0">
+                <label>Minites</label>
+            </div>
+            <div class="d">
+                <input type="text" readonly="" value="0">
+                <label>Seconds</label>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  var end="03 Dec 2024 10:29:40 PM";
+  document.getElementById("dend").innerHTML=end;
+  const inputs=document.querySelectorAll("input");
+  function clock()
+  {
+ var ends=new Date(end);
+ var now=new Date();
+ var diff=(ends-now)/1000;
+ if(diff<0)return;
+  da=Math.floor(diff/3600/24);
+  if(da<=9){
+     inputs[0].value="0"+da;
+  }
+  else {
+    inputs[0].value=da;
+  }
+  c=Math.floor(diff/3600)%24;
+  if(c<=9){
+     inputs[1].value="0"+c;
+  }
+  else {
+    inputs[1].value=c;
+  }
+  d=Math.floor(diff/60)%60;
+  if(d<=9){
+     inputs[2].value="0"+d;
+  }
+  else {
+    inputs[2].value=d;
+  }
+  a=Math.floor(diff)%60;
+  if(a<=9){
+     inputs[3].value="0"+a;
+  }
+  else {
+    inputs[3].value=a;
+  }
+  }
+  
+
+   setInterval( 
+    () => { 
+        clock()
+     },
+     10 )
+    
+</script>
+</html>

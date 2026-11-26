@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containor
+        {
+            height:98vh;
+            background-color:cornflowerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:cover;
+        }
+        .main{
+            width:30%;
+          padding:30% 10% auto; 
+            height:auto;
+            background-color: black;
+            color:white;
+           backdrop-filter:blur(20px);
+           border-radius:20px;
+           box-shadow:0px 0px 7px red;
+        }
+        label{
+            font-size: 20px;
+            font-weight: 600;
+            margin-left:30px;
+            text-transform: capitalize;
+            padding:8px;
+        }
+        input[type="text"]{
+            width:80%;
+            padding:7px 15px;
+            font-size: 17px;
+            margin:5px 30px;   
+        }
+        button{
+            font-size: 20px;
+            padding:5px 10px;
+            background-color:blue ;
+            color:white;
+            border-radius:10px;
+            margin:10px 20px 10px 30px;
+            cursor: pointer;
+        }
+        .span1{
+            float: left;
+            text-transform: capitalize  ;
+            }
+            .span2{
+            color:red;
+            float: right;
+            margin-right:10px;
+        }
+        .div1{
+            margin-left:30px;
+            margin-top:10px;
+            width:80%;
+            border:2px solid black;
+            display:inline-block;
+            padding:3px 5px;
+            font-size: 20px;
+            background-color:black;
+            color:white;
+            box-shadow: 0px 0px 7px red;
+            font-weight:bold;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class="main">
+            <h2 style="text-align: center;">Expense Tracker</h2>
+            <label for="text1">item Name  <br>
+            <input type="text" id="text1" placeholder="Enter Item Name"></label>
+            <br>
+            <label for="text2">item Amount  <br>
+            <input type="text" id="text2" placeholder="Enter Item Amount"></label>
+            <button onclick="additem()">Add Item</button>
+            <button onclick="removeitem()">Cleam Item</button>
+          <div id="ans1">  <div id="ans"></div></div>
+            <h1 style="text-align:center" id="pement">00</h1>
+        </div>
+    </div>
+</body>
+<script>
+    const ans=document.getElementById("ans");
+     const ans1=document.getElementById("ans1");
+    var go=0;
+    function additem(){
+        var div=document.createElement("div");
+        const pement=document.getElementById("pement");
+        var text1=document.getElementById("text1");
+        var text2=document.getElementById("text2");
+        if(text1.value.length<=0 || text2.value.length<=0){
+           alert("length is zero");
+           }
+         else{ 
+        // localStorage.setItem(text1.value,text2.value)
+        // console.log(typeof(eval(text2.value)));
+        div.innerHTML=`<div class="div1"><span class='span1'>${text1.value}</span><span class="span2">${text2.value}</span></div>`;
+        ans.appendChild(div);
+        go=Number(go)+eval(text2.value);
+         
+        text1.value="";
+        text2.value="";
+        pement.innerHTML='&#8377;'  +go;
+         }
+    }
+    function removeitem(){
+     window.location.href='basic.html';
+             
+    }
+</script>
+</html>

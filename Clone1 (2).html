@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>*
+    {
+        box-sizing: border-box;
+        text-decoration: none;
+        
+    }
+        header{
+          width:100%;
+          height:auto;
+          background-color: black;  
+          display: flex;
+          justify-content: space-between;
+         align-items: center;
+        
+        }
+        .logo{
+            font-size: 30px;
+            color:white;
+        }
+    .firstnav ul li {
+        display:inline;
+    }
+        .firstnav ul li a{
+            display:inline;
+            color:white;
+            font-size:23px;
+            padding:5px;
+            font-weight: bold;
+        }
+        .secondnav ul li{
+            display:inline;
+            color:white;
+            font-size:23px;
+            padding:15px;
+            font-weight: 400;
+        }
+        aside{
+            width:59%;
+            height:80vh;
+            background-color:black;        
+        }
+        aside ul li a{
+            font-size: 30px;
+            color:white;
+            text-decoration: underline 2px solid white;
+        }
+        .asidee{
+            float: left;
+        }
+        .fitsrart{
+            width:80%;
+             position: absolute;
+             left:18%;
+        }
+        h2{
+            font-size:31px;
+            margin-top:10px;
+            margin-bottom:8px;
+        }
+        p
+        {
+            text-align: justify;
+            padding:0 20px 0 0;
+        }
+        .meaa{   
+            width:30%;
+        }
+        
+           img{
+            width:100%;
+            height:60%;
+           } 
+           .flex{
+            display: flex;
+        justify-content:space-around;
+           }
+           .img{
+            position: relative;
+            top:5%;
+            left:0%;
+            width:97%;
+            height:40%;
+           } 
+           footer{
+            width:100%;
+            height:10vh;
+            background-color: black;
+            color:red;
+         position:absolute;   
+          top:97%;  
+          display: flex;  
+          justify-content: center;
+          font-size: 30px;
+          padding:10px;
+            }
+            @media screen and (max-width:850px) {
+                aside{
+            width:70%;        
+        }
+            }
+            @media screen and (max-width:600px) {
+                header{
+            display: flex;
+           flex-direction: column ;     
+        }
+        .logo{order:-1;}
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> 
+</head>
+<body>
+    <header>
+        <nav class="firstnav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Setting</a></li>
+            </ul>
+        </nav>
+        <div class="logo">logo</div>
+        <nav class="secondnav">
+            <ul>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-google-plus-g"></i></li>
+            </ul>
+        </nav>   
+    </header>
+    <div class="asidee">
+    <aside>
+        <ul>
+            <li><a href="#">line first</a></li>
+            <li><a href="#">line first</a></li>
+            <li><a href="#">line first</a></li>
+            <li><a href="#">line first</a></li>
+        </ul>
+        <br>
+        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtOFbqbWLfDGsW4oUK5oSJ40-vBePBXjXQNH6_bDpA0kpgswVHxanvicgJ3yomEXzxp0&usqp=CAU">
+    </aside>
+    </div>
+    <article class="fitsrart">
+        <h2>Wecome to our Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae deserunt explicabo mollitia accusamus hic ipsa itaque. Soluta quia sunt ipsa quisquam ab ratione. Odit, asperiores. Velit rerum beatae ad iure a voluptatibus nam, aliquam consequuntur aperiam repellendus, porro fuga similique. Esse illum rem architecto reprehenderit pariatur, sapiente aut dolores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae deserunt explicabo mollitia accusamus hic ipsa itaque. Soluta quia sunt ipsa quisquam ab ratione. Odit, asperiores. Velit rerum beatae ad iure a voluptatibus nam, aliquam consequuntur aperiam repellendus, porro fuga similique. Esse illum rem architecto reprehenderit pariatur, sapiente aut dolores?</p>
+        <h2>Our Services</h2>
+        <div class="flex">
+        <div class="meaa">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/6Z2U0y6ktxZJE2MZ6X6r03/34a3016c528589769577097a4dc24856/GettyImages-960938238_how_to_become_a_web_developer__1_.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h=">
+            <h3>Web Designing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae impedit modi harum aliquam veritatis blanditiis numquam distinctio, eveniet magni?</p>
+        </div>
+        <div class="meaa">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/FRSdefault.jpg">
+            <h3>Web Designing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae impedit modi harum aliquam veritatis blanditiis numquam distinctio, eveniet magni?</p>
+        </div>
+        <div class="meaa">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5yTr3d9Of_MfCL6fSVsATw-T7C1JSqt745g&usqp=CAU">
+            <h3>Web Designing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae impedit modi harum aliquam veritatis blanditiis numquam distinctio, eveniet magni?</p>
+        </div>
+        </div>
+    </article><br>
+  <footer>govind</footer>
+</body>
+</html>

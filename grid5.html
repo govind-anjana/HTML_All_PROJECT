@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        background-color: black;
+    }
+    .b1{grid-area: a1;}
+    .b2{grid-area: a2;}
+    .b3{grid-area: a3;}
+    .b4{grid-area: a4;}
+    .b5{grid-area: a5;}
+    #main{
+        border:20px solid white;
+        box-shadow: 0 0 20px 5px silver;
+        background-color: white;
+        width:50vw;
+        height:97vh;
+        margin:auto;
+        display: grid;
+        gap:7px;
+        
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: 40% auto;
+        grid-template-areas: 'a1 a1 a2'
+        'a3 a4 a2'
+        'a3 a5 a5';
+    }
+    .box{
+        
+        overflow: hidden;
+    }
+   .box img{
+        width:300px;
+        height:500px;
+        /* object-fit: cover; */
+        background-size: cover;
+    }
+   .b1 img,.b5 img{
+        width:610px;
+        height:330px;
+        object-fit: cover;
+    }
+   .b2 img{
+        width:300px;
+        height:600px;
+        object-fit: cover;
+    }
+   .b4 img{
+        width:300px;
+        height:240px;
+        object-fit: cover;
+    }
+
+</style>
+<body>
+    <div id="main">
+        <div class="box b1"><img src="https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b2"><img src="https://images.pexels.com/photos/1024996/pexels-photo-1024996.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b3"><img src="https://images.pexels.com/photos/2277778/pexels-photo-2277778.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b4"><img src="https://images.pexels.com/photos/3754270/pexels-photo-3754270.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b5"><img src="https://images.pexels.com/photos/2174662/pexels-photo-2174662.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+    </div>
+</body>
+</html>

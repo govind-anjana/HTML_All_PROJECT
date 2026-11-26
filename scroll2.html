@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a
+    {
+        width: 90%;
+        height:90px;
+        margin: auto;
+        position: relative;
+        padding:10px;
+        /* overflow: hidden; */
+        background-color: silver;
+    }
+    .box{  
+        width:800px;
+        height:70px;
+        border:2px solid red;
+        color:white;
+        position: absolute;
+        font-size: 22px;;
+        left:calc(800px * 5);
+        /* white-space: nowrap; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* white-space: nowrap; */
+        /* animation: scroll 30s linear 3 ; */
+
+        /* left:20px; */
+        
+    }
+    ul{
+        display: flex;
+        font-size: 30px;
+        list-style: none;
+        position: relative;
+        transform: translateX(100%);
+        animation: scroll 10s linear 3 ;
+
+    }
+    ul li{
+        /* position: relative; */
+        /* width:200px; */
+        border:2px solid red;
+        
+        /* margin-left:calc(auto * 5) ; */
+        white-space: nowrap;
+    }
+        /* .a1{ animation-delay: calc(30s / 5 * (5 - 1) * -1); }
+        .a2{ animation-delay: calc(30s / 5 * (5 - 2) * -1); }
+        .a3{ animation-delay: calc(30s / 5 * (5 - 3) * -1); }
+        .a4{ animation-delay: calc(30s / 5 * (5 - 4) * -1); }
+        .a5{ animation-delay: calc(30s / 5 * (5 - 5) * -1); } */
+    @keyframes scroll{
+        /* from{
+            transform: translateX(100%);
+        } */
+        to{
+            transform: translateX(-100%);
+            /* left:-800px; */
+        }
+
+    }
+</style>
+<body>
+    <div class="a">
+        <ul>
+            <li class="a1">Korean team uses Artificial Intelligence to produce clean water</li>
+            <li class="a2">BJP cannot advise me, Congress will decide my journey: Kumari Selja</li>
+            <li class="a3">American CEOs praise PM Modi's vision after roundtable meet in New York</li>
+            <li class="a4">PM Modi thinking on how AI can transform India, says Sundar Pichai</li>
+            <li class="a5">PM Modi pushed us to continue making, designing in India: Sundar Pichai</li>
+        </ul>
+        <!-- <div class="box a1">Korean team uses Artificial Intelligence to produce clean water Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deleniti quaerat quasi cupiditate obcaecati sit, architecto dignissimos aliquam facilis qui.</div>
+        <div class="box a2">BJP cannot advise me, Congress will decide my journey: Kumari Selja</div>
+        <div class="box a3"> American CEOs praise PM Modi's vision after roundtable meet in New York</div>
+        <div class="box a4"> PM Modi thinking on how AI can transform India, says Sundar Pichai</div>
+        <div class="box a5">PM Modi pushed us to continue making, designing in India: Sundar Pichai</div> -->
+    </div>
+</body>
+</html>

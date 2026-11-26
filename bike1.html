@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        .row{
+    width:99vw;
+    border:2px solid black;
+    margin:auto;
+    padding:20px;
+    box-shadow: 0px 0px 10px 5px silver;
+    background-color: white;
+    border-radius: 20px;
+}
+.row #main{
+    width:100%;
+    /* margin:20%; */
+    padding:20px;
+    /* display:flex; */
+    column-gap:15px;
+    /* overflow: scroll; */
+    /* display: inline; */
+    /* position: relative; */
+}
+#main .box{
+    width:30%;
+    border-radius: 20px;
+    margin:10px;
+    box-shadow: 0px 0px 10px 2px red;
+    /* position: relative; */
+}
+.box img{
+    width:100%;
+    height:300px;
+    border-radius: 20px;
+    background-size: cover;
+}
+.row button{
+    width:100%;
+    color:red;
+    padding:8px;
+    font-size: 25px;
+    border-radius: 10px;
+    border:2px solid red;
+    margin-bottom: 10px;;
+}
+#main span{
+    color:black;
+    font-size: 25px;
+    border:2px solid red;
+    padding:13px;
+    position: absolute;
+    top:30%;
+    right:0;
+    border-radius:50%;
+    cursor: pointer;
+}
+p{
+    border:2px solid black;
+    border-left:none;
+    border-bottom:none;
+    display: block;
+    padding:6px;
+    transform: rotate(40deg);
+    /* border-width:2px 2px 2px 2px; */
+}
+    </style>
+</head>
+<body>
+     
+        <div class="row  swiper">
+            <h1 class="h1">Bikes in Spotlight</h1> 
+            <div class="card-wrapper">
+        <div id="main" class="swiper-wrapper">
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Yamaha MT 15 V2</h3>
+                    <h4>&#8377;1.68-1.74 Lakh*</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/hero-motocorp/hero-motocorp-splendor/source/hero-motocorp-splendor6594efca3fa93.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3> Hero Splendor Plus</h3>
+                    <h4>&#8377;77,306-77,586 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/royal-enfield/classic350/640X309/classic35062de7da31c3db.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Royal Enfield Classic 350</h3>
+                    <h4>&#8377;1.93-2.25 Lakh*</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>   
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/honda/activa-6g/source/activa-6g65e80a97062a4.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Honda Activa 6G</h3>
+                    <h4>&#8377;76,684-82,684 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>  
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/honda/activa-6g/source/activa-6g65e80a97062a4.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Honda Activa 6G</h3>
+                    <h4>&#8377;76,684-82,684 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>  
+            <!-- <span onclick="clicks()"><p></p></span>  -->
+    </div>
+</div>
+    <div class="swiper-pagination"></div>
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween:30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints:{
+    0:{
+        slidesPerView:1
+    },
+    768:{
+        slidesPerView:2
+    },
+    1024:{
+        slidesPerView:3
+    },
+  }
+});
+ </script>
+</html>

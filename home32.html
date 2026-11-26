@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            padding:0px;
+            margin:0px;
+            justify-content:center;
+            align-items:center; 
+            padding-top:240px; 
+        
+        }
+        #ans{
+            background-color:white;
+            width:30%;
+            padding:8px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px black;
+        }
+        span{
+            width:10px;
+            height:10px;
+            display: inline-block;
+            border-radius: 50%;
+             padding:18px;   
+            margin-left:10px; 
+            position:relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Body Color Change</h1>
+    <div id="ans"></div>
+</body>
+<script>
+        function bgcolor(color){
+        let colorarray=["red","black","pink","silver","orange","blue","gold"];   
+       document.body.style.background=colorarray[color];
+        }
+        var colorarray=["red","black","pink","silver","orange","blue","gold"];
+        var ans=document.getElementById("ans");
+
+        colorarray.forEach(function (value,index){
+            
+          let span= document.createElement("span");
+           span.style.backgroundColor=value;
+         span.addEventListener("click",function(){
+            bgcolor(index);
+         })
+         ans.appendChild(span);
+        })
+</script>
+</html>

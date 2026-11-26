@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: silver;
+        }
+        #number{
+           
+            margin-top:16%;
+            margin-left:38%;
+            width:250px;
+            height:30px;
+            border:none;
+            outline:none;
+            padding:4px 20px;
+            font-size: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px red;
+        }
+        button{
+            background-color:black;
+            color:white;
+            padding:10px;
+            font-size:25px;
+            border-radius: 20px;
+            margin:2% 43%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center">Leap Year</h1>
+    <input type="number" id="number"><br>
+    <button onclick="demo()">Click me</button>
+</body>
+            <script>
+
+                function demo(){
+             num=document.getElementById("number").value;
+            if(go(num))
+             {
+                
+                 alert(num+" leap Year");
+             } 
+             else
+             {
+                alert(num+" Not leap Year");
+             }
+             
+                }
+                function go(num){
+                    if((num % 4==0 && num%100!==0) || num%400==0)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                } 
+                }
+            </script>
+</html>

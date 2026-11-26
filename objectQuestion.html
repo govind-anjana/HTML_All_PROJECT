@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:7px;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .containtor{
+            height:95vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        #div1{
+            width:35%;
+            height:auto;
+            padding:2px;
+            border-radius: 14px;
+            background-color: white;
+            box-shadow: 0px 0px 30px orangered;
+        }
+        .main{
+            width:96%;
+            height:auto;
+            padding:10px;
+           
+        }
+        input[type="radio"]{
+            width:18px;
+            height:18px;
+            cursor: pointer;
+            accent-color:red;
+        }
+        label{
+            font-size:22px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button{  
+            padding:4px 20px;
+            font-size: 24px;;
+            color:white;
+            margin-top:30px;
+            cursor: pointer;
+            font-family: sans-serif;
+            background:linear-gradient(to top left,pink,blue);
+            border: none;
+            border-radius: 20px;      
+        }
+        .govind{
+            
+            padding:10px;
+            text-align: center;
+            font-size: 26px;
+        }
+        .govind label{
+            color:red;
+        }
+        #ans{
+            text-transform: capitalize;
+            font-size: 20px;
+            display: block;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <div class="containtor">
+            <div id="div1">
+            <div class="main">
+                <h2 id="qestion">Q1) Enter The name</h2>
+              <input type="radio" class="options1" id="a" name="g" value="a"><label      class="option" for="a">Option1</label><br>
+              <input type="radio" class="options1" id="b" name="g" value="b"><label      class="option" for="b">Option2</label><br>
+              <input type="radio" class="options1" id="c" name="g" value="c"><label      class="option" for="c">Option3</label><br>
+              <input type="radio" class="options1" id="d" name="g" value="d"><label      class="option" for="d">Option4</label><br>
+              <div id="ans">go</div>
+              <button onclick="prewValue()">Prew</button>
+              <button id="show">Show Answear</button>
+              <button onclick="onclickss()" style="float:right">Next</button>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+  const question=[
+        {
+            que:"How To Markap Language",
+           a:"HTML",
+            b:"CSS",
+            c:"PHP",
+            d:"Phthon",
+            ans:"a"
+        },
+        {
+            que:"How To Hypertext Preprocesor",
+            a:"HTML",
+            b:"CSS",
+            c:"PHP",
+            d:"Phthon",
+            ans:"c"
+        },
+        {
+            que:"How To Caseding Style Site",
+            a:"HTML",
+            b:"CSS",
+            c:"PHP",
+            d:"Phthon",
+            ans:"b"
+        },
+        {
+            que:"How To JavaScript Developed",
+            a:"HTML",
+            b:"CSS",
+            c:"PHP",
+            d:"1995",
+            ans:"d"
+        }
+    ];
+   const qq=document.getElementById("qestion");
+   const div1=document.getElementById("div1");
+   let anss=document.getElementById("ans");
+   const options=document.querySelectorAll(".options1");
+    index=0;
+    let right=0;
+    let wrong=0;
+   function genderques(){
+    data=question[index];
+    anss.innerHTML="";
+    if(index==question.length){
+         end();
+    };
+     document.getElementById("show").addEventListener("click",()=>{ 
+       const data=question[index];
+        to=data.ans; 
+       showanswear= data[to];
+        
+       go=anss.innerHTML=`${data.ans} : ${showanswear}`;
+       document.getElementById("show").innerHTML="Hide Answear";
+       document.getElementById("show").addEventListener("click",()=>{  
+       go=anss.innerHTML="";
+       document.getElementById("show").innerHTML="Show Answear";
+     })
+     });
+        reset();
+    qq.innerHTML=`${index+1})${data.que}`;
+    options[0].nextElementSibling.innerHTML=data.a;
+    options[1].nextElementSibling.innerHTML=data.b;
+    options[2].nextElementSibling.innerHTML=data.c;
+    options[3].nextElementSibling.innerHTML=data.d;
+   }
+   function onclickss(){
+    data=question[index];
+    ans=checked()
+    if(ans==data.ans){
+         right++;
+    }
+    else{
+        wrong++;
+    }
+      index++;
+      genderques()
+      return
+   }
+   const prewValue=()=>{ 
+        index--;
+        right--;
+        genderques()
+        return;
+   }
+   const checked=()=>{
+            let go;
+            options.forEach((input)=>{
+            
+        if(input.checked){
+           go=input.value;
+            }
+        }
+        )
+        return go
+        }
+   const reset=()=>{
+     options.forEach((input)=>{
+        input.checked=false;
+     })  
+   }
+   function end() {
+     document.querySelector(".main").style.display="none";
+     div=document.createElement("div");
+     div.className="govind";
+     div.innerHTML=`<label>Total Question:</label> ${index}<br><label>Right:</label> ${right}<br> <label>Wrong:</label> ${wrong}`;
+     div1.appendChild(div);
+     } 
+   genderques();
+</script>
+</html>

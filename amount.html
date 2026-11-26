@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            font-size: 24px;
+            margin-top: 10%;
+        }
+        tr:nth-child(1){
+            background-color: black;
+            color:white;
+        }
+        tr:nth-child(2){
+            background-color:grey;
+            color:white;
+        }
+        input[type="text"]{
+            width:100px;
+            font-size: 23px;
+            padding:2px 10px;
+            border:none;
+            outline: none;;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="containtor">
+        <table width="51%" align="center">
+            <tr>
+                <th>&#8377;</th>
+                <td>500</td>
+                <td>200</td>
+                <td>100</td>
+                <td>50</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>2</td>           
+                <td>1</td>
+           </tr>
+            <tr>
+                <td><input type="text" id="ans" readonly value="&#8377"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+                <td><input class="demo" onkeyup="demo()" type="text"></td>      
+    </tr>   
+        </table>
+    </div>
+</body>
+
+<script>
+        const demos=document.querySelectorAll(".demo");
+     function demo(){
+        demo1=demos[0].value;
+        g1=demo1*500;
+        demo2=demos[1].value;
+        g2=demo2*200;
+        demo3=demos[2].value;
+        g3=demo3*100;
+        demo4=demos[3].value;
+        g4=demo4*50;
+        demo5=demos[4].value;
+        g5=demo5*20;
+        demo6=demos[5].value;
+        g6=demo6*10;
+        demo7=demos[6].value;
+        g7=demo7*5;
+        demo8=demos[7].value;
+        g8=demo8*2;
+        demo9=demos[8].value;
+        g9=demo9*1;
+        document.getElementById("ans").value=g1+g2+g3+g4+g5+g6+g7+g8+g9;
+     }
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: radial-gradient(white, yellow,red);
+    }
+    #main{
+        background-color: white;
+        width:65vw;
+        height:100vh;
+        margin: auto;
+        border:18px solid black;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,4fr));
+        grid-auto-rows: minmax(207px,auto);
+        gap:8px;
+        padding:4px;
+        overflow-wrap: break-word;
+       
+    }
+    .box{
+        border:2px solid black;
+        overflow: hidden;
+    }
+    #box6{
+         
+        grid-row:2/ span 2;
+        grid-column: 2/ span 2;
+    }
+    #box6 img{
+        width:100%;
+        height:425px;
+
+    }
+    img{
+        width:300px;
+        height:210px;
+        background-size: cover;   
+        transition: 2s; 
+    }
+    img:hover{
+        transform: scale(1.2);
+    }
+</style>
+<body>
+    <div id="main">
+        <div class="box" id="box1"><img src='https://images.pexels.com/photos/984955/pexels-photo-984955.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box2"><img src='https://images.pexels.com/photos/1382732/pexels-photo-1382732.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box3"><img src='https://images.pexels.com/photos/935789/pexels-photo-935789.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box4"><img src='https://media.istockphoto.com/id/1075997304/photo/heart-shape-with-a-male-and-female-hand-clear-blue-water-as-background-freedom-in-paradise.jpg?b=1&s=612x612&w=0&k=20&c=CHzoFWDVs6AKDc7m7hsY5tAgx9pQIak-jjtKmaqfEso='></div>
+        <div class="box" id="box5"><img src='https://images.pexels.com/photos/773124/pexels-photo-773124.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box6"><img src='govind2.jpg'></div>
+        <div class="box" id="box7"><img src='https://images.pexels.com/photos/627979/pexels-photo-627979.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box8"><img src='https://images.pexels.com/photos/1667849/pexels-photo-1667849.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box9"><img src='https://media.istockphoto.com/id/469549422/photo/young-indian-couple.jpg?b=1&s=612x612&w=0&k=20&c=5qGGtuViR427P_OlKZiB65tAbapgDqi-PYjGvLElVIY='></div>
+        <div class="box" id="box10"><img src=' https://images.pexels.com/photos/246367/pexels-photo-246367.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box11"><img src='https://images.pexels.com/photos/2494701/pexels-photo-2494701.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box12"><img src='https://images.pexels.com/photos/1253370/pexels-photo-1253370.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box" id="box13"><img src='https://images.pexels.com/photos/3724031/pexels-photo-3724031.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+    </div>
+    
+
+</body>
+</html>

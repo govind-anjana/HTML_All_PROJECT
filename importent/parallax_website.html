@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+    }
+    .container{
+        width:100%;
+        height:99vh;
+        background-image: url('https://wallpapers.com/images/high/beautiful-nature-pictures-2c29nke7owomq7la.webp');
+        background-size:cover;
+        position:  fixed;
+        top:0px;
+        z-index: -1;
+    }
+    .container h2{
+        padding:16% 0px 16% 62%;
+        font-size: 50px;
+        color:chartreuse;
+        
+    }
+    h1{
+        color:white;
+        font-size:50px;
+        padding:25% 0px 25% 40% ;
+        font-family:sans-serif;
+         /* transform:translate(-50px,-50px) */
+    }
+    .about{
+    background-color:  aliceblue;
+    padding:15px;
+    z-index: 10;
+}
+.about h1{
+    color:red;
+    text-align: center;
+    padding:50px;
+    font-size: 55px;
+    font-family:anton, sans-serif;
+    text-transform: capitalize;
+}
+.about .main{
+    padding:60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    gap:30px;
+}
+.main .a1{
+    border:10px solid white;
+}
+.main .a1 img{
+    width:100%;
+    height:100%
+}
+.main .a2{
+    padding:10px;
+    line-height: 30px;
+    font-size: 26px;
+    text-align: justify;
+    font-family: cursive;
+}
+.both{
+    padding:50px;
+    line-height: 40px;
+    /* border:3px solid red; */
+    font-size: 33px;;
+}
+</style>
+<body>
+    <div class="container">
+        <h2>Parallax Website</h2>
+    </div>
+    <h1>Govind Anjana Patel</h1>
+    <div id="work" class="about">
+        <h1>About Narendra Modi</h1>
+        <div class="main">
+            <div class="box a1"><img src="https://www.bjp.org/files/inline-images/narendra-modi-indpendence-day-speech.jpg"></div>
+            <div class="box a2">On 26th May 2014 Narendra Modi took oath as the Prime Minister of India, becoming the first ever PM to be born after India attained Independence. Dynamic, dedicated and determined, Narendra Modi reflects the aspiration and hope of over a billion Indians. Ever since he assumed office in May 2014, PM Modi has embarked on a journey of all-round and inclusive development where every Indian can realize their hopes and aspirations. He remains deeply inspired by the principle of 'Antyodaya', of serving the last person in the queue. Through innovative ideas and initiatives, the Government has ensured that the wheels of progress move at rapid pace and the fruits of development reach every citizen. Governance has become open, easier and transparent.</div>
+        </div>
+     </div>
+     <h1>Ram Ram Ram</h1>
+</body>
+</html>

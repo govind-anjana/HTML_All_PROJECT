@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            background-image: url("https://i.pinimg.com/736x/21/c0/0a/21c00a4688c392f267f4d9a3cfa7b12f.jpg");
+            background-size: cover;
+        }
+                #main{
+                    width:42%;
+                    height:50vh;
+                    margin:auto;
+                    margin-top:23%;
+                    text-align: center;
+                    
+                }
+                .new{
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    color:white;
+                }
+                h1{
+                    font-size:80px;
+                    
+                }
+                .input{
+                    width:100px;
+                    height:auto;
+                    background-color: dimgray;
+                    padding:10px;
+                    float: left;
+                    margin-left:20px;
+                    border-radius: 10px;
+                    border-bottom:6px solid #00FF00;
+                    color:white;
+                    
+                }
+               .day
+                {
+                    font-size: 70px;
+                    font-weight: bold;
+                    
+                }
+                label{
+                    font-family: serif;
+        
+                }
+                @media screen and (max-width:500px) {
+                    
+                }
+                .govind{
+                    font-size: 100px;
+                    color:red;
+                    backdrop-filter: blur(4px);
+                    border-radius: 20px;
+                    animation: gov 4s infinite 2s;
+                }
+                @keyframes gov{
+                    0%{color:pink;font-family:serif; transform: scale(1.1);}
+                    50%{color:silver;font-family:sans-serif; transform: scale(1.2);}
+                    100%{color:white;font-family:monospace;transform: scale(1.4);}
+                }
+            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="main">
+        <div id="di">
+        <h1 id="son">2024</h1>
+        <p class="new">New Year Countdown</p>
+        <br>
+        <div class="input">
+        <p class="day">00</p>
+        <label>Days</label>
+        </div>
+        <div class="input">
+        <p class="day">00</p>
+        <label>Hours</label>
+        </div>
+        <div class="input">
+        <p class="day">00</p>
+        <label>Minutes</label>
+        </div>
+        <div class="input">
+        <p class="day">00</p>
+        <label>Seconds</label>
+        </div>
+        </div>
+     </div>
+</body>
+<script>
+   var main= document.getElementById("main");
+   let first= document.getElementById("first");
+    var ens="<span style=display:none>"+"jan"+"</span>"+"2025";
+    document.getElementById("son").innerHTML=ens;
+   input= document.querySelectorAll(".day");
+    count =()=>{
+  var e=new Date(ens);
+  var d=new Date();
+  let diff=e-d;
+
+  var se=1000;
+  var mi=se*60;
+  var ho=mi*60;
+  var da=ho*24;
+
+ d= input[0].innerHTML= Math.floor(diff/da);
+ h= input[1].innerHTML= Math.floor((diff%da)/ho);
+ m= input[2].innerHTML=Math.floor((diff%ho)/mi);
+ s= input[3].innerHTML=Math.floor((diff%mi)/se);
+ }
+    
+    count();
+   i= setInterval(()=>{
+        count()
+    },100
+    )
+    ee="jan 2024";
+    const soon=()=>{
+     var d=new Date();
+     var s=new Date(ee);
+     df= d.getFullYear();
+     dm=d.getMonth();
+     dmi=d.getMinutes();
+     sf= s.getFullYear();
+     sm=s.getMonth();
+     smi=s.getMinutes();
+    
+    }
+soon();
+    
+</script>
+</html>

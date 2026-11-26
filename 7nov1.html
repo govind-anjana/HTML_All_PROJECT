@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+		*
+		{
+		padding:0px;
+		margin:0px;
+		}
+            .a
+            {
+                width:70%;
+                height: 50%;
+                background-color: aqua;
+
+            }
+			#a{
+			width:30%;
+			background-color:silver;
+			font-size:20px;
+			font-weight:bold;
+			}
+		#b{
+			width:30%;
+			background-color:silver;
+			font-size:20px;
+			font-weight:bold;
+			}
+			.ans
+			{
+			width:90%;
+			height:30%;
+			background-color:silver;
+			color:red;
+			margin:10px 30%;
+			}
+			.abc{
+			font-size:22px;
+			color:white;
+			font-weight:bold;
+			text-align:left;
+			}
+			.abc1{
+			font-size:22px;
+			color:white;
+			font-weight:bold;
+			text-align:right;
+			}
+        </style>
+    </head>
+       <body>
+        <div class="a">
+		
+<input type="text" onblur="first()" id="a"  placeholder="My Message"></textarea>
+<input type="text" onblur="second()" id="b"  placeholder="My Receriver"></textarea>
+<div id="ans" class="ans"  readonly></div>
+        </div>
+       </body>
+	   <script>
+	  function first()
+	   {
+	  var a= document.getElementById("a").value;
+	 var b= document.getElementById("ans");
+	 var c= document.createElement("p");
+	 c.className="abc"
+	 c.innerHTML=a;
+	 b.appendChild(c);
+	 document.getElementById("a").value="";
+	 }
+	  function second()
+	   {
+	  var a= document.getElementById("b").value;
+	 var b= document.getElementById("ans");
+	 var c= document.createElement("p");
+	 c.className="abc1"
+	 c.innerHTML=a;
+	 b.appendChild(c);
+	  document.getElementById("b").value="";
+	 }
+	 </script>
+</html>

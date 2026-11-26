@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        width:70vw;
+        height:auto;
+        border:2px solid red;
+        margin: auto;
+        display: grid;
+        gap:10px;
+        padding:10px;
+        grid-template-columns: 10vw auto;
+        grid-template-rows: 90px auto auto 90px;
+        grid-template-areas: "head head head head"
+        "ad art art art"
+        "nav art art art"
+        "nav foot  foot foot";
+    }
+    .box{
+        border:3px solid pink;
+        font-size: 40px;
+        background-color:greenyellow;
+    }
+    .b1{grid-area: head;}
+    .b2{grid-area: ad;}
+    .b3{grid-area: art;}
+    .b4{grid-area: nav;}
+    .b5{grid-area: foot;}
+</style>
+<body>
+    <div id="main">
+        <div class="box b1" >head</div>
+        <div class="box b2" >Ads</div>
+        <div class="box b3" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nesciunt nemo dolore iure nisi maiores provident consectetur culpa repudiandae tempore, maxime nam placeat nihil rerum vero. Iusto autem delectus perspiciatis provident vel similique nostrum voluptas qui. Iure facilis id fugit consequatur ab fugiat voluptate iste neque odio, necessitatibus beatae assumenda minus at quia reprehenderit! Ea ex cupiditate dolore aliquam quis,   dicta, et iure! Natus maiores ullam est velit sit nesciunt voluptates reiciendis a.</div>
+        <div class="box b4" >Box-4</div>
+        <div class="box b5" >Box-5</div>
+    </div>
+    
+</body>
+</html>

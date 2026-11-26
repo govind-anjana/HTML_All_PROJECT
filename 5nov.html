@@ -1,0 +1,81 @@
+<html>
+<head>
+<style>
+.di
+{
+width:50%;
+height:50%;
+background-color:silver;
+margin:auto;
+margin-top:10%;
+border:10px groove black;
+}
+table{
+width:100%;
+
+}
+input[type="button"]
+{
+width:90%;
+background-color:blue;
+font-size:25px;
+font-weight:bold;
+color:white;
+border-radius:20px;
+border:none;
+}
+#a:hover
+{
+transition:5s;
+}
+.blue
+{
+width:40%;
+background-color:blue;
+}
+</style>
+</head>
+<body>
+<div class="di">
+<table border="3px" cellpadding="5px" cellspacing="20px">
+<tr>
+<th><input type="button" value="plus" onclick="pius()" id="a"></th>
+<th><input type="button" value="0" id="ans"></th>
+<th><input type="button" value="Min" onclick="mi()" id="b"></th>
+</tR>
+</table>
+
+
+</body>
+<script>
+ var x=0;
+function pius()
+{
+y=x++;
+y=y+1;
+if(x<=4)
+ document.getElementById("ans").value=("kids :")+y;
+  
+ if(x>=5 && x<=18)
+ document.getElementById("ans").value=("Minor :")+y;
+  
+  if(x>=18 && x<=40)
+ document.getElementById("ans").value=("Odult :")+y;
+  if(x>=40 && x<=50)
+ document.getElementById("ans").value=("Yourger:")+y;
+  if(x>50)
+  x=0;
+}
+function mi()
+{
+ if(x>0)
+ document.getElementById("ans").value=--x;
+ if(x<1)
+ {
+ x=0;
+ }
+ else{
+ document.getElementById("ans").value=x;
+ }
+}
+</script>

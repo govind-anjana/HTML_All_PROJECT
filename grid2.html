@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .containor{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(320px,4fr));
+        grid-auto-rows: minmax(100px,auto);
+        grid-auto-columns: minmax(200px,auto);
+        grid-gap: 20px;
+
+    }
+    .item{
+            background-color:blue;
+            color:red;
+            border-radius: 10px;
+            border:2px solid black;
+        }
+        #item1{
+            grid-column-start: 1;
+            grid-column-end: 5; 
+            background-color: darkviolet;
+        }
+        #item2{
+            grid-row-start:2 ;
+            grid-row-end:6 ;
+            grid-column-start: 1;
+            grid-column-end: 2; 
+            background-color: cyan;
+        }
+        #item3{
+            grid-row-start:2 ;
+            grid-row-end:4 ;
+            grid-column-start: 2;
+            grid-column-end: 4; 
+            background:linear-gradient(to right  bottom, blue 60%,cyan);
+        }
+        #item4{
+            grid-row-start:4;
+            grid-row-end:6 ;
+            grid-column-start: 2;
+            grid-column-end: 3; 
+            background:linear-gradient(to right bottom, blue 60%,cyan);
+        }
+        #item5{
+            grid-row-start:4;
+            grid-row-end:6 ;
+            grid-column-start: 3;
+            grid-column-end: 4; 
+            background:linear-gradient(to right bottom, blue 60%,cyan);
+        }
+        #item6{
+            grid-row-start:2;
+            grid-row-end:6 ;
+            grid-column-start: 4;
+            grid-column-end: 5; 
+            background-color:cyan
+        }
+        #item7{
+            grid-row-start:6;
+            grid-row-end:7 ;
+            grid-column-start: 1;
+            grid-column-end: 5; 
+            background-color:darkorchid;
+        }
+       
+</style>
+<body>
+    <div class="containor">
+        <div class="item" id="item1">Header</div>
+        <div class="item" id="item2">Sidebar</div>
+        <div class="item" id="item3">Columns-1</div>
+        <div class="item" id="item4">Columns-2</div>
+        <div class="item" id="item5">Columns-3</div>
+        <div class="item" id="item6">Navber</div>
+        <div class="item" id="item7">Footer</div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ans">
+        <button onclick="demo()">Otp Click</button></div>
+</body>
+<script>
+     const demo=()=>{
+        const ans=document.getElementById("ans");
+        var otp="";
+        for(i=1;i<=6;i++){
+            otp+=Math.floor(Math.random()*10);
+             
+        }
+       go= document.createElement("div");
+       go.innerHTML=otp;
+        ans.appendChild(go);
+     }
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .contoner
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+            grid-gap: 10px;
+            grid-auto-rows: minmax(50px,auto);
+            grid-auto-columns: minmax(10px,auto);
+        }
+        .item{
+            background-color:blue;
+            color:red;
+            border-radius: 10px;
+            border:2px solid black;
+        }
+        #item1{
+            grid-row-start: 1;
+            grid-row-end: 8;
+        }
+        #item2{
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+        #item3{
+            grid-row-start: 5;
+            grid-row-end: 8;
+        }
+        #item4{
+            grid-row-start: 1;
+            grid-row-end: 4;
+           
+        }
+        #item5{
+            grid-row-start: 4;
+            grid-row-end: 6;
+           
+        }
+        #item6{
+            grid-row-start: 6;
+            grid-row-end: 8;    
+        }
+           
+        #item7{
+            grid-row-start: 1;
+            grid-row-end: 3;    
+        }
+           
+        #item8{
+            grid-row-start: 3;
+            grid-row-end: 5;    
+        }
+        #item9{
+            grid-row-start: 5;
+            grid-row-end: 7;    
+        }
+        #item10{
+            grid-row-start: 7;
+            grid-row-end: 8;    
+        }
+           
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contoner">
+         <div class="item" id="item1">Dobba 1</div>
+         <div class="item" id="item2">Dobba 2</div>
+         <div class="item" id="item3">Dobba 3</div>
+         <div class="item" id="item4">Dobba 4</div>
+         <div class="item" id="item5">Dobba 5</div>
+         <div class="item" id="item6">Dobba 6</div>
+         <div class="item" id="item7">Dobba 7</div>
+         <div class="item" id="item8">Dobba 8</div>
+         <div class="item" id="item9">Dobba 9</div>
+         <div class="item" id="item10">Dobba 10</div>
+    </div>
+</body>
+</html>

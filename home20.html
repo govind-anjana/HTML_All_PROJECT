@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        main{
+            width:100%;
+            height:97vh;
+            background-color: aqua;
+          
+            font-size: 30px;
+        }
+        div{
+            position:relative;
+            width:25%;
+            background-color: black;
+            height:auto;
+            color:white;
+            padding:5px;
+            top:40%;
+            left:35%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <main>
+        <div id="ans"></div>
+      </main>
+ 
+<script>
+    p=prompt("Entre Youe UserName is:");
+    len=p.length;
+    console.log(len);
+    ans=`${p}${len}`
+ document.getElementById("ans").innerHTML="@"+ans;
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animation2.css">
+   </head>
+   <style>
+    *{padding: 0;margin: 0;box-sizing: border-box;}
+
+#container{
+         background-color:red;
+         /* border: 2px sold black; */
+         width: 95%;
+         height:97vh;
+         margin: auto;
+         overflow: hidden;
+         box-shadow: 0px 0px 10px 5px red;;
+    /* position: relative;          */
+         /* grid-template-columns:repeat(4,1fr); */
+         /* padding: 20px; */
+         /* background-repeat: no-repeat; */
+         
+}
+.box{
+     /* border: 2px solid black; */
+     width: 300px;
+     height: 300px;    
+     position: relative;
+     border-radius: 10px;;
+    }
+    .b1{
+        animation: top 10s ease-in-out infinite;
+        /* position: relative; */
+        /* position: absolute; */
+        /* border-radius: 10px; */
+        /* background-color: pink; */
+        background-image: url('https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600');
+        background-size: cover;
+    }
+  .b2{
+    /* grid-row-start: bottom; */
+    position: absolute;
+    animation: right 10s ease-in-out  infinite; 
+    border-radius: 20px;
+    /* background-color: blue; */
+    background-image: url('https://images.pexels.com/photos/1619697/pexels-photo-1619697.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+ } 
+ .b3{
+    /* grid-column-start: right; */
+     position: absolute;
+    animation: left 10s ease-in-out  infinite;
+    /* background-color: orange; */
+    background-image: url('https://images.pexels.com/photos/452558/pexels-photo-452558.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+
+ }
+ .b4{
+    position: absolute;
+    animation: bottom 10s ease-in-out infinite;
+   background-image: url('https://images.pexels.com/photos/572463/pexels-photo-572463.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+ }
+ @keyframes top
+ {
+    0%,100%{
+         top: 0px;
+         left: 0px;
+         background-color: silver;
+    }
+    25%{
+        top: 0px;
+        left: 1510px;
+    }
+     50%{
+        top: 570px;
+        left: 1510px;
+        /* background-color: gray; */
+    } 
+     75%{
+        top: 570px;
+        left:0px;
+
+    } 
+}
+   
+ 
+  @keyframes right
+ {
+    0%,100%{
+         top: 0px;
+         left: 1560px;
+    }
+    25%{
+        top: 570px;
+        left: 1560px;
+    }
+     50%{
+        top:570px;
+        left:50px;
+    }
+    75%{
+        top: 0px;
+        left:50px;
+
+    }
+    
+ }
+ @keyframes left
+ {
+    0%,100%{
+         top: 570px;
+         left:50px;
+    }
+    25%{
+        top: 0px;
+        left: 50px;   
+    }
+    50%{
+        top: 0px;
+        left: 1560px;   
+    }
+    75%{
+        top: 570px;
+        left: 1560px;   
+    }
+}
+ @keyframes bottom
+ {
+    0%,100%{
+         top: 570px;
+         left:1560px;
+    }
+    25%{
+        top: 570px;
+        left: 50px;   
+    }
+    50%{
+        top: 0px;
+        left: 50px;   
+    }
+    75%{
+        top: 0px;
+        left: 1560px;   
+    }
+}
+    
+   </style>
+<body>
+    <div id="container">
+         <div class="box b1">
+            
+         </div>
+         <div class="box b2">
+            
+         </div>
+         <div class="box b3">
+            
+         </div>
+         <div class="box b4">
+            
+         </div>
+    </div>
+</body>
+</html>
+</body>
+</html>

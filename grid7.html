@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .b1{grid-area: h1;margin-left: 20px;}
+    .b2{grid-area: h2;}
+    .b3{grid-area: h3;}
+    .b4{grid-area: h4;}
+    .b5{grid-area: h5;}
+    .b6{grid-area: h6;}
+    .b7{grid-area: h7;}
+    .b8{grid-area: h9;}
+    #main{
+        width:60vw;
+        margin:auto;
+        padding:10px;
+        border:2px solid red;
+        background-color:aqua;
+        display: grid;
+        height:90vh;
+        gap:10px;
+        grid-template-columns:repeat(6,auto);
+         grid-template-columns:2fr 1fr 1fr 1fr 1fr 2fr; 
+         grid-template-rows:2fr 1fr 1fr 1fr 1fr 2fr; 
+        
+        grid-template-areas: '. . h1 h1 . . '
+         '. h2 h2 h3 h3 . '
+         'h4 h2 h2 h3 h3 h5 '
+         'h4 h6 h6 h7 h7 h5 '
+         '. h6 h6 h7 h7 . '
+         '. . h9 h9 . .';
+        }
+        .box{
+            font-size: 30px;
+            
+            border-radius:10px;
+            overflow: hidden;
+    }
+    .box img{
+        width:100%;
+        height:120%;
+        /* object-fit: cover; */
+        background-size: cover;
+        /* transform: scale(1.7); */
+    }
+</style>
+<body>
+      <div id="main">
+        <div class="box b1"><img src="https://media.istockphoto.com/id/518918017/photo/statue-of-seth-sanwariya-temple.jpg?s=1024x1024&w=is&k=20&c=9PnxxcTY5KzZYaAW3ND-xJSGWDjb-1yKdsvf4dikmjg="></div>
+        <div class="box b2"><img src="https://media.istockphoto.com/id/533315627/photo/hanuman-shrine.jpg?s=612x612&w=0&k=20&c=qMY4-9Rde3sKERwnRCyIvgfMH3MbUBLS0eKeXeEPg_k="></div>
+        <div class="box b3"><img src="https://media.istockphoto.com/id/1078414074/photo/shri-mata-vaishno-devi-deity-statue.jpg?s=612x612&w=0&k=20&c=X5IiqVoWJRGJHY-1UN9FH_Lo94gjjM-iQnrZmu0SRQw="></div>
+        <div class="box b4"><img src="https://media.istockphoto.com/id/1386130489/photo/hindu-god-vishnu.jpg?s=612x612&w=0&k=20&c=2LOAFrYlS9TgWo-fWGSzZM-3x6FakSk667Po5R9QmvM="></div>
+        <div class="box b5"><img src="https://media.istockphoto.com/id/1277963676/photo/close-up-view-of-maa-durgas-face-during-durga-puja-festival.jpg?s=612x612&w=0&k=20&c=mRIOiGnFAGreNKtg-1nX1iwcybX_FSn3WlYVMSia1MU="></div>
+        <div class="box b6"><img src="https://media.istockphoto.com/id/1287253780/photo/idols-of-hindu-deities-radha-krishna.jpg?s=612x612&w=0&k=20&c=QxD4VbAqHP-wG4R7u_0W53a_kwjt7njxl0aPLYObz00="></div>
+        <div class="box b7"><img src="https://media.istockphoto.com/id/1062968348/photo/golden-guanyin-statue-in-the-public-chinese-temple-guanyin-or-guan-yin-is-an-east-asian.jpg?s=612x612&w=0&k=20&c=p2_pDb369ecFfe3YEm0bpCcFV7Gci-J7LIYnzhExfo0="></div>
+        <div class="box b8"><img src="https://media.istockphoto.com/id/1146884525/photo/lord-tirupati-balaji-idol-during-ganapati-festival-pune.jpg?s=612x612&w=0&k=20&c=hw4216DGMiGREOnwEEX_-NDFpSTZW-kTNoWtYllaeq4="></div>
+      </div>
+</body>
+</html>

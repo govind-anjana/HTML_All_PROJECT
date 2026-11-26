@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .containtor{
+            width:100%;
+            height:97vh;
+            background-color: aqua;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+main{
+    width:30%;
+    height:auto;
+    background-color: blue; 
+}
+h2{
+    color:white;
+    font-family: sans-serif;
+
+}
+span{
+    
+    padding:3px 5px;
+    font-size: 50px;
+    font-weight: 600;
+    color:white;
+    background-color: black;
+    border: 2px solid white;
+    margin:10px;
+    border-radius: 10px;    
+}
+input[type="text"]{
+    width:67%;
+    padding:4px 0px 4px 60px;
+    font-size: 30px;
+    outline: none;
+    color:red;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+.day span{
+    display:inline-block;
+    padding:3px 5px;
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <div class="containtor">
+            <main>
+                <h2>A Complte Watch</h2><br>
+                <span class="year" >02</span>
+                <span class="year" >03</span>
+                <span class="year" >2024</span>
+                <input type="text" placeholder="Time" readonly id="time">
+                <div class="day">
+                <span class="year">Satur</span>
+                <span class="year">18 c</span>
+                </div>
+            </main>
+        </div>
+</body>
+<script>
+    const time=document.querySelector('#time');
+    const year=document.querySelectorAll(".year");
+    const day=["Sunday","Monday","Tuesday","Webnesday","Thursday","Friday","Saturday"]
+  const watchs=()=>{
+        const d=new Date();
+        times= d.toLocaleTimeString();
+        time.value=times;
+                 date=d.getDate()
+                //  console.log(day[d.getDay()]);
+                 month=d.getMonth()+1;
+                 date=date<=9?"0"+date:date;
+                 month=month<=9?"0"+month:month;
+                //  console.log(date);
+                    year[0].innerText=date;
+                    year[1].innerText=month;
+                    year[2].innerText=d.getFullYear();
+                    year[3].innerText=day[d.getDay()];
+                }
+     setInterval(()=>{
+        watchs()
+     },1000);
+     
+     
+    function check(){
+        const d=new Date();
+        ho=d.getHours();
+        mi=d.getMinutes();
+        se=d.getSeconds();
+        // session="AM";
+        // if(ho>=13){
+        //     session="PM";
+        // }
+        // if(ho>=13){
+        //     ho=ho-12;
+        // }
+        // ho=ho<=9?"0"+ho:ho;
+        // mi=mi<=9?"0"+mi:mi;
+        // se=se<=9?"0"+se:se;
+        // to=ho+"/"+mi+"/"+se;
+        too=ho;
+        console.log(too);
+        console.log(typeof(too));
+
+        if(too>="0" && too<="6"){
+           year[4].innerHTML="17'C";
+        }
+        else
+         if(too>="7" && too<="12"){
+            year[4].innerHTML="18'C";
+        }
+        else
+         if(too>="13" && too<="18"){
+            year[4].innerHTML="22'C";
+        }
+        else
+         if(too>="19" && too<="23"){
+            year[4].innerHTML="20'C";
+        }     
+    }
+    check();   
+</script>
+</html>

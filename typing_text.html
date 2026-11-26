@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        h1{
+            color:white;
+            text-align:center;
+            /* animation:govind 10s steps(40,end) infinite; */
+             margin:8px ;
+            
+        }
+        /* @keyframes govind{
+            from {width:0;}
+            to {width:100%;}
+        } */
+       .containtor{
+        height:97vh;
+        background-color:blue;
+        display:flex;
+        justify-content: center;;
+        align-items:center;
+       } 
+       .main{
+        width:35%;
+         backdrop-filter: blur(50px);
+        border:3px solid red;
+        padding:1%;
+        color:white;
+       }
+       .watch{
+        display:flex;
+        justify-content: center;
+        
+       }
+       #hours,#minitues,#seconds{
+        font-size:60px;
+        font-weight: 600;
+        margin-right:10%;
+        margin-bottom:0px; 
+        letter-spacing: 2px; 
+       }
+       .name{
+        font-size:20px;
+        font-weight: 600;
+        margin-right:45px;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="containtor">
+        <div class="main">
+            <h1>Digital Clock</h1>
+            <div class="watch"> 
+            <div id="hours">15</div> 
+            <div id="minitues">15</div>
+            <div id="seconds">15</div>
+            </div>
+            
+            <div class="watch"> 
+                <div  class="name">Hours</div> 
+                <div  class="name">Minitues</div>
+                <div  class="name">Seconds</div>
+                </div>
+        </div>
+    </div>
+    <!-- <progress   max="100" value="50"></progress>
+    <input type="text" autofocus>
+     <input type="text" list="go">
+     <datalist id="go">
+        <option>india</option>
+        <option>pakistan</option>
+        <option>japan</option>
+     </datalist> -->
+</body>
+</html>

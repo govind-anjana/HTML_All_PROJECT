@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .header{
+            width:34%;
+            padding:8px;
+            margin-top:6%;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;;
+        }
+        input[type="button"]{
+            cursor: pointer;
+            font-size: 23px;
+            background-color: black;
+            color:white;
+            border-radius: 10px;
+        }
+        main{
+            width:30%;
+            height:auto;
+            margin:auto;
+            margin-top:10%;
+            border:2px solid red;
+            padding:10px;
+        }
+        input[type="text"]{
+            width:70%;
+            padding:3px 5px;
+            font-size: 23px;
+            outline: none;
+        }
+        #ans{
+            width:94%;
+            padding:3px 5px;
+            font-size: 23px;
+            outline: none;
+            border:2px solid black;
+            margin-top:20px;
+            cursor: pointer;
+        }
+        button{
+            width: 23%;
+            padding:3px 7px;
+            font-size: 23px;
+            outline: none;
+            cursor: pointer;
+        }
+        #uu{
+            padding:1px 7px;
+            font-size: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+        span{
+            width:90%;
+            display: block;
+            font-size:20px;
+            margin-top:10px;
+            border: 2px solid red;
+            padding:3px;
+            color:crimson;
+            text-transform: capitalize;
+        }
+        button{
+            float:right;
+        }
+        .saka{
+            background-color: black;
+            text-decoration: line-through;
+            color:white;;
+        }
+    </style>
+     <title>Document</title>
+</head>
+<body>
+    <div class="header">
+      <input type="button" onclick="demo('red')" value="Red">
+      <input type="button" onclick="demo('pink')" value="Pink">
+      <input type="button" onclick="demo('black')" value="Black">
+      <input type="button" onclick="demo('orange')" value="Orange">
+      <input type="button" onclick="demo('green')" value="Green">
+    </div>
+     <main>
+        <input type="text" id="text">
+        <button id="button">Submit</button>
+        <div id="ans">
+           
+        </div>
+     </main>
+</body>
+ <script>
+    function demo(x){
+         document.body.style.backgroundColor=x;
+     }
+
+     document.getElementById("button").addEventListener("click",govind);
+     function govind(){
+         const text=document.getElementById("text").value;
+         
+         if(""==text){
+             alert("Enter The Session:");
+            }
+            else{    
+              const ans=document.getElementById("ans");
+            span=document.createElement("span");
+            span.innerHTML=`${text}<button id="uu">Click</button>`;
+            span.addEventListener("click",function(){
+                console.log(this.classList.toggle("saka"));
+             });
+            document.querySelector("button").addEventListener("click",(e)=>{
+                 console.log(e);
+             });
+            // document.querySelector("button").addEventListener("click",function(){
+            //     span.remove();
+            // })
+            go=document.getElementById("text").value="";
+            ans.appendChild(span);
+          }
+        }
+ </script>
+
+</html>
+<!-- addd=(it)=>{
+    itemlist=document.createElement("li")
+    itemlist.innerHTML=`${it} 
+                <i class="dele fas fa-cat"></i>`;                 
+                itemlist.addEventListener("click",
+                function(){
+                    this.classList.toggle("dono")
+                }               
+                )
+                itemlist.querySelector("i").addEventListener("click",
+                function(){
+                    itemlist.remove();
+                })
+                todobox.appendChild(itemlist);
+} -->

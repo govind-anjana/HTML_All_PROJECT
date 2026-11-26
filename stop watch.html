@@ -1,0 +1,128 @@
+<html>
+<head>
+<style>
+body{
+       background:linear-gradient(to top left,pink,silver,green);
+       }
+.a
+{
+width:50%;
+height:55%;
+background-color:silver;
+margin:auto;
+margin-top:10%;
+border:4px dotted black;
+outline:20px solid red;
+outline-offset:4px;
+}
+table
+{
+width:100%;
+text-align:centre;
+
+}
+.xyz
+{
+font-size:90px;
+}
+th
+{
+border-radius:20px;
+border:4px solid black;
+box-shadow:4px 4px 5px green;
+}
+input[type="button"]
+{
+width:100%;
+background-color:blue;
+font-size:25px;
+font-weight:bold;
+color:white;
+border-radius:20px;
+}
+input[type="button"]:hover
+{
+transform:scale(1.2);
+transition:2s;
+color:red;
+cursor:pointer;
+}
+</style>
+<head>
+<body>
+<div class="a">
+<table border="0px" cellpadding="15px" cellspacing="50px">
+<tr bgcolor="red">
+<th id="a" class="xyz">00</th>
+<th id="b" class="xyz">00</th>
+<th id="c" class="xyz">00</th>
+</tr>
+<tr bgcolor="white">
+<th><input type="button" value="Start" id="bstart" onclick="demo"></tH>
+<th><input type="button" value="Stop" id="bstop"></tH>
+<th><input type="button" value="Reset" id="breset"></tH>
+</tR>
+</table>
+</div>
+</body>
+<script>
+ window.onload=function()
+{
+	var m=0;
+	var s=0;
+	var ns=0;
+	x=document.getElementById("a");
+	y=document.getElementById("b");
+	z=document.getElementById("c");
+	p=document.getElementById("bstart");
+	q=document.getElementById("bstop");
+	r=document.getElementById("breset");
+	p.onclick=function()
+	{
+	i=setInterval(timer,10)
+	}
+	q.onclick=function()
+	{
+	clearInterval(i); 
+	}
+	r.onclick=function()
+	{
+	clearInterval(i); 
+	 m=0;
+	 s=0;
+	 ns=0;
+	 a.innerHTML="00";
+	 b.innerHTML="00";
+	 c.innerHTML="00";
+	}
+	function timer()
+	{
+	ns++;
+	if(ns<=9)
+	z.innerHTML="0"+ns;
+	if(ns>9)
+	z.innerHTML=ns;
+	if(ns>99)
+	{
+	s++;
+	if(s<=9)
+	y.innerHTML="0"+s;
+	if(s>9)
+	y.innerHTML=s;
+	 ns=0;
+	 z.innerHTML="0"+ns;
+	}
+	if(s>59)
+	{
+	m++;
+	if(m<=9)
+	x.innerHTML="0"+m;
+	if(m>9)
+	x.innerHTML=m;
+	 s=0;
+	 y.innerHTML="0"+s;
+	}
+	}
+}
+</script>
+</html>

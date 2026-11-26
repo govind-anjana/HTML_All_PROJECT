@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+body{
+background-color:silver;
+}
+table
+{
+width:40%;
+border:4px solid black;
+margin:auto;
+margin-top:10%;
+font-size:23px;
+font-weight:bold;
+}
+#ans{
+width:100%;
+height:30px;
+background-color:red;
+}
+input[type="radio"]
+{
+width:30px;
+height:30px;
+}
+</style>
+</head>
+<body>
+<table border="0px" cellpadding="5px" cellspacing="10px">
+<tr>
+<td>1</td>
+<td>Yaspal Singh Sisodiya</td>
+<td><input type="radio" onclick="demo('a')"  name="g" id="r1"></td>
+</tR>
+<tr>
+<td>2</td>
+<td>Vipin Jain</td>
+<td><input type="radio" name="g" onclick="demo('b')" id="r2"></td>
+</tR><tr>
+<td>3</td>
+<td>Pratik</td>
+<td><input type="radio" name="g" onclick="demo('c')" id="r3"></td>
+</tR><tr>
+<td>4</td>
+<td>Mahesh Soni</td>
+<td><input type="radio" name="g" onclick="demo('d')" id="r4"></td>
+</tR>
+<tr>
+<th colspan="3"><input type="text" readonly id="ans"></th>
+</tr>
+</table>
+</body>
+<script>
+ function demo(x)
+ {
+ var p=document.getElementById("r1");
+ var q=document.getElementById("r2");
+ var r=document.getElementById("r3");
+ var s=document.getElementById("r4");
+ n="You Voted to :";
+ 
+ switch(x)
+ {
+ case 'a':
+   document.getElementById("ans").value=n+"Yashpal Singh Sisodiya";
+   document.getElementById("ans").style.fontSize="24px";
+   document.getElementById("ans").style.color="white";
+   p.disabled=true;
+   q.disabled=true;
+   r.disabled=true;
+   s.disabled=true;
+   break;
+   case 'b':
+   document.getElementById("ans").value=n+"Vipin Jain";
+   document.getElementById("ans").style.fontSize="24px";
+   document.getElementById("ans").style.color="white";
+   p.disabled=true;
+   q.disabled=true;
+   r.disabled=true;
+   s.disabled=true;
+   break;
+ case 'c':
+   document.getElementById("ans").value=n+"Pratik";
+   document.getElementById("ans").style.fontSize="24px";
+   document.getElementById("ans").style.color="white";
+   p.disabled=true;
+   q.disabled=true;
+   r.disabled=true;
+   s.disabled=true;
+   break;
+  case 'd':
+   document.getElementById("ans").value=n+"Mahesh Soni";
+   document.getElementById("ans").style.fontSize="24px";
+   document.getElementById("ans").style.color="white";
+   p.disabled=true;
+   q.disabled=true;
+   r.disabled=true;
+   s.disabled=true;
+   break;
+ }
+ }
+</script>
+</html>

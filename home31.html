@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .main{
+            width:100%;
+            height:auto;
+            background-color:white;
+        }
+        #header{
+            display:flex;
+            padding:4px;
+            border:2px silid silver;
+            box-shadow: 0px 4px 10px silver;;
+        }
+        h3{
+            margin:10px 0px 0 154px;
+            font-size: 25px;
+        }
+        ul{
+            list-style: none;
+            margin:auto;
+            padding:15px;
+            
+        }
+        li{
+            display:inline;
+            padding-left:45px;
+        }
+     ul li a{
+            text-decoration: none;
+            font-weight: bold;
+            color:black;
+        }
+        a:hover{
+            color:red;
+        }
+        #color{
+            font-size:30px;
+            margin-right:160px;
+            margin-top:4px;
+            transform: rotate(-40deg);
+            cursor: pointer;
+        }
+        .img{
+            float:left;
+            margin:7% 0% 5% 10%; 
+            border-top:3px solid red;
+            box-shadow: 8px 0px 10px silver;
+            border-radius: 10px;
+        }
+        .img img{
+            border-radius: 10px;
+            background-size: cover;
+        }
+        .pag{
+            width:48%;
+             position: absolute;
+             top:36%;
+             left:40%
+        }
+        .div
+        {
+            font-size:60px;
+            font-family: sans-serif;
+        }
+        .div span{
+            color:red;
+        }
+        i{
+            font-size:30px;
+            border:2px solid red;
+             padding:5px;
+            border-radius: 50%;
+            text-align: center;
+            color:red;
+            margin-right:16px;
+            transition: 4s;
+        }
+        .go,.govin,.govind{
+            width:32px;
+             
+        }
+        i:hover{
+            transform:scale(1.2);
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />  
+</head>
+<body>
+    <div class="main">
+        <div id="header">
+            <h3>Logo.</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contant</a></li>
+            </ul>
+            <span id="color" onclick="demo()" ondblclick="del()">🌜</span>
+        </div>
+        <div class="img">
+            <img src="dog.jpg" width="350px">
+        </div>
+        <div class="pag">
+            <div><b>Hi,I'm</b></div>
+            <div class="div"><span>John</span> Doe</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet id, repudiandae earum obcaecati nesciunt maxime, nulla nam quia sit, quae animi nihil molestias laudantium eius iusto esse! Nesciunt, beatae.</p>
+            <br>
+           
+            <i class="go fa-brands fa-apple"></i>
+            <i class="gov fa-brands fa-twitter"></i>
+            <i class="govi fa-brands fa-github"></i>
+            <i class="govin fa-brands fa-facebook-f"></i>
+            <i class="govind fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+</body>
+<script>
+    function demo(){
+      co= document.body.style.backgroundColor="silver";
+    }
+    function del(){
+        co= document.body.style.backgroundColor="white";
+    }
+</script>
+</html>

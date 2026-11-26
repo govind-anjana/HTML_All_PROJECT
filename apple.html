@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: white;
+    }
+    .container{
+        width:60vw;
+        margin:auto;
+        border:3px solid black; 
+        background-image: url('https://t3.ftcdn.net/jpg/07/53/20/82/240_F_753208233_2tFjybdyLCTU12MEJfguSJKBtl0sG5pj.jpg');
+        /* background-size: cover; */
+    }
+    h1{
+            background: linear-gradient(red 10%,orange );
+            /* display: inline; */
+            font-size: 50px;
+            text-transform: uppercase;
+            text-align: center;
+            -webkit-background-clip:text;
+            -webkit-text-fill-color: transparent;
+            font-family: sans-serif;
+           filter: drop-shadow(2px 2px 1px white );
+           position: sticky;
+           top:1px;
+           z-index: 1;
+    }
+    #main{
+        height:90vh;
+        overflow: scroll;
+        /* border:2px solid red; */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: minmax(170px,auto);
+        gap:15px;
+        padding:15px;   
+    }
+    #main::-webkit-scrollbar{
+        display: none;
+    }
+    .box{
+        border:2px solid black;
+        overflow: hidden;
+        border-radius: 30px;
+        position: relative;
+        padding:9px;
+        background-color: white;
+    }
+    .box:hover{
+        box-shadow: 0px 0px 10px 5px silver;
+    }
+     .box .sort{
+        position: absolute;
+        font-size: 40px;
+        top:1px;
+        color:red;
+        font-weight: 800;
+        font-family: sans-serif;
+    }
+    .a1 .sort,.a5 .sort,.a9 .sort,.a15 .sort,.a21 .sort{
+        color:rgb(11, 146, 229);
+    }
+    .box .full{
+        position: absolute;
+        bottom: 7px;
+        left:15px;
+        color:black;
+        font-family: sans-serif;
+        font-size: 20px;;
+        font-weight: 700;
+        
+    }
+    .box img{
+        /* position: relative; */
+        width:90%;
+        height:158px;
+        /* border:2px solid red; */
+        float: right;
+    }
+    @media screen and (max-width:1124px){
+        body{
+        background-color: black;
+    }
+        .container{
+            width:70vw;
+        }
+        #main{
+            height:550px;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media screen and (max-width:768px){
+        body{
+        background-color: silver;
+    }
+        #main{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media screen and (max-width:600px){
+        body{
+        background-color: gray;
+    }
+        h1{
+            font-size: 35px;
+        }
+        #main{
+            height:98vh;
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>alphabets</h1>
+        <div id="main">
+            <div class="box a1"><span class="sort">Aa</span><img src="https://media.istockphoto.com/id/185262648/photo/red-apple-with-leaf-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=gUTvQuVPUxUYX1CEj-N3lW5eRFLlkGrU_cwwwOWxOh8="><span class="full">Apple</span></div>
+            <div class="box a2"><span class="sort">Bb</span><img src="https://t4.ftcdn.net/jpg/05/02/37/15/240_F_502371561_t06yYi2ugRzfYXEHjklzqvF6ez8gX5So.jpg"><span class="full">Boy</span></div>
+            <div class="box a3"><spna class="sort">Cc</spna><img src="https://media.istockphoto.com/id/858701710/photo/fluffy-gray-kitten-of-a-russian-blue-cat.jpg?s=612x612&w=0&k=20&c=UNa1QGzOed4h-c5xs7bdNFA7UGKhjmaYDUn27f28RwA=">
+            <spna class="full">Cat</spna></div>
+            <div class="box a4"><spna class="sort">Dd</spna><img src="https://media.istockphoto.com/id/652437872/photo/golden-retriever-adult-sitting-clowning-at-camera-isolated-on-white.jpg?s=612x612&w=0&k=20&c=VSrRacUEsMhTNZD5yqRzH0CfzE1VEdlIUey2RRgChCc=">
+                <spna class="full">Dog</spna></div>
+            <div class="box a5"><spna class="sort">Ee</spna><img src="https://media.istockphoto.com/id/169940960/photo/asian-elephant.jpg?s=612x612&w=0&k=20&c=QblEPpog7qLeBjzrvAUNweJUEvUo0Z3KKK3MUBa8Bkw=">
+                <spna class="full">Elephant</spna></div>
+            <div class="box a6"><spna class="sort">Ff</spna><img src="https://t4.ftcdn.net/jpg/03/14/68/67/240_F_314686744_dvRiiXuRg6b9EIA1a4wzadc8xEwFYi82.jpg">
+                <spna class="full">Fish</spna></div>
+            <div class="box a7"><spna class="sort">Gg</spna><img src="https://www.drawing123.com/wp-content/uploads/2022/10/drawing-girl-step11-1.jpg">
+                <spna class="full">Girl</spna></div>
+            <div class="box a8"><spna class="sort">Hh</spna><img src="https://t3.ftcdn.net/jpg/08/08/91/18/240_F_808911859_NQ5Lu4srrGZkFhTqFfilfUrslJXZQIJ5.jpg">
+                <spna class="full">Horse</spna></div>
+            <div class="box a9"><spna class="sort">Ii</spna><img src="https://t4.ftcdn.net/jpg/01/10/78/21/240_F_110782199_VEPzI0XbJKXQpIOoIxRE1YIZ9cek08DM.jpg">
+                <spna class="full">Ice Cream</spna></div>
+            <div class="box a10"><spna class="sort">Jj</spna><img src="https://t3.ftcdn.net/jpg/03/09/52/38/240_F_309523864_UR3HY9Q3Nf7c4mjd02UZnIQ8uHccEhTZ.jpg">
+                <spna class="full">Jug</spna></div>
+            <div class="box a11"><spna class="sort">Kk</spna><img src="https://t4.ftcdn.net/jpg/02/87/14/21/240_F_287142175_6jZ8ap77M1DzWerxeEs30pBLMihjabcX.jpg">
+                <spna class="full">kite</spna></div>
+            <div class="box a12"><spna class="sort">Li</spna><img src="https://t3.ftcdn.net/jpg/00/58/80/86/240_F_58808640_3VZ0aSrmeRKA3rwkOmRLqk9JnIFEq1Oj.jpg">
+                <spna class="full">Lion</spna></div>
+            <div class="box a13"><spna class="sort">Mm</spna><img src="https://media.istockphoto.com/id/1487747317/vector/illustration-of-cute-monkey-wildlife-animals-black-and-white-isolated-drawing-of-macaque-for.jpg?s=612x612&w=0&k=20&c=7UU9b_34dG4gLAQum_NIyP3BU-MylqEIwITpzwa2v3Q=">
+                <spna class="full">Monkey</spna></div>
+            <div class="box a14"><spna class="sort">Nn</spna><img src="https://t4.ftcdn.net/jpg/00/61/97/83/240_F_61978377_9ESErk6P96OtaXovw3KAB9vCERDbDhpD.jpg">
+                <spna class="full">Nest</spna></div>
+            <div class="box a15"><spna class="sort">Oo</spna><img src="https://t4.ftcdn.net/jpg/00/93/86/49/240_F_93864955_0axUkp9uQ7n8n6qbr6xjR9DShQ6FrfFi.jpg">
+                <spna class="full">Orange</spna></div>
+            <div class="box a16"><spna class="sort">Pp</spna><img src="https://t4.ftcdn.net/jpg/01/52/32/11/240_F_152321116_uSM4MbB6w2xhePIOcLRgIHGbFRifykZj.jpg">
+                <spna class="full">Parrot</spna></div>
+            <div class="box a17"><spna class="sort">Qq</spna><img src="https://t4.ftcdn.net/jpg/01/71/17/15/240_F_171171524_gCbJx7qb0Sruy9zfyA3GidO3jrcDTyB0.jpg">
+                <spna class="full">Queen</spna></div>
+            <div class="box a18"><spna class="sort">Rr</spna><img src="https://t4.ftcdn.net/jpg/03/01/91/05/240_F_301910596_t7XMJBPG64iQ25kJn3wIsTmIHeh0hzSQ.jpg">
+                <spna class="full">Rose</spna></div>
+            <div class="box a19"><spna class="sort">Ss</spna><img src="https://t4.ftcdn.net/jpg/00/33/36/89/240_F_33368990_6YB2dNLl1ETpfnmCkuizxL8BF0OfYJmV.jpg">
+                <spna class="full">Swan</spna></div>
+            <div class="box a20"><spna class="sort">Tt</spna><img src="https://t4.ftcdn.net/jpg/01/36/14/55/240_F_136145559_nRuVUXUBv7wF1JIAgdeQO6sI4Va6shxW.jpg">
+                <spna class="full">Tiger</spna></div>
+            <div class="box a21"><spna class="sort">Uu</spna><img src="https://t4.ftcdn.net/jpg/07/89/82/63/240_F_789826378_UaZPBOOmZUC8We6OR6x80Ozy271oKFV0.jpg">
+                <spna class="full">Umbrella</spna></div>
+            <div class="box a22"><spna class="sort">Vv</spna><img src="https://t4.ftcdn.net/jpg/07/48/85/57/240_F_748855766_JFAKELFAVevcSM7nZf0YLfnXt7Il5HSM.jpg">
+                <spna class="full">Van</spna></div>
+            <div class="box a23"><spna class="sort">Ww</spna><img src="https://media.istockphoto.com/id/525575671/vector/smart-watch-isolated-with-icons-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=2waziDObLLmI3pmCngMbqTMHSI6TQRXp4DQ7_zRGikI=">
+                <spna class="full">Watch</spna></div>
+            <div class="box a24"><spna class="sort">Xx</spna><img src="https://t3.ftcdn.net/jpg/04/58/80/60/240_F_458806065_E7TgOhsLk0xn1l6EUiyCMAzB8OKOznTr.jpg">
+                <spna class="full">X-mas</spna></div>
+            <div class="box a25"><spna class="sort">Yy</spna><img src="https://t4.ftcdn.net/jpg/01/58/62/99/240_F_158629919_Xykd53QquZ0traX06UCbbcVqNDzL7uaU.jpg">
+                <spna class="full">Yacht</spna></div>
+            <div class="box a26"><spna class="sort">Zz</spna><img src="https://t4.ftcdn.net/jpg/00/51/41/23/240_F_51412322_Fqm0IRJKSMsCii6pRrOV0Zsrz5iXYxNe.jpg">
+                <spna class="full">Zebra</spna></div>
+        </div>
+    </div>
+</body>
+</html>

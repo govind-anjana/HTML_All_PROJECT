@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .div2{
+            width:100%;
+            height:96vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width:24%;
+            height:auto;
+            background-color: silver;
+            padding:2px; 
+            text-align: center;    
+            border-radius: 10px;
+        }
+        h4{
+                font-size: 35px;
+                color:white;
+        }
+        #clock{
+            width:200px;
+            padding:6px;
+            display: block;
+            background-color:orange;
+            margin:auto;
+            margin-top:10px;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div2">
+    <div class="container">
+        <h4>Digital Clock</h4>
+        <div id="clock"></div>
+    </div>
+    </div>
+</body>
+<script>
+  const clock=document.getElementById("clock");
+    function demo(){
+         
+        const d=new Date();
+    //    console.log(d.toLocaleTimeString())
+        ho=d.getHours();
+        mi=d.getMinutes();
+        se=d.getSeconds();
+        action="AM";
+        if(ho>12){
+            action="PM";
+        }
+       if(ho>12){
+        ho=ho-12;
+       }
+       ho=ho<=9?"0"+ho:ho;
+       mi=mi<=9?"0"+mi:mi;
+       se=se<=9?"0"+se:se;
+        clock.innerHTML=`${ho} : ${mi} : ${se} : ${action}`;
+    } 
+     setInterval(function(){
+        demo()
+     },1000);
+    
+</script>
+</html>

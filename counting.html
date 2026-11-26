@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        width:70vw;
+        padding:10px;
+        border:2px solid red;
+        margin:auto;
+    }
+    p{
+        font-size: 23px;;
+        text-align: justify;
+    }
+     
+    body {
+  counter-reset: govind;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: govind;
+  content: "Section " counter(govind) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(govind) "." counter(subsection) " ";
+}
+</style>
+<body>
+    <div id="main">
+        <h1>Curvature</h1>
+        <h2>Data Comunction Network</h2>
+        <h2>Data Structure</h2>
+        <h2>Php</h2>
+        <h2>Computer Graphics</h2>
+        <h2>HTML</h2>
+        <h2>Java Programing</h2>
+        <h2>E-Commerce</h2>
+        <h2>Artifical Intelligency</h2>
+        <h1>Curvature</h1>
+        <h2>Data Comunction Network</h2>
+        <h2>Data Structure</h2>
+        <h2>Php</h2>
+        <h2>Computer Graphics</h2>
+        <h2>HTML</h2>
+        <h2>Java Programing</h2>
+        <h2>E-Commerce</h2>
+        <h2>Artifical Intelligency</h2>
+        <h1>Curvature</h1>
+        <h2>Data Comunction Network</h2>
+        <h2>Data Structure</h2>
+        <h2>Php</h2>
+        <h2>Computer Graphics</h2>
+        <h2>HTML</h2>
+        <h2>Java Programing</h2>
+        <h2>E-Commerce</h2>
+        <h2>Artifical Intelligency</h2>
+
+    </div>
+</body>
+</html>

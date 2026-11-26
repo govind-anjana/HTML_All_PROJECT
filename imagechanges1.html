@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h2{
+            color:red;
+            font-size: 50px;
+            text-align: center;
+            top:3%;
+            padding:7px 21px;
+        }
+         #image{
+            margin: auto;
+            margin-top:5%;
+            width:50%;
+            height:65vh;
+            box-shadow: 0px 0px 20px white;
+            background-image:url(bca.jpg);
+            background-size:cover;
+            border-radius: 8px;
+             box-shadow: 0px 0px 10px orange;
+        }
+    </style>
+     <title>Document</title>
+</head>
+<body style="background-color: cyan;">
+    <h2 id="h2">govind</h2>
+     <div id="image"></div>
+</body>
+<script>
+   const image=document.getElementById("image");
+   let to=0;
+    function bgcolor(color){
+    let colorarray=["govind2","govind3","govind4","govind5","image","image3","image1","image5","dog","coding"];   
+   go=colorarray[color];
+   image.style.backgroundImage=`url(${go}.jpg)`;
+   image.style.backgroundSize="cover";
+   to++;
+   console.log(to);
+
+//    document.body.style.backgroundColor=go
+    }
+    jj=0;
+    function govind(){
+        if(jj<10){
+        bgcolor(jj);
+        jj=jj+1;
+        }
+        else{
+            clearInterval(breaks);
+            clearInterval(anjana);
+        }
+}
+const breaks=setInterval(()=>{
+    govind()
+},11000);
+j=0;
+    function demos(){
+        j=j+1; 
+        // console.log(j);
+         if(j<=10){
+            document.getElementById("h2").innerHTML=10-j;
+        }  
+         else{
+            j=0;
+         }
+    }
+   const anjana=setInterval(()=>{
+        demos()
+    },1000);
+</script>
+</html>

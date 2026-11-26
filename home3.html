@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    *
+{
+    padding:0px;
+    margin:0px;
+}
+.main
+{
+width:100%;
+height:95vh;
+background-color:pink;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.first{
+    width:40%;
+    height:auto;
+    background-color: white;
+    border:4px dotted black;
+}
+.second
+{
+    margin:10px 5px;
+    font-size: 20px;;
+}
+input[type="radio"]
+{
+    width:20px;
+    height:20px;
+    accent-color: red;
+}
+button{
+    width:100%;
+    font-size: 25px;
+    color:red;
+    background-color: blueviolet;
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body onload="govind()">
+  <div class="main">
+    <div class="first">
+        <h2 id="qq">Q How to Create to Element By Id?</h2>
+        <div class="second"><input type="radio" name="a1" value="a" class="options" id="option1">
+        <label for="option1">Option1</label>
+        </div>
+        <div class="second"><input type="radio" name="a1" value="b" class="options" id="option2">
+            <label for="option2">Option2</label>
+            </div>
+            <div class="second"><input type="radio" name="a1" value="c" class="options" id="option3" >
+                <label for="option3">Option3</label>
+                </div>
+                <div class="second"><input type="radio" name="a1" value="d" class="options" id="option4">
+                    <label for="option4">Option4</label>
+                    </div>
+                    <button id="su" onclick="sumit()">Submit</button>
+    </div>
+</div>
+</body>
+<script>
+const question=[
+    {'que':'How Are You Govind',
+      'a':'Fine',
+      'b':'Anfine',
+      'c':'Achaa',
+      'd':'good',
+      'anss':'a',
+    },
+    {'que':'How Are You Hariom',
+      'a':'Fine',
+      'b':'Anfine',
+      'c':'Achaa',
+      'd':'good',
+      'anss':'b',
+    },
+    {'que':'How Are You Govind',
+      'a':'Fine',
+      'b':'Anfine',
+      'c':'Achaa',
+      'd':'good',
+      'anss':'a',
+    },
+];
+ index=0;
+total=question.length;
+right=0;
+wrong=0;
+h1=document.getElementById("qq");
+inputs=document.querySelectorAll(".options");
+function govind(){
+  data=question[index];
+   if(total==index)
+   {
+     que();
+   }
+  reset();
+h1.innerHTML=`${index +1 }) ${data.que}`; 
+inputs[0].nextElementSibling.innerHTML=data.a;
+inputs[1].nextElementSibling.innerHTML=data.b;
+inputs[2].nextElementSibling.innerHTML=data.c;
+inputs[3].nextElementSibling.innerHTML=data.d;
+}
+function sumit(){
+  data=question[index];
+  ac=getad();
+if(ac==data.anss)
+{
+  right++;
+  
+}
+else{
+  wrong++;
+}
+index++;
+govind();
+} 
+getad = () => {
+  let answer;
+  inputs.forEach ( 
+    (input) => {
+     if(input.checked)
+     {
+     answer= input.value;
+     
+     }
+    }
+  )  
+  return answer; 
+}
+reset = () => {
+  inputs.forEach ( 
+    (input) => {
+     input.checked=false; 
+    }
+  )   
+}
+que = () => {
+  document.getElementsByClassName("first")[0].inneText=`<h1> Ans  ${total}/${right} </h1>`;
+}
+</script>
+</body>
+</html>

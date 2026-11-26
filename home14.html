@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        label{
+            font-size: 30px;
+        }
+        input[type="text"]
+        {
+            width:30%;
+            font-size: 26px;
+            padding:3px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="lal">Enter Your Number:</label><input type="text" onkeyup="val(this)" id="lal">
+    <div id="ans"></div>
+</body>
+<script>
+     document.getElementById("ans").style.color="red";
+      function val(ele){
+          if(isNaN(ele.value)){
+            document.getElementById("ans").innerHTML="Place Number Only";
+          }
+          else{
+            document.getElementById("ans").innerHTML="";
+          }
+          if(ele.value.length >10){
+            document.getElementById("ans").innerHTML="place enter only ten digit";
+          }
+
+      }
+</script>
+</html>

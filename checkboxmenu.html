@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width,
+                   initial-scale=1.0">
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+
+ul li a {
+      margin-right: 30px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+
+  }
+  ul li a:hover {
+    color: lightgreen;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check,.hide {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .hide{
+        display: block;
+        position: absolute;
+        top:-40px;
+        padding:10px;
+        right:0px
+    }
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+    ul {
+      position: fixed;
+      top: -15px;
+      right: -100%;
+      background-color: black;
+      width: 50%;
+      height: 100vh;
+      line-height: 100px;;
+       display: flex;
+      flex-direction: column;
+       align-items: center; 
+      transition: 3s;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+  }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">Govind</label>
+        <ul>
+            <li><a class="active" href="#">HTML</a><span class="hide"><label for="check" class="checkbtn"><i class='fas fa-times'></i>	&#xf057;</label></span></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">ReactJS</a></li>
+            <li><a href="#">PHP</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

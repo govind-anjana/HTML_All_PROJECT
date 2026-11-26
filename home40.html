@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .mean
+        {
+            width:100%;
+            height:99vh;
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+            position: fixed;
+        }
+        .div1
+        {
+            width:460px;
+            height:80px;     
+            background-color: orange;
+        }
+        .div2
+        {
+            width:460px;
+            height:80px;     
+            background-color: white;
+        }
+        .div2 img{
+            width:78px;
+            height:78px;
+            margin:1px 41%;
+        }
+        .div3
+        {
+            width:460px;
+            height:80px;     
+            background-color: green;
+        }
+        
+        h1
+        {
+            position: absolute;
+            top:40px;
+           margin-bottom:90px;
+           color:white;
+           font-size:53px;
+           letter-spacing: 2px;
+           font-family: sans-serif;
+           text-shadow: 1px 1px 0px red,2px 2px 0px brown,3px 3px 0px red,4px 4px 0px brown,5px 5px 0px red,6px 6px 0px brown;
+           animation :govind 3s infinite 5s ease-in;
+        }
+
+        @keyframes govind{
+            10%{
+                color:orange;
+                text-shadow: 1px 1px 0px olive,2px 2px 0px olivedrab,3px 3px 0px olive,4px 4px 0px olivedrab,5px 5px 0px olive,6px 6px 0px olivedrab;
+           animation :govind 3s infinite 3s ease-in;
+            }
+            50%{
+                color:green;
+                text-shadow: 1px 1px 0px gold,2px 2px 0px goldenrod,3px 3px 0px gold,4px 4px 0px goldenrod,5px 5px 0px gold,6px 6px 0px goldenrod;
+           animation :govind 3s infinite 3s ease-in;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="mean">
+            <h1>76th  Republic Day Celebration</h1><br>
+            <div class="divm">
+                <div class="div1"></div>
+                <div class="div2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ashoka_Chakra_1.svg/640px-Ashoka_Chakra_1.svg.png"></div>
+                <div class="div3"></div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            width:100%;
+            height:99vh;
+            background-color:black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .first{
+            width:50%;
+            display:flex;
+            border:3px solid black;
+            padding:5px;
+        }
+        .item{
+            
+            background-color:transparent;
+             
+            margin:3px 30px;
+            font-size:80px;
+            color:white;
+            border-radius: 20px;
+             
+        }
+            .govin,.go{
+                padding:0px 8px;
+                 
+            }
+           .go,.govi,.govind {
+            border-radius: 5px;
+            animation:go 3s infinite ease-in 0s;
+            
+           }
+           .gov,.govin {
+            border-radius: 5px;
+            animation:govi 3s infinite ease-in 0s;
+            
+           }
+            @keyframes go{
+                0%{color:white;
+            text-shadow: 10px 10px 50px fuchsia ,20px 20px 30px blue,-20px -10px 50px fuchsia ,-20px -20px 30px blue;
+            }
+                50%{color:white;
+            text-shadow: 10px 10px 50px green ,20px 20px 30px greenyellow,-20px -10px 50px green ,-20px -20px 30px greenyellow;
+            }
+                90%{color:white;
+            text-shadow: 10px 10px 50px gold ,20px 20px 30px greenyellow,-20px -10px 50px gold ,-20px -20px 30px greenyellow;
+            }      
+                }
+                @keyframes govi{
+                0%{color:white;
+            text-shadow: 10px 10px 50px purple ,20px 20px 30px palevioletred,-20px -10px 50px purple ,-20px -20px 30px palevioletred;
+            }
+                50%{color:white;
+            text-shadow: 10px 10px 50px forestgreen ,20px 20px 30px fuchsia,-20px -10px 50px forestgreen ,-20px -20px 30px fuchsia;
+            }
+                90%{color:white;
+            text-shadow: 10px 10px 50px gold ,20px 20px 30px greenyellow,-20px -10px 50px gold ,-20px -20px 30px greenyellow;
+            }
+                 
+                
+                }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />  
+</head>
+<body>
+    <div class="main">
+        <div class="first">
+            <div class="item"><i class="go fa-brands fa-apple"></i></div>
+            <div class="item"><i class="gov fa-brands fa-twitter"></i></div>
+            <div class="item"><i class="govi fa-brands fa-github"></i></div>
+            <div class="item"><i class="govin fa-brands fa-facebook-f"></i></div>
+            <div class="item"><i class="govind fa-brands fa-whatsapp"></i></div>
+        </div>
+    </div>
+</body>
+</html>

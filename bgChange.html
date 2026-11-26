@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-size: cover;
+            background-repeat: no-repeat;
+            color:white;
+        }
+        .main{
+            width:50%;
+            height: auto;
+            padding:10px;
+            margin:auto;
+            margin-top: 3%;
+            background-color: aqua;
+            display: flex;
+            justify-content:space-around;
+            border-radius: 10px;
+        }
+        button{
+                    padding:4px 5px;
+                    font-size: 24px;
+                    background-color: black;
+                    color:white;
+                    cursor: pointer;
+                    font-weight: 600;
+                    border-radius: 10px;
+                    transition: 2s;
+                }
+         button:hover{
+                      transform: scale(1.1);
+                      transform: skew(10deg,10deg);
+                }
+          main{
+            width:30%;
+            /* background-color: blue;  */
+            margin:auto;
+            margin-top: 10%;
+            text-align: center;
+            border:2px solid white;
+        }
+        h2{
+            font-family: sans-serif;
+        
+        }
+        span{
+
+            padding:3px 5px;
+            font-size: 50px;
+            font-weight: 600;
+            background-color: black;
+            border: 2px solid white;
+            margin:10px;
+            border-radius: 10px;    
+        }
+       .govind{
+            width:65%;
+            display: block;
+            padding:4px 0px 4px 20px;
+            font-size: 30px;
+            outline: none;
+            border-radius:10px;
+            margin-top: 26px;
+            margin-left:60px;
+            margin-bottom: 26px;
+            background-color:black;
+        }
+        .day span{
+            display:inline-block;
+            padding:3px 5px;
+            font-size: 44px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+            </style>
+</head>
+<body>
+                <div class="main">
+                    <button onclick="bgcolorchange('red','red')">Default</button>
+                    <button autofocus onclick="bgcolorchange('green','green')">Thems1</button>
+                    <button onclick="bgcolorchange('silver','purple')">Thems2</button>
+                    <button onclick="bgcolorchange('black')">Thems3</button>
+            <button onclick="bgcolorchange('orange','white')">Thems4</button>
+         </div>
+         <main>
+            <h2>A Complte Watch</h2><br>
+            <span class="year" >02</span>
+            <span class="year" >03</span>
+            <span class="year" >2024</span><br>
+            <span class="govind" id="time"></span>
+            <div class="day">
+            <span class="year">Satur</span>
+            <span class="year">18 c</span>
+            </div>
+        </main>
+</body>
+<script>
+   const bgcolorchange=(x,y="red")=>{
+
+        document.body.style.backgroundColor=x;       
+        document.body.style.color=y;
+        // document.body.style.backgroundImage=`url(${x})`;
+        // document.body.style.backgroundSize="cover";
+    }
+   
+    const time=document.querySelector('#time');
+    const year=document.querySelectorAll(".year");
+    const day=["Sunday","Monday","Tuesday","Webnesday","Thursday","Friday","Saturday"]
+     const watchs=()=>{
+        const d=new Date();
+        times= d.toLocaleTimeString();
+        time.innerHTML=times;
+                 date=d.getDate()
+                 
+                 month=d.getMonth()+1;
+                 date=date<=9?"0"+date:date;
+                 month=month<=9?"0"+month:month;
+                 
+                    year[0].innerText=date;
+                    year[1].innerText=month;
+                    year[2].innerText=d.getFullYear();
+                    year[3].innerText=day[d.getDay()];
+                 }
+     setInterval(()=>{
+        watchs()
+     },1000);
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        background-color: black;
+        padding:20px;
+        display: grid;
+        grid-template-columns:repeat(3,auto);
+        gap:10px;
+        
+        }
+        .box{
+        display: flex;
+      justify-content: center;
+      align-items: center;
+        border:2px solid;
+        font:italic 30px bolder;
+        padding:30px;
+        color:white;
+    
+    }
+    #box1{
+        grid-row: 1;
+        grid-column: 1/ span 3;
+        background-color: blue;
+    }
+    #box2{
+        
+        height:30vh;
+        grid-auto-rows: 3;
+    }
+    #box5{
+    grid-row: 3;
+    grid-column: 1/ span 3;
+    background-color: blue;
+}
+</style>
+<body>
+     <div id="main">
+        <div class="box" id="box1">Hold Grail Layout</div>
+        <div class="box" id="box2">Box-2</div>
+        <div class="box" id="box3">Box-3</div>
+        <div class="box" id="box4">Box-4</div>
+        <div class="box" id="box5">Box-5</div>
+         
+     </div>
+</body>
+</html>

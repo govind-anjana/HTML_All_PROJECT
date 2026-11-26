@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            background-color: aqua;
+            font-family: sans-serif;
+        }
+        .main{
+            padding:40px;
+            height:80vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #header{
+            font-size: 50xp;
+            color:darkslategray;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            padding:5px;
+        }
+        button{
+            font-weight: bold;
+            padding:10px;
+            font-size: 30px;
+            background-color: black;
+            color:white;
+            margin-bottom:20px;
+            letter-spacing: 2px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .container
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: brown;
+        }
+        .box{
+            background-color: white;
+            width:150px;
+            height:150px;
+            border:2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding:1px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <div class="main">
+        <h1 id="header">Let's Play</h1>
+        <button id="reset">Reset</button>
+        <div class="container">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+           
+        </div>
+    </div>
+</body>
+<script>
+          names=document.getElementById("header");
+         var reset=document.getElementById("reset");
+         var boxes=Array.from(document.getElementsByClassName("box"));
+         reset.addEventListener("click",reset=()=>{
+             winBoxes=[];
+             area.forEach((val,index)=>{
+                area[index]=null;
+             })
+             boxes.forEach(box=>{
+                box.innerHTML='';
+                box.style.background='';
+                box.style.cursor='pointer';
+                
+             })
+             names.innerHTML="let's play";
+             names.style.background="";
+             currentPaly=otext;
+         })
+        var area=[null,null,null,null,null,null,null,null,null];
+         otext="o";
+         xtext="x";
+         currentPaly=otext;
+         winBoxes=[];
+         function bindClickEvent(){
+            boxes.forEach(box=>
+            {
+                box.addEventListener("click",handleBoxClick);
+            })      
+         }
+
+         bindClickEvent();
+         function handleBoxClick(e){
+            if(winBoxes.length>0){
+                return;
+            }
+            const id=e.target.id;
+             if(!area[id]){
+                area[id]=currentPaly;
+                e.target.innerHTML=currentPaly;
+             
+                if(haspalywon(currentPaly)){  
+                     names.innerHTML=`${currentPaly} has won !!`;
+                    names.style.background='red'; 
+                    changeWinBoxes();           
+                    return;
+                }
+
+                currentPaly=currentPaly===otext?xtext:otext;      
+             }
+            }
+        function haspalywon(cPlay){
+            if(area[0]==cPlay){
+                if(area[1]===cPlay && area[2]===cPlay){
+                    winBoxes=[0,1,2];
+                     
+                    return true;
+                }
+                if(area[3]===cPlay && area[6]===cPlay){
+                    winBoxes=[0,3,6];
+                    return true;
+                }
+                if(area[4]===cPlay && area[8]===cPlay){
+                    winBoxes=[0,4,8];
+                    return true;
+                }
+            }
+            if(area[4]==cPlay){
+                if(area[1]===cPlay && area[7]===cPlay){
+                    winBoxes=[4,1,7];
+                    return true;
+                }
+                if(area[2]===cPlay && area[6]===cPlay){
+                    winBoxes=[4,2,6];
+                    return true;
+                }
+                if(area[3]===cPlay && area[5]===cPlay){
+                    winBoxes=[4,3,5];
+                    return true;
+                }
+            }
+            if(area[8]==cPlay){
+                if(area[7]===cPlay && area[6]===cPlay){
+                    winBoxes=[8,7,6];
+                    return true;
+                }
+                // if(area[2]===cPlay && area[5]===cPlay){
+                //     winBoxes=[8,2,5];
+                //     return true;
+                // }
+                // if(area[0]===cPlay && area[4]===cPlay){
+                //     winBoxes=[8,0,4];
+                //     return true;
+                // }
+            }
+        }
+        
+         function  changeWinBoxes(){
+            winBoxes.forEach(id=>{
+                boxes[id].style.background='lightgreen';
+            })
+            boxes.forEach(box=>{
+                box.style.cursor='not-allowed';
+            })
+         }
+</script>
+</html>

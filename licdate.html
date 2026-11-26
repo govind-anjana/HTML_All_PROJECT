@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .containtor{ 
+            height:99vh;
+            background-image: url('image5.jpg');
+            /* background-color: silver; */
+            background-size:cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter:blur(20px);     
+        }
+        .containtor2{ 
+            height:97vh;
+            background-image: url(image3.jpg);
+            /* background-color: silver; */
+            background-size:cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+        }
+        .date{
+            width:20%;
+            height:auto;      
+            background:black;
+            padding:40px;
+            text-align: center;
+            border-radius: 20px;
+            backdrop-filter: blur(40px);
+            box-shadow: 0px 0px 20px 10px red;
+            position: absolute;
+            top:26%;
+            transition: 5s;
+    }
+        .text{
+            margin-top:40%;
+            position:absolute;  
+            bottom:19%;
+            padding:20px 40px;
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 10px white;            
+        }  
+        input[type="text"]{
+            width:40px;
+            background-color:transparent;
+            color:white;
+            padding:0px 3px;
+            border:none;
+            outline:none;
+            font-size: 30px;
+            border-bottom:3px solid white;
+        }
+        input[type="text"]#year{
+            width:72px;
+            background-color:transparent;
+            color:white;
+            padding:0px 3px;
+            border:none;
+            outline:none;
+            font-size: 30px;
+            border-bottom:3px solid white;
+        }
+        .sales{
+           position: relative;
+           top:8px;
+            font-size:40px ;
+            font-weight: bold;
+            margin-top:50%;
+            padding-top:10px;
+            color:white;
+           
+        
+        }
+        /* @keyframes  govind{
+            10%{
+            border-top:5px solid black;
+            border-right:5px solid white;
+            border-bottom:5px solid black;
+            border-left:5px solid white;
+            };
+            50%{
+            border-top:5px solid white;
+            border-right:5px solid black;
+            border-bottom:5px solid white;
+            border-left:5px solid black;
+            };
+            90%{
+            border-top:5px solid black;
+            border-right:5px solid white;
+            border-bottom:5px solid black;
+            border-left:5px solid white;
+            }; */
+        /* } */
+        .num{
+            width:33%;
+            height:auto;
+            border-radius: 20px;;
+            border:3px solid black;
+            padding:20px 30px;
+            background-color: transparent;
+            backdrop-filter: blur(12px);
+            color:white;
+            box-shadow: 0px 0px 10px 5px white;
+        }
+        label{
+            font-size: 24px;
+            font-weight: 600;
+            font-family:Arial, Helvetica, sans-serif;     
+        }
+        input[type="number"]{
+            width: 40%;
+            padding:5px 10px;
+            font-size: 22px;
+            border:none;
+            outline: none;
+            border:2px solid blue;    
+            font-weight: 600;
+        }
+       .multi{
+        padding:4px;
+        text-align: center;
+       margin-right:23px;
+       } 
+        #text,#text1{
+            font-size: 24px;
+            font-weight: 600;
+            font-family:Arial, Helvetica, sans-serif;  
+            color:black;   
+            word-wrap: pre;
+        }
+        input[placeholder]{
+            color:white;
+        }
+        span{
+            color:white;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <div class="containtor">
+            <div class="date">
+                <input type="text" onkeyup="demo()" id="date" placeholder="Date">  <span class="sales">/</span>
+                <input type="text" onkeyup="demo()" id="month" placeholder="Month">  <span class="sales">/</span>
+                <input type="text" onkeyup="demo()" id="year" placeholder="Year">
+            </div> 
+            <div class="text">Age: <sapn id="ans">___</sapn></div>
+        </div>
+        <hr style="background-color:red; height:5px" >
+        <div class="containtor2">
+           <div class="num">
+            <label>Enter Any Number :    </label><input type="number" onkeyup="squr()" id="squr"><br><br>
+            <div class="multi">
+                <span id="text">Sqrt  &nbsp; : </span><span class="sqrt1"></span></div>      
+            <div class="multi">
+                <span id="text1">Cube : </span><span class="sqrt1"></span></div>
+            <div class="multi">
+                <span id="text1">Sqrt Root : </span><span class="sqrt1"></span></div>
+               
+             
+           </div>
+        </div>
+</body>
+<script>
+    function demo(){ 
+        const date=document.getElementById("date").value;
+        const month=document.getElementById("month").value;
+        const year=document.getElementById("year").value;
+         
+        if(date>31 || month>12 || year.length>=5){
+            alert("The Value Of Wrong");
+        }
+        else{
+       const to=month+"/"+date+"/"+year;
+            const old=new Date(to);
+            olddate=old.getDate();
+            oldmo=old.getMonth()+1;     
+            const d=new Date();
+            da=d.getDate();
+            mo=d.getMonth()+1;
+            ye=d.getFullYear();            
+            if(mo>=oldmo){
+                document.getElementById("ans").innerHTML=(ye-year);
+                if(mo==oldmo && da<=olddate){
+                document.getElementById("ans").innerHTML=(ye-year)-1;  
+                }
+                else{
+                    document.getElementById("ans").innerHTML=(ye-year);
+                }   
+            }
+            else{  
+                document.getElementById("ans").innerHTML=(ye-year)-1;
+            }        
+        }
+    }
+        function squr(){
+           const squr= document.getElementById("squr").value;
+           sqer= document.querySelectorAll(".sqrt1");
+           sqer[0].innerHTML=squr*squr;
+           sqer[1].innerHTML=squr*squr*squr;
+           // sqer[2].innerHTML=Math.sqrt(squr).toFixed(1);
+            sqer[2].innerHTML=Math.sqrt(squr).toLocaleString(1);
+        }
+</script>
+</html>

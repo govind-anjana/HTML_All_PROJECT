@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .containtor{
+            height:97vh;
+            background-color: aqua;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .images{
+            width:60%;
+            height:70%;
+            border: 3px solid red;
+         
+        }
+        .demo{
+            width:955px;
+            height:492px;
+            position: absolute;
+           margin: auto;   
+        }
+    </style> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="containtor">
+        <div class="images" id="image">       
+        </div>
+    </div>
+</body>
+<script>
+     window.localStorage.setItem("name","black") 
+    let i=0;
+    function run(){
+        image.style.display="inline"
+        const bgchane=["govind2.jpg","govind3.jpg","govind4.jpg","govind5.jpg"];
+        span=document.createElement("div");
+        span.className="demo";
+        span.style.backgroundImage="url("+bgchane[i]+")";
+        span.style.backgroundSize="cover";
+    
+        image.appendChild(span);
+        i++;
+      if(i=="4"){
+         i=0;  
+          }
+    }
+    setInterval(run,5000);
+</script>
+</html>

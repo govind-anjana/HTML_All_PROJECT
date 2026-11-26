@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+    .abc
+    {
+        width:40%;
+        background-color: rgb(0, 157, 255);
+        margin:auto;
+        margin-top:10%;
+    }
+     
+     </style>
+</head>
+<body>
+    <div class="abc">
+        <table border="3px" cellpadding="4px" cellspacing="6px" width="100%">
+            <tr>
+                <th>Enter Your Amount</th>
+                <th><input type="number" id="a1" onkeyup="amount()"><br>
+                   <input type="range" id="r1" oninput="range()" min="0" max="2000000"></th>
+            </tr>
+            <tr>
+                <th>Enter Your Ratr</th>
+                <th><input type="number" id="a2" onkeyup="amount()"><br>
+                <input type="range" id="r2" oninput="range()" min="0" max="15"></th>
+            </tr>
+            <tr>
+                <th>Enter Your Tanuare</th>
+                <th><input type="number" id="a3" onkeyup="amount()"><br>
+                <input type="range" id="r3" oninput="range()" min="0" max="36"></th>
+            </tr>
+            <tr>
+                <th>EMI:</th>
+                <th><p id="emi"></p></th>
+            </tr>
+            <tr>
+                <th>Interest:</th>
+                <th><p id="int"></p></th>
+            </tr>
+            <tr>
+                <th>Total Amount:</th>
+                <th><p id="amo"></p></th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function amount()
+    {
+       // p=document.getElementById("r1").value;
+       // q=document.getElementById("r2").value;
+       // r=document.getElementById("r3").value;
+        
+        document.getElementById("a1").value=p;
+        document.getElementById("a2").value=q;
+        document.getElementById("a3").value=r;
+       b=q/12/100;
+       r=r*12;
+       m=Math.pow(1+b,r);
+       emi=p*b*m/(m-1);
+       k=(emi*r)-p;
+       r=emi*r;
+        document.getElementById("emi").innerHTML=emi;
+        document.getElementById("int").innerHTML=k;
+        document.getElementById("amo").innerHTML=r;
+    }
+</script>
+</html>

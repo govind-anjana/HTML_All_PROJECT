@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+     <h1>Change Background Color</h1>
+     <p id="ans"></p>
+     <button id="start">Start</button>
+     <button id="stop">Stop</button>
+</body>
+    <script>
+        const background=function(){
+            hex="1234567890ABCDEF";
+            color="#";
+            for(let i=0;i<6;i++){
+                color +=hex[Math.floor(Math.random()*16)];
+
+            }
+            document.getElementById("ans").innerHTML=color;
+            return color;
+        }
+        let go;
+       function backgroundchange(){
+         
+        if(!go){
+           go=setInterval(backgrounds,1000);
+        }
+           function backgrounds(){
+            document.body.style.backgroundColor= background(); 
+           }      
+        }
+     off=function(){  
+            clearInterval(go)
+              go=null;
+        }
+      const setin= document.querySelector("#start").addEventListener("click",backgroundchange
+      )
+      document.querySelector("#stop").addEventListener("click",off)
+    </script>
+</html>

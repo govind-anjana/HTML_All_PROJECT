@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+ .a
+ {
+    width:25%;
+    background-color:black;
+    border:4px solid white;
+    margin:auto;
+    margin-top:1%;
+    padding-top:10%;
+    border-radius: 50px;
+ }
+table
+{
+    border-radius: 20px;
+}
+button
+{
+    width:60px;
+    height:59px;
+    padding:8px;
+    background-color:#708090;
+    font-weight: bold;
+    font-size:27px;
+    border:none;
+    border-radius: 50%;
+    color:white;
+
+}
+input[type="text"]
+{
+    width:90%;
+    height:auto;
+    background-color: black;
+    color:white;
+    font-size: 50px;
+    padding:4px;
+    border:none;
+    outline:none;
+    padding-left:20px; 
+}
+::placeholder
+{
+    padding-left:5px;
+color:red;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="black">
+    <div class="a">
+    <table width="100%" cellpadding="1px" cellspacing="10px">
+        <tr>
+            <t colspan="4"><input type="text" placeholder="0" readonly id="ans"></th>
+        </tr>
+<tr>
+    <th ><button style="background-color: silver;" onclick="x='';
+        document.querySelector('#ans').value=x;
+        ";>AC</button></th>
+    <th><button style="background-color: silver;">+/-</button></th>
+    <th><button style="background-color: silver;" onclick="x=x+'%';
+        document.querySelector('#ans').value=x;
+        ";>%</button></th>
+    <th><button style="background-color:goldenrod" onclick="x=x+'/';
+        document.querySelector('#ans').value=x;
+        ";>/</button></th>
+</tr>
+<tr>
+    <th><button onclick="x=x+'7';
+    document.querySelector('#ans').value=x;
+    ";>7</button></th>
+    <th><button  onclick="x=x+'8';
+        document.querySelector('#ans').value=x;
+        ";>8</button></th>
+    <th><button onclick="x=x+'9';
+        document.querySelector('#ans').value=x;
+        ";>9</button></th>
+    <th><button style="background-color:goldenrod;" onclick="x=x+'+';
+        document.querySelector('#ans').value=x;
+        ";>+</button></th>
+</tr>
+<tr>
+    <th><button onclick="x=x+'4';
+        document.querySelector('#ans').value=x;
+        ";>4</button></th>
+        <th><button  onclick="x=x+'5';
+            document.querySelector('#ans').value=x;
+            ";>5</button></th>
+        <th><button onclick="x=x+'6';
+            document.querySelector('#ans').value=x;
+            ";>6</button></th>
+        <th><button style="background-color:goldenrod"  onclick="x=x+'-';
+            document.querySelector('#ans').value=x;
+            ";>-</button></th>
+</tr>
+<th><button onclick="x=x+'1';
+    document.querySelector('#ans').value=x;
+    ";>1</button></th>
+    <th><button  onclick="x=x+'2';
+        document.querySelector('#ans').value=x;
+        ";>2</button></th>
+    <th><button onclick="x=x+'3';
+        document.querySelector('#ans').value=x;
+        ";>3</button></th>
+    <th><button style="background-color:goldenrod"  onclick="x=x+'+';
+        document.querySelector('#ans').value=x;
+        ";>+</button></th>
+        </tr>
+        <tr>
+            <th colspan="2"><button onclick="x=x+'0';
+                document.querySelector('#ans').value=x;
+                ";>0</button></th>
+                <th><button  onclick="x=x+'.';
+                    document.querySelector('#ans').value=x;
+                    ";>.</button></th>
+                <th><button style="background-color:goldenrod" onclick="
+                x=eval(x);
+                    document.querySelector('#ans').value=x;
+                    ";>=</button></th>
+        </tr>
+    </table>  
+    </table>
+    </table>
+</div>
+</body>
+<script>
+    let x="";
+    document.querySelector("#ans").value=x;
+    </script>
+</html>

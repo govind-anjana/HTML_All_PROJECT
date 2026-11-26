@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="ans" width="500" height="500" style="border:3px solid red"></canvas>
+    <script>
+        var ans=document.getElementById("ans");
+        ctx= ans.getContext("2d");
+    
+      // ctxx.beginPath(); 
+       ctx.moveTo(50,250);
+       ctx.lineTo(470,250);
+       ctx.moveTo(250,50);
+       ctx.lineTo(250,450);
+       ctx.moveTo(50,50);
+       ctx.lineTo(50,250);
+       ctx.moveTo(470,250);
+       ctx.lineTo(470,450);
+       ctx.moveTo(250,50);
+       ctx.lineTo(470,50);
+       ctx.moveTo(250,450);
+       ctx.lineTo(50,450);   
+       ctx.lineWidth=10;
+     ctx.lineCap="round";
+     ctx.strokeStyle="red";
+      //ctx.lineJoin="round";
+       ctx.stroke();
+
+    ctx.beginPath();
+       ctx.arc(140,150,10,0,2*Math.PI);
+       ctx.stroke();
+
+        ctx.beginPath();
+       ctx.arc(360,150,10,0,2*Math.PI);
+       ctx.stroke();
+
+        ctx.beginPath();
+       ctx.arc(140,350,10,0,2*Math.PI);
+       ctx.stroke();
+
+        ctx.beginPath();
+       ctx.arc(360,350,10,0,2*Math.PI);
+       ctx.stroke();
+       
+    </script>
+</body>
+</html>

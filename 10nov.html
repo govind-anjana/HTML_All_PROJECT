@@ -1,0 +1,105 @@
+ <html>
+ <head>
+ </head>
+<script>
+function dd()
+{
+var x=document.getElementById("ab").value;
+var y=document.getElementById("abcd").value;
+var z=document.getElementById("abcde").value;
+var za=document.getElementById("abcdef").value;
+document.getElementById("abc").style.backgroundColor=x;
+document.getElementById("abc").style.color=y;
+document.getElementById("abc").style.fontFamily=z;
+document.getElementById("abc").style.fontSize=za;
+}
+</script>
+ <body>
+ <select id="ab" onchange="dd()">
+ <option>Select Your Background Color</option>
+ <option value="red">Red</option>
+ <option value="green">Green</option>
+ <option value="pink">Pink</option>
+ </select><br><br>
+ <select id="abcd" onchange="dd()">
+ <option>Select Your Color</option>
+ <option value="red">Red</option>
+ <option value="green">Green</option>
+ <option value="pink">Pink</option>
+ </select>
+<br><br>
+<select id="abcde" onchange="dd()">
+ <option>Select Your Font Family</option>
+ <option value="serif">Serif</option>
+ <option value="sans-serif">Sans-serig</option>
+ <option value="monospace">Monospace</option>
+ <option value="cursive">Cursive</option>
+ <option value="fantasy">Fantasy</option>
+ </select><br><br>
+<select id="abcdef" onchange="dd()">
+ <option>Select Your Font size</option>
+ <option value="15px">Small</option>
+ <option value="18px">Extra Small</option>
+ <option value="21px">Medium</option>
+ <option value="25px">Extra Large</option>
+ <option value="29px">Large</option>
+ </select>
+<br><br>
+ <table border="3px" cellpadding="5px" cellspacing="10px" bgcolor="silver" id="abc">
+ <tr>
+ <td>Name :</td>
+ <td><input type="text" required class="abc"></td>
+ </tr>
+ <tr>
+ <td>Father Name :</td>
+ <td><input type="text" required class="abc"></td>
+ </tr>
+ <tr>
+ <td>Subject</td>
+ <td><select id="bca" onclick="demo()">
+ <option>Select Your Subject</option>
+ <option value="bca 1 year">BCA I Year</option>
+  <option value="bca 2 year">BCA II Year</option>
+  <option value="bca 3 year">BCA III Year</option>
+ </select></td>
+ </tr>
+ <tr>
+ <td>Fees</td>
+ <td><input type="text" readonly id="fees"></td>
+ </tR>
+ <tr>
+ <td>Jma</td>
+ <td><input type="number" id="jma" onkeyup="demo()"></td>
+ </tR>
+ <tr>
+ <td>Baki</td>
+ <td><input type="number" id="bki"></td>
+ </tR>
+ <tr>
+ <th colspan="2"><input type="submit"></th>
+ </tR>
+ </table>
+ </body>
+ <script>
+ function demo()
+ {
+ var x=document.getElementById("bca").value;
+ if(x=="bca 1 year")
+ {
+  y=document.getElementById("fees").value=7500;
+ }
+ else
+ if(x=="bca 2 year")
+ {
+ y=document.getElementById("fees").value=8000;
+ }
+ else
+ if(x=="bca 3 year")
+ {
+  y=document.getElementById("fees").value=9000;
+ }
+ z=document.getElementById("jma").value;
+ document.getElementById("bki").value=y-z;
+ }
+ </script>
+ </html>

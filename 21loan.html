@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan</title>
+    <style>
+        body{
+            height:500px;
+            display: flex;
+            justify-content: center;
+            background-color:rgb(15, 170, 154) ;
+            align-items: center;
+        }
+        .main{
+            width:40%;
+            border-radius: 10px;
+            height: 450px;
+            background-color: darkslateblue;
+    
+        }
+        P{
+            color:white;
+            font-size: 18px;
+            font-family: arial;
+            margin-left: 20%;
+        }
+        .loan{
+      width:100%;
+      height:60px;
+      display: flex;
+            justify-content: center;
+            align-items: center;
+      background-color: aqua;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+        }
+        a{
+            margin:20px;
+            font-size: 20px;
+            font-family: sans-serif;
+            color:white;
+            font-weight: bold;
+        }
+        a:hover{
+            color:black;
+            background-color: cadetblue;
+        }
+        .in{
+        height: 350px;
+        }
+        #a1,#a2,#a3{
+            width:50%;
+            margin-left:25%;
+        }
+        #r1,#r2,#r3{
+            width:50%;
+            margin-left:25%;
+        }
+        #res{
+            width:20%;
+            height:100px;
+            margin-left: 20%;
+            background-color: white;
+        }
+        h2{
+            text-align: center;
+            color:rgb(240, 223, 36);
+            font-family: arial;
+        }
+        #an{
+            width:20%;
+            margin-left:15%;
+            height:450px;
+  
+        }
+        #cont{
+            width:100%;
+            height:100px;
+            border-radius: 20px;
+            margin-top: 40px;
+            background-color: aliceblue;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        h3{
+ font-family: arial;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="loan">
+            <a onclick="home()"href="#" id="hl">Home loan</a>
+            <a onclick="personal()" href="#">Personal loan</a>
+            <a onclick="car()" href="#">Car loan</a>
+        </div>
+<div class="in">
+    <h2 id="m2">Home Loan</h2>
+    <p> Loan Amount</p>
+<input type="number" onkeyup="inputrange()" id="a1"><br/>
+<input type="range" oninput="rangein()"  id="r1" value="" min="0" max="20000000"><br/>
+<p>Interest Rate</p>
+<input type="number" onkeyup="inputrange()"id="a2"><br/>
+<input type="range" oninput="rangein()" id="r2" value="" min="0" max="20"><br/>
+<p>Loan Time</p>
+<input type="number" onkeyup="inputrange()"id="a3"><br/>
+<input type="range" oninput="rangein()" id="r3" value="" min="0" max="30"><br/>
+
+</div>
+    </div>
+    <div id="an">
+  <div id="cont">
+    <h3>EMI :</h3>
+    <h3 id="emi">0</h3>
+  </div>
+  <div id="cont">
+    <h3>Interest :</h3>
+    <h3 id="int">0</h3>
+  </div>
+  <div id="cont">
+    <h3>Total Amu :</h3>
+    <h3 id="tam">0</h3>
+  </div>
+
+</div>
+
+<script>
+
+        function rangein(){
+  
+          let p=document.getElementById("r1").value;
+          let r=document.getElementById("r2").value;
+          let n=document.getElementById("r3").value;
+
+          document.getElementById("a1").value=p;
+          document.getElementById("a2").value=r;
+          document.getElementById("a3").value=n;
+
+           r=r/12/100;
+           console.log(r);
+           w=Math.pow(1+r,n);
+           e=(p*r*w)/((w-1));
+           q=e*n;
+           t=Math.floor(q);
+           s=Math.floor(e);
+           k=t-p;
+             document.getElementById("emi").innerHTML=s;
+              document.getElementById("int").innerHTML=k;
+              document.getElementById("tam").innerHTML=t;
+   }
+
+
+        function home(){
+
+    document.getElementById("r1").value="0";
+    document.getElementById("r1").max=20000000;
+    document.getElementById("r2").value="0";
+    document.getElementById("r2").max=20;
+    document.getElementById("r3").value="0";
+    document.getElementById("r3").max=30;
+    document.getElementById("m2").innerHTML="Home Loan";
+}
+
+ function personal(){
+      document.getElementById("r1").value="0";
+       document.getElementById("r1").max=3000000;
+       document.getElementById("r2").value="0";
+       document.getElementById("r2").max=11;
+       document.getElementById("r3").value="0";
+       document.getElementById("r3").max=3;
+       document.getElementById("m2").innerHTML="Personal Loan";
+ }
+
+ function car(){
+    document.getElementById("r1").value="0";
+     document.getElementById("r1").max=2000000;
+     document.getElementById("r2").value="0";
+      document.getElementById("r2").max=20;
+      document.getElementById("r3").value="0";
+     document.getElementById("r3").max=7;
+   document.getElementById("m2").innerHTML="Car Loan";
+ }
+</script>
+</body>
+</html>

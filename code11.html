@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <style>
+        img{
+            width:100px;
+            height:100px;
+        }
+     </style>
+    <title>Document</title>
+ </head>
+ <body>
+    <ul id="div1">
+         <li><img src="govind2.jpg"></li>
+         <li><img src="govind3.jpg"></li>
+         <li><img src="govind4.jpg"></li>
+    </ul>
+ </body>
+ <script>
+            document.getElementById("div1").addEventListener("click",function(e){
+                co=e.target.parentNode;
+               co.remove();
+               console.log(co);
+                    } )
+            
+ </script>
+ </html>

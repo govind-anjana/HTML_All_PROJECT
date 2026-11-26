@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .blue{
+            width:410px;
+            height:410px;
+            background-color:orange;
+            margin:4px;
+            position:relative;
+            
+        }
+        #red{
+            width:50px;
+            height:50px;
+            background-color:red;
+            position:absolute;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="demo()">Click Me</button>
+    <br>
+    <div class="blue">
+        <div id="red">govind</div>
+    </div>
+   </div>
+</body>
+<script>
+   function demo(){
+   red= document.getElementById("red");
+   var c=0;
+  sam= setInterval(go,5);
+   
+   function go(){
+    if(c==360){
+        clearInterval(sam);
+    }else{
+    z=c++;
+   
+    red.style.top=z+"px";
+    red.style.transform=`rotate(${z}deg)`
+    red.style.left=z+"px";
+   }
+}
+   }
+</script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+
+    *{
+        padding:0px;
+        margin:5px;
+    }
+    .containtor{ 
+            width:100%;
+            height:auto;
+            background-image: url(image3.jpg);
+            /* background-color: silver; */
+            background-size:cover; 
+            display: inline-block;      
+        }
+        .date{
+            width:33%;
+            height:auto;
+            background: linear-gradient(130deg,pink,orange,green);
+            padding:30px;
+            border-radius: 20px;
+            backdrop-filter: blur(40px);
+            box-shadow: 0px 0px 20px 10px black;;
+            margin:6% auto 4%;
+                
+        }
+        label{
+            font-size: 24px;
+            font-weight: 600;
+            font-family:Arial, Helvetica, sans-serif;     
+        }
+        input[type="number"]{
+            width: 35%;
+            padding:5px 10px;
+            font-size: 22px;
+            border:none;
+            outline: none;
+            border:3px solid black;    
+            font-weight: 600;
+            border-radius: 10px;
+            
+        }
+        #go{
+            display:inline-block; 
+            margin:12%; 
+            margin-left:30%; 
+            margin-top:1%; 
+            font-size: 30px;
+            font-weight: 700;
+            background-color: blue;  
+            color:white;
+            border-radius: 10px;
+          
+        }
+        span{  
+
+            padding:3px 10px;
+            border-right:2px solid red;
+
+        }
+        button{
+           
+           padding:4px 20px;
+           font-size: 24px;;
+           color:white;
+           margin-top:10px;
+           cursor: pointer;
+           font-family: sans-serif;
+           background:linear-gradient(to top left,pink,blue);
+           border: none;
+           border-radius: 20px;    
+       }
+       .div1{
+         color:red;
+       }
+ </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="containtor">
+        <div class="date">
+            <label>Enter Table Number :    </label><input type="number"  id="start"><br><br>
+            <label>Enter End Table Nu :    </label><input type="number"   id="end"> 
+            <br>
+            <button onclick="start()">Click</button>
+        </div>
+        <div id="go">
+           
+        </div>
+        
+        
+    </div>
+</body>
+<script>
+    function start(){
+ const start=document.getElementById("start").value;
+ const end=document.getElementById("end").value;
+ let ans=document.getElementById("go");
+let count=0;
+ for(j=1;j<=end;j++){
+     count++;
+     if(count<=4){
+         span=document.createElement("span")  
+         span.innerHTML= `${start}*${j}=${j*start}`;
+         ans.appendChild(span);        
+        } 
+        else{
+            span=document.createElement("span")  
+            span.innerHTML= `<hr>${start}*${j}=${j*start}`;
+            ans.appendChild(span); 
+            count=1;
+        } 
+        // if(count==5){
+            
+        //     span.innerHTML="<br>";
+        //     span=document.createElement("span")  
+        //     span.innerHTML= `${start}*${j}=${j*start}`;
+        //     ans.appendChild(span); 
+        //     count=1;
+        // }
+    }
+    console.log(count);
+ }
+    
+</script>
+</html>

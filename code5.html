@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            width:90%;
+            height:96vh;
+            background:linear-gradient(silver,pink);
+            background-size: cover;
+            background-repeat: no-repeat;
+           
+        }
+        .main{
+            width:30%;
+            height:auto;
+            border:3px solid white;
+            margin:auto;
+            margin-top:20%;
+            padding:15px;
+        }
+        .div1{
+            width:90%;
+            height:auto;
+            padding:15px;
+            background-color:white;  
+            border-radius: 10px;
+        
+        }
+        input[type="text"]{
+            width:70%;
+            padding:5px;
+            font-size:20px;
+            background:transparent;
+             border-radius: 10px;;
+            border:2px solid red;
+            outline:none;
+        }
+        
+        input[type="button"]{
+            width:20%;
+            padding:4px;
+            font-size:20px;
+            float:right;
+            background-color:black;
+            color:white;
+            border-radius: 10px;
+        }
+        #tasks{
+            width:90%;
+            height:auto;
+            background-color:white;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding:14px;
+        }
+        #taskname{
+            color:red;
+            font-size: 20px;
+            font-weight: 300;;
+            text-transform: capitalize;
+        }
+        .go{
+            margin-top:20px;
+            padding:6px 10px;
+            border-bottom: 3px solid silver;
+            cursor: pointer; 
+        }
+        .delate{
+            float:right;
+        }
+        .com{
+            color:blue;
+            text-decoration: 2px line-through red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="div1">
+            <input type="text" id="newtask" placeholder="Enter your Messages">
+            <input type="button" id="push" onclick="demo()" value="Add">
+        </div>
+            <div id="tasks">
+
+            </div>
+        </div>
+        <script>
+            document.querySelector("#push").onclick=function(){
+    if(document.querySelector("#newtask").value.length==0){
+        alert("task");
+    }
+    else{
+        document.querySelector("#tasks").innerHTML +=` <div class="go">
+        <span id="taskname">
+        ${document.querySelector("#newtask").value}</span>
+        <button class="delate">De</button>
+        </div>`
+       const  current=document.querySelectorAll(".delate");
+       for(var i=0;i<current.length;i++){
+        current[i].onclick=function(){
+             this.parentNode.remove();
+        }
+       }
+       const  tasks=document.querySelectorAll("#taskname");
+       for(var i=0;i<tasks.length;i++){
+        tasks[i].onclick=function(){
+             this.classList.toggle('com');
+        }
+       }
+        document.querySelector("#newtask").value="";
+    }
+}
+        </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        main{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div{
+            width:35%;
+            height:auto;
+            background-color:silver;
+            border-radius:10px;
+            padding:10px;
+             
+        }
+        .do{
+            width:30%;
+            height:auto;
+            background-color:black;
+            padding:10px;
+            font-size: 27px;
+            color:white;
+            text-align: center;
+         
+        }
+        h3{
+            
+            color:pink;
+            padding:4px;
+        }
+        input[type="radio"]{
+             margin:10px;
+             width:20px;
+             height:20px;
+             accent-color: red;
+        }
+        label{
+            font-size: 20px;
+        }
+        button{
+            width:100%;
+            padding:4px;
+            font-size:20px;
+            color:blue;
+            font-weight: bold;
+            background: linear-gradient(to top right,pink,gold,white);
+            backdrop-filter:blur(20%);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <div class="div" id="div">
+            <h2 id="qq">Enter The Question is Answer</h2>
+            <input type="radio" id="option1" value="a" class="options" name="r1"><label for="option1">Option1</label><br>
+            <input type="radio" id="option2" value="b" class="options" name="r1"><label for="option2">Option2</label><br>
+            <input type="radio" id="option3" value="c" class="options" name="r1"><label for="option3">Option3</label><br>
+            <input type="radio" id="option4" value="d" class="options" name="r1"><label for="option4">Option4</label><br><br>
+            <button onclick="demo()">Submit</button>
+            
+        </div>
+    </main>
+</body>
+<script>
+    question=[
+        {
+            'que':"Enter Your Name is:",
+            'a':"Govind",
+            'b':"Aniket",
+            'c':"Ritesh",
+            'd':"Lakhan",
+            'ans':"a" 
+         },
+         {'que':"What Do You Live:",
+            'a':"Mahuwa",
+            'b':"Sitamau",
+            'c':"Mahuwi",
+            'd':"Parli",
+            'ans':"c" 
+         },
+         {
+            'que':"Enter Your Name is:",
+            'a':"Govind",
+            'b':"Aniket",
+            'c':"Ritesh",
+            'd':"Lakhan",
+            'ans':"a"
+         },
+    ];
+   let index=0;
+    let right=0;
+    let wrong=0;
+    len=question.length;   
+    main= document.getElementById("main");
+    div= document.getElementById("div");
+    h1=document.getElementById("qq");
+   let inputs=document.querySelectorAll(".options");
+    firsttime=()=>{
+        reset();
+        if(len==index){
+          go();
+        }
+         data=question[index];
+         h1.innerHTML=`${index+1}) ${data.que}`;
+         inputs[0].nextElementSibling.innerHTML=data.a;
+         inputs[1].nextElementSibling.innerHTML=data.b;
+         inputs[2].nextElementSibling.innerHTML=data.c;
+         inputs[3].nextElementSibling.innerHTML=data.d;
+    }
+
+  function demo(){
+   let data=question[index];
+    ac=det();
+     
+     if(ac==data.ans)
+     {
+        
+        right++;
+     }
+     else{
+        wrong++;
+     }
+     index++;
+     firsttime();
+     return;
+    
+     }
+    
+  const det=()=>{
+    let answer
+     inputs.forEach(
+        (input)=>{
+            if(input.checked){
+                 answer= input.value;
+            }
+        }
+     )
+     return answer;
+  }
+  reset=()=>{
+    inputs.forEach(
+        (input)=>{
+            input.checked=false;
+        }
+    ) 
+  }
+  go=()=>{
+    div.style.display="none";
+    so=document.createElement("div");
+    so.className="do";
+    so.innerHTML=`<h3>Congertion </h3>Right Answer is :${right}<br>Wrong is :${wrong} <br>Total Question is :${len}`;
+    main.appendChild(so);
+  }
+    firsttime();
+</script>
+</html>

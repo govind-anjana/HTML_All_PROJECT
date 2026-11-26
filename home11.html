@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         *{
+            padding:0px;
+            margin:0px;
+        
+         }
+         #game{
+            width:600px;
+            height:500px;
+            border:2px solid red;
+            margin:auto;
+            background-color: aquamarine;
+            overflow: hidden;
+         }
+         #block {
+            width:43px;
+            height:500px;
+            background:linear-gradient(to left,#84aa41,#e5fc89);
+            position:relative;
+            left:400px;
+            animation:slice 2s linear infinite;
+         }
+         @keyframes slice {
+            0%{
+                left:500px;
+            }
+            100%{
+                left:-50px;
+            }
+         
+         }
+         #hole {
+            width:43px;
+            height:150px;
+            background-color:aquamarine;
+            position:relative;
+            left:400px;
+            top:-500px;
+            animation:slice 2s linear infinite;
+         }
+         #img{
+            width:60px;
+            height:60px;
+            border-radius: 50%;;
+            background-color: red;
+            position: absolute;
+            top:90px;
+
+         }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game">
+        <div id="block"></div>
+        <div id="hole"></div>
+        <div id="img"></div>
+    </div>
+</body>
+<script>
+    const block=document.getElementById("block");
+    const hole=document.getElementById("hole");
+    const character=document.getElementById("img");
+    let jumping=0;
+    let counter=0;
+    hole.addEventListener("animationiteration",()=>{
+        let random=-((Math.random()*300)+150);
+        hole.style.top=random+"px";
+        counter++;
+
+    })
+    setInterval(function(){
+        let charatorTop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        if(jumping==0){
+            character.style.top=(charatorTop+3)+"px";
+        }
+        let blockLeft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+        let holeTop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+        let cTop=-(500 -charatorTop);
+        if((charatorTop >480) || ((blockLeft > -50) && (blockLeft < 20) && ((cTop < holeTop ) || (cTop > holeTop+130)))){
+            alert("Game Over"+(counter-1));
+            character.style.top=100+"px";
+            counter=0;
+        }
+    },10);
+    function jump(){
+        jumpcount=0;
+        jumpInterval=setInterval(function (){
+            characterTop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+            if((characterTop > 6) && (jumpcount <15) ){
+                charater.style.top=(characterTop -3) +"px";
+            }
+            if(jumpcount > 20){
+                clearInterval(jumpInterval);
+                jumping=0;
+                jumpcount=0;
+            }
+            jumpcount++;
+        },10);
+    }
+</script>
+</html>

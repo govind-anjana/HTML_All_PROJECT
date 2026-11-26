@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .containtor{
+            height:97vh;
+            background-color:black;
+        }
+        .main{
+            background-color:white;
+            position: relative;
+            top:25%; 
+            left:40%;
+            width:25%;
+            padding:15px;
+            border:3px solid black;
+            border-radius:10px;
+            box-shadow: 0px 0px 5px 4px pink;
+        }
+        input[type="number"]  {
+            width:95%;
+            padding:3px 5px;
+            font-size:20px;
+            outline:none;
+        }
+        button{
+            width:100%;
+            padding:5px;
+            font-size:20px;
+            font-weight: 700;
+            color:white;
+            border:none;
+            border-radius:10px;
+            cursor: pointer;
+            background:linear-gradient(to top left,blue,pink);
+        }
+        #ans{
+            width:30%;
+            position: relative;
+            top:40%;
+            left:40%;
+        }
+        .ans1{
+            font-size:19px;      
+            background-color: white;
+            padding-left:20px;
+            padding:5px;
+            font-weight: 300;
+            border-radius:20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-shadow: 0px 0px 15px 7px silver;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="containtor">
+        <div class="main">
+            <input type="number" id="price" placeholder="Enter The Price"> <br><br>
+            <input type="number" id="quntity"placeholder="Enter The Product Quntity"> <br><br>
+            <button onclick="demo()">Calculator</button>
+        </div>
+        <br>
+        <div id="ans">
+             
+        </div>
+    </div>
+</body>
+<script>
+    function demo(){
+         const price=document.getElementById("price").value;;
+         const quntity=document.getElementById("quntity").value;
+         const ans=document.getElementById("ans");
+         x=price*quntity;
+         console.log(x);
+          if(x>=25000){
+            z=x*12/100;
+            pra=12;
+          }
+          else if(x>=20000){
+            z=x*8/100;
+            pra=8;
+          }
+          else if(x>=15000){
+            z=x*6/100;
+            pra=6;
+          }
+          else if(x>=10000){
+            z=x*4/100;
+            pra=4;
+          }
+          else if(x>=5000){
+            z=x*2/100;
+            pra=2;
+          }
+          else if(x>2500){
+            z=x*1/100;
+            pra=1;
+          }
+          else {
+            z=0;
+            pra=0;
+          }
+          g='Price of Per Product is :'+price;
+          qp='The Quntity Of Product:'+quntity;
+          pm='The Price of Amount :'+x;
+          dc=`The Discount is ${pra}%:${z}`;
+          to=`The Price Total Product is ${x}-${z}:${x-z}`; 
+          console.log(x);
+         const div=document.createElement("div");   
+         div.innerHTML=`${g}<br>${qp}<br>${pm}<br>${dc}<br>${to}<br>`;
+         div.className='ans1';
+         ans.appendChild(div);
+    }
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>*
+    {
+        margin:0px;
+        padding:0px;
+        list-style-type: none;
+
+    }
+        .go{
+            position:fixed;
+             left:-250px;
+            width:250px;
+            height:80vh;
+            background-color: blue;
+            transition:5s;
+        }
+        header{
+            font-size:40px;
+            color:white;
+
+        }
+        ul li{
+            line-height: 50px;
+            width:90%;
+            border-top: 2px solid white;
+            border-bottom: 2px solid black;
+        }
+        #check{
+            display: none;;
+        }
+        label #fi , label #se{
+            position:absolute;
+            background-color: black;
+        }
+        label #fi{
+            color:red;
+            font-size: 30px;
+            padding:5px;
+            top:20px;
+            left:20px;
+        }
+        label #se{
+            color:white;
+            
+            font-size: 29px;
+            padding:4px;
+            z-index: 1;  
+            left:175px;
+        }
+        #check:checked~.go{
+            left:0;
+            color:red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <span id="fi">Open</span>
+        <span id="se">Close</span>
+    </label>
+    <div class="go">
+        <header>New Page</header>
+        <ul class="or">
+            <li>Home</li>
+            <li>govind</li>
+            <li>Anjana</li>
+            <li>Patel</li>
+            <li>Seittg</li>
+        </ul>
+    </div>
+</body>
+</html>

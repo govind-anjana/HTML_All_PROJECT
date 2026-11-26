@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *
+        {
+            padding:0px;
+            margin:0px;
+            box-sizing:border-box;
+        }
+        .main{
+            width:100%;
+            height:97vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+   .a {
+    width:24%;
+    height:15%;
+    background-color: aliceblue;
+    border-radius:20px;
+    text-align: center;
+   }
+   button{
+    
+     padding:auto;
+    width:100%;
+    margin-top:6px;
+    font-size: 30px;
+    border:none;
+    background-color: pink;
+    cursor:pointer;
+   }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="a">
+            <h1 id="ans"></h1>
+   <button id="ci">Click</button>
+        </div>
+    </div>
+     
+</body>
+<script>
+    getcolor = () => 
+    {
+      var a=Math.floor(Math.random() * 16777215);
+      var b="#"+ a.toString(16);
+      document.body.style.backgroundColor=b;  
+      document.getElementById("ans").innerHTML=b.toUpperCase();   
+    } 
+    document.getElementById("ci").addEventListener("click",getcolor);
+    getcolor();
+</script>
+</html>
+
+ 

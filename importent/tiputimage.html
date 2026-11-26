@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .main{
+        width:99%;
+        height:225px;
+        /* border:2px solid black; */
+        position:  sticky;
+        top:10px;
+        overflow: hidden;
+        margin:auto;
+        padding:10px;
+        background-color: black;
+    }
+    .box{
+        width:250px;
+        height:200px;
+        background-color: brown;
+        position: absolute;
+        border-radius:10px;
+        left:calc(250px * 7);
+        /* left:100%; */
+        animation: scroll 10s linear infinite;   
+    }
+    .a1{animation-delay: calc(10s / 7 * (7 - 1) * -1);}
+    .a2{animation-delay: calc(10s / 7 * (7 - 2) * -1);}
+    .a3{animation-delay: calc(10s / 7 * (7 - 3) * -1);}
+    .a4{animation-delay: calc(10s / 7 * (7 - 4) * -1);}
+    .a5{animation-delay: calc(10s / 7 * (7 - 5) * -1);}
+    .a6{animation-delay: calc(10s / 7 * (7 - 6) * -1);}
+    .a7{animation-delay: calc(10s / 7 * (7 - 7) * -1);}
+    @keyframes scroll {
+        to{
+            left:-200px;
+        }
+    }
+    .main1{
+        width:99%;
+        /* height:300px; */
+        margin:auto;
+        padding:20px;
+        border:2px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        position: relative;
+        gap:30px;
+    }
+    .box1{
+        height:350px;
+    }
+    .box img,.box1 img{
+        width: 100%;
+        height:100%;
+        background-size: cover;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="box a1"><img src="https://media.gettyimages.com/id/2167276215/photo/warsaw-poland-indian-prime-minister-narendra-modi-at-the-end-of-a-joined-press-conference.jpg?s=612x612&w=0&k=20&c=CcY68KnNBmivmG36_PBxP99meySVFl0yg9EdOtVHsKs=" alt="loading"></div>
+            <div class="box a2"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/06/H20240609160356.jpg"></div>
+            <div class="box a3"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/08/H20240815164195-scaled.jpg"></div>
+            <div class="box a4"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/03/H20240310156430.jpg"></div>
+            <div class="box a5"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/09/H20240916166325.jpg"></div>
+            <div class="box a6"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/09/H20240915166271.jpg"></div>
+            <div class="box a7"><img src="https://www.pmindia.gov.in/wp-content/uploads/2024/09/H20240906165769-1.jpg"></div>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="box1"><img  src="https://www.pmindia.gov.in/wp-content/uploads/2024/06/H20240627161860-e1719483790305.jpg"></div>
+        <div class="box1"><img  src="https://www.pmindia.gov.in/wp-content/uploads/2024/03/H20240311156441.jpg"></div>
+
+    </div>
+</body>
+</html>

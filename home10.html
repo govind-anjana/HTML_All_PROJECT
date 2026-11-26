@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home10.css">
+</head>
+<body>
+   <div id="add"></div>
+    <div id="team">
+        <div id="block"></div>
+        <div id="charater"></div>
+    </div>
+</body>
+<script>
+ var charater=document.getElementById("charater");
+ var counter=0;
+ function setLeft(){
+   var left=parseInt(window.getComputedStyle(charater).getPropertyValue("left"));
+    left -=100;
+    if(left >=0){
+    charater.style.left=left+"px";
+    }
+ }
+ function setRight(){
+    left=parseInt(window.getComputedStyle(charater).getPropertyValue("left"));
+    left +=100;
+    if(left<300)
+    charater.style.left=left+"px";
+ }
+ document.addEventListener("keyup",event=>{
+    if(event.key=="ArrowLeft"){setLeft();}
+    if(event.key=="ArrowRight"){setRight();}
+ })
+ var block=document.getElementById("block");
+ block.addEventListener("animationiteration", ()=>{
+    random=Math.floor(Math.random()*3);
+    left=random*100;
+    block.style.left=left+"px";
+    c=counter++;
+    c=c+1
+    document.getElementById("add").innerHTML="Scores : "+c;
+
+   
+ })
+ setInterval(function(){
+   charaterLeft=parseInt(window.getComputedStyle(charater).getPropertyValue("left"));
+   blockLeft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+   blockTop=parseInt(window.getComputedStyle(block).getPropertyValue("top"));
+   if(charaterLeft==blockLeft && blockTop >300 && blockTop < 500){
+    alert("The Total Score :"+counter);
+    block.style.animation="none";
+   }
+ },1)
+</script>
+</html>

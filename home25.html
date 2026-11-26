@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        main{
+            width:25%;
+            height:auto;
+            background-color:silver;
+            margin:auto;
+            margin-top:5%;
+        }
+        label{
+            font-size:25px;
+        }
+        input{
+            width: 90%;
+            height:30px;
+            padding:5px;
+            font-size:22px;
+           border-radius: 14px;
+           border: none;
+            outline: none;
+            margin-left:8px;
+        }
+        button{
+            width:100%;
+            padding:5px;
+            font-size: 25px;
+            margin:10px 0px 1px ;
+            
+        }
+        select{
+            width:24%;
+            height:30px;
+            font-size:20px;
+            margin-top:10px;
+            margin-left:20px;
+        }
+        #anss{
+            font-size:32px;
+            padding:0xx;
+             letter-spacing: 3px;
+             color:red;
+             margin:2px 0px 5px 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <label for="name">Enter Your Name</label><br>
+        <input type="text" id="name" required><br><br>
+        <label for="age">Enter Today Date is:</label><br>  
+        <select id="ydate">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+        </select>
+        <select id="ymonth">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <select id="yson">
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+        </select>
+        <label for="age">Enter Your Age:</label><br>  
+        <select id="ldate">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+        </select>
+        <select id="lmonth"  >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <select id="lson">
+            <option>2000</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+            <option>2009</option>
+            <option>2010</option>
+        </select>
+        <button onclick="govind()">Submit</button>
+        <div id="anss">go</div>
+    </main>
+</body>
+<script>
+    function govind(){
+        var ydate=  document.getElementById("ydate").value;
+        var ymonth=  document.getElementById("ymonth").value;
+        var yson=  document.getElementById("yson").value;
+     var to=ymonth+"/"+ydate+"/"+yson;
+
+      var lson=  document.getElementById("lson").value;
+      var lmonth= document.getElementById("lmonth").value;
+      var ldate=  document.getElementById("ldate").value;
+      la=lmonth+"/"+ldate+"/"+lson;
+        
+
+      //today
+        var d=new Date(to);
+        var da=d.getDate();
+         var ma=d.getMonth(ymonth)+1;
+         var fu=d.getFullYear();
+        time=da+"/"+ma+"/"+fu;
+        console.log(da);
+         
+       
+        //age 
+        lo=new Date(la);
+       timee=d-lo;
+       console.log(timee);
+        var day=lo.getDate();
+        var mon=lo.getMonth(lmonth)+1;
+        var ful=lo.getFullYear();
+        ltime=day+"/"+mon+"/"+ful;
+         console.log(day);
+        days=Math.abs(day-da);
+        console.log(days);
+        month=ma-mon;
+        z=fu-ful;
+        document.getElementById("anss").innerHTML=days+"-"+month+"-"+z;
+    }
+</script>
+</html>

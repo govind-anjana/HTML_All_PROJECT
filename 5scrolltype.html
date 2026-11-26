@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;box-sizing: border-box;
+    }
+    header{
+        background-color:orange;
+    }
+    h1{
+        color:white;
+        padding:4px;
+        text-align:center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    .main{
+        width:100%;
+        height:235px;
+        background-color:  gainsboro;
+        position: relative;
+        margin:10% auto;
+        overflow: hidden;
+        padding:15px;
+        z-index: 1;
+    }
+    .box{
+        width:200px;
+        height:200px;
+        box-shadow: 0px 0px 10px 4px white;;
+        position: absolute;
+        left: 100%;
+        animation: scroll 10s linear 5;
+        overflow: hidden;
+        border-radius: 10px;;
+    }
+    img{
+        width:100%;
+        height:100%;
+        background-size: cover;
+        transform: scale(1.2);
+    }
+    .a1{animation-delay: calc(10s / 6 * (6 - 1 ) * -1);}
+    .a2{animation-delay: calc(10s / 6 * (6 - 2 ) * -1);}
+    .a3{animation-delay: calc(10s / 6 * (6 - 3 ) * -1);}
+    .a4{animation-delay: calc(10s / 6 * (6 - 4 ) * -1);}
+    .a5{animation-delay: calc(10s / 6 * (6 - 5 ) * -1);}
+    .a6{animation-delay: calc(10s / 6 * (6 - 6 ) * -1);}
+    /*.a7{animation-delay: calc(10s / 8 * (8 - 1 ));} */
+    @keyframes scroll {
+        to{
+            left:-300px;
+        }
+    }
+
+    /* main1  Css */
+    .main1{
+        width:40%;
+        height:40%;
+        border:10px double orangered;
+        /* padding:10px; */
+        display: flex;
+        margin:10% auto;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .box1{
+        /* flex-basis: 200px; */
+        width:100%;
+        overflow: hidden;
+        height:300px;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+    .main1::-webkit-scrollbar{
+        display: none;
+    }
+
+    /*  main2   */
+    .main2{
+        width:40%;
+        height:40%;
+        border:10px double orangered;
+        /* padding:10px; */
+        display: flex;
+        margin:10% auto;
+        overflow: hidden;
+    }
+    .box2{
+        /* flex-basis: 200px; */
+        width:100%;
+        overflow: hidden;
+        height:300px;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        animation: scroll2 10s linear infinite;
+    }
+    @keyframes scroll2{
+        to{
+            transform: translate(-300%);
+        }
+
+    }
+</style>
+<body>
+    <!-- <video controls autoplay height="235px">
+        <source src="https://cdn.pixabay.com/video/2021/03/08/67358-521707474_tiny.mp4">
+    </video> --><header>
+        <h1>1. Infinite Scroll </h1>
+    </header>
+    <div class="main">
+        <div class="box a1"><img src="https://cdn.pixabay.com/photo/2019/08/20/15/30/ganesh-4419043_1280.jpg"></div>
+        <div class="box a2"><img src="https://cdn.pixabay.com/photo/2024/05/11/07/24/ganesh-8754174_1280.jpg"></div>
+        <div class="box a3"><img src="https://cdn.pixabay.com/photo/2024/02/08/14/52/ai-generated-8561243_1280.jpg"></div>
+        <div class="box a4"><img src="https://cdn.pixabay.com/photo/2018/10/04/19/42/india-3724251_1280.jpg"></div>
+        <div class="box a5"><img src="https://cdn.pixabay.com/photo/2016/12/16/02/49/statue-1910481_1280.jpg"></div>
+        <div class="box a6"><img src="https://cdn.pixabay.com/photo/2020/03/02/19/28/ganesh-4896689_1280.jpg"></div>
+    </div><br>
+    <header><h1>2. Govind</h1></header>
+    <div class="main1">
+        <div class="box1"><img src="https://cdn.pixabay.com/photo/2020/03/02/19/28/ganesh-4896689_1280.jpg"></div>
+        <div class="box1"><img src="https://cdn.pixabay.com/photo/2024/05/11/07/24/ganesh-8754174_1280.jpg"></div>
+        <div class="box1"><img src="https://cdn.pixabay.com/photo/2018/10/04/19/42/india-3724251_1280.jpg"></div>
+        <div class="box1"><img src="https://cdn.pixabay.com/photo/2024/02/08/14/52/ai-generated-8561243_1280.jpg"></div>
+    </div><br>
+    <header><h1>3. Govind</h1></header>
+    <div class="main2">
+        <div class="box2"><img src="https://cdn.pixabay.com/photo/2020/03/02/19/28/ganesh-4896689_1280.jpg"></div>
+        <div class="box2"><img src="https://cdn.pixabay.com/photo/2024/05/11/07/24/ganesh-8754174_1280.jpg"></div>
+        <div class="box2"><img src="https://cdn.pixabay.com/photo/2018/10/04/19/42/india-3724251_1280.jpg"></div>
+        <div class="box2"><img src="https://cdn.pixabay.com/photo/2024/02/08/14/52/ai-generated-8561243_1280.jpg"></div>
+    </div><br>
+</body>
+</html>

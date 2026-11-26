@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <!-- <link rel="stylesheet" href="clone.css"> -->
+     <style>
+        *{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    min-height:200px;
+    background-color: rgba(26, 23, 23, 0.988);
+    display:grid ;
+    place-items: center;
+}
+header img{
+    width:45%;
+    height:100px;;
+    background-size: cover;
+}
+main{
+    background-color: black;
+    color:white;
+    line-height: 60px;;
+    display: block;
+    padding:10px;
+    position: sticky;
+    top:0;
+}
+main ul{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 25px;
+    gap:100px;
+    
+}
+li{
+    padding: 2px 10px;
+    /* border:2px solid red; */
+    margin-left:30px;
+}
+main ul li:hover{
+    /* padding:4px; */
+    /* border:2px solid red; */
+    background-color: silver;
+}
+.mains{
+ width:90%;
+/* border:2px solid red; */
+display: flex;
+gap:10px;
+justify-content: space-between;
+margin:auto;
+padding:10px;
+}
+.mains .boxs{
+/* border:2px solid red; */
+padding:10px;
+
+}
+.support{
+   margin:10%;
+   /* border:2px solid red; */
+   width:80%;
+   height:100px;
+}
+ .a1{
+    width:25%;
+    /* float: left; */
+    /* display: block; */
+    /* text-align: center; */
+}
+ .a2{
+    width:73%;
+}
+.a1 h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 14px 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    text-decoration: underline;
+}
+.pragraf{
+    margin-top: 20px;
+    color:greenyellow;
+    display: block;
+}
+.a1 .textwidget{
+    font-size: 23px;
+    line-height: 38px;
+
+}
+.a2 p{
+    font-size: 25px;
+    line-height: 32px;
+    margin:15px 0px;
+}
+hr{
+    width:100%;
+    height:5px;
+    margin:36px 0px;
+    background-color: black;
+}
+.inner{
+    margin:40px 0px; 
+}
+.inner h1{
+    font-size: 35px;
+    font-weight: 100;
+    margin:30px 0px;
+}
+.img{
+    width:45%;
+    /* height:350px; */
+    /* border:3px solid red; */
+    float: left;
+}
+.img img{
+    width:75%;
+    height:280px;
+
+}
+.content{
+    /* border:3px solid red; */
+        color:black;
+}
+.icon span{
+    font-size: 29px;;
+}
+.icon span:hover{
+    color:red;
+}
+@media screen and (max-width:1025px) {
+    main{
+        position: relative;
+    }
+    header img{
+        width:80%;
+        height:110px;
+        padding:20px;
+    }
+    .mains{
+        width:100%;
+        flex-direction: column;
+    }
+    main ul{
+        display:block;
+        line-height: 33px;;
+    }
+    .mains .a1{
+        display: none;      
+}
+.a2{
+    width:100%;
+}
+.img{
+    width:100%;
+   float:none
+}
+}
+     </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.html5webtemplates.co.uk/wp-content/uploads/2020/05/cropped-logo.png">
+    </header>
+    <main>
+        <ul>
+            <li>Home</li>
+            <li>Website Templates</li>
+            <li>HTML 5 ReSourse</li>
+            <li>FAQs</li>
+            <li>Blog</li>
+            <li>Content</li>
+            <li><i class="glyphicon glyphicon-search"></i></li>
+        </ul>
+    </main>
+     <div class="mains">
+        <div class="boxs a1">
+            <h2>Support Us</h2>
+            <img class="support" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"><br>
+            <h2>Resources</h2>
+            <div class="textwidget"><p><a href="http://www.dannybarker.co.uk/">Bespoke sites by DBWD</a><br />
+                <a href="https://clearwateragency.com.au/">clearwateragency.com.au</a><br />
+            <a href="https://www.edgeonline.com.au/">Edge Marketing</a></p>
+        </div>
+        <h2>Learning Centre</h2>
+        <div class="pragraf">    
+            <a ><img width="110px" height="110px" style="float:left;" src="https://www.html5webtemplates.co.uk/wp-content/uploads/2024/03/cybersecurity-150x150.webp" class="attachment-75x75 size-75x75 wp-post-image" alt="" decoding="async" loading="lazy" /><span  class="textwidget">The Importance of Cybersecurity for Small Businesses</span></a>
+        </div>
+        <div class="pragraf">
+            <a><img width="110px" height="110px" style="float:left;" src="https://www.html5webtemplates.co.uk/wp-content/uploads/2018/06/drag-and-drop-website-builder-150x150.jpg" class="attachment-75x75 size-75x75 wp-post-image" alt="A simple &#039;drag and drop&#039; interface" decoding="async" loading="lazy" /><span  class="textwidget">Your First Business Website</span></a>
+            </div><br><br><br><br>
+        <div class="pragraf">
+            <a><img width="110px" height="110px" style="float:left;" src="https://www.html5webtemplates.co.uk/wp-content/uploads/2016/10/Tattooton-150x150.jpg" class="attachment-75x75 size-75x75 wp-post-image" alt="A simple &#039;drag and drop&#039; interface" decoding="async" loading="lazy" /><span  class="textwidget">Your First Business Website</span></a>
+            </div><br><br><br><br>
+        <div class="pragraf">
+            <a><img width="110px" height="110px" style="float:left" src="https://www.html5webtemplates.co.uk/wp-content/uploads/2015/07/HTML5-Validation-Tools-150x150.jpg" class="attachment-75x75 size-75x75 wp-post-image" alt="A simple &#039;drag and drop&#039; interface" decoding="async" loading="lazy" ><span  class="textwidget">Your First Business Website</span></a>
+            </div><br/><br><br><br>
+        <div class="pragraf">
+            <a><img width="110px" height="110px" style="float:left" src="https://www.html5webtemplates.co.uk/wp-content/uploads/2015/07/Page-Speed-Tests-150x150.jpg" alt="A simple &#039;drag and drop&#039; interface" decoding="async" loading="lazy" ><span  class="textwidget">Your First Business Website</span></a>
+            </div>
+    </div>
+    <div class="boxs a2"> 
+        <div class="daba">
+            <h1>Free HTML5 Website Templates</h1>
+            <p>All of these basic website templates are released as ‘open source’ designs which means that you are FREE to download and use them for anything you want (including modifying and amending them). These are beautiful yet simple HTML templates. Whilst these simple website templates might look like a basic web template they have very clean html and css code and so are extremely fast to load, good for Google ranking as well as for your viewers!</p>
+            <p>Please note that you must leave our link in the footer of the template. Alternatively, you can provide a donation of £15 to remove the footer link. Generosity is always appreciated, please use the Donate button to the left if you wish to leave a larger amount, don’t forget to add your URL. Thank you!</p>
+            <hr>
+            <div class="inner">
+                <h1>Elements Responsive</h1>
+                <div class="img"><img src="https://www.html5webtemplates.co.uk/wp-content/uploads/2020/05/elements.jpg"></div>
+                <div class="content">
+                    <p>
+                        Stunning html5 and fully responsive template for desktops, tablets and mobile. This is the ONE to go for, clean html code with CSS and mobile-friendly, this is probably the best of our simple html templates.
+                        <br><br>
+                        <div class="icon"><span>🔍</span>&nbsp;<span>View elements</span></div><br/><br/>
+                        <div class="icon"><span>📩</span>&nbsp;<span>View elements</span></div>
+                    </p>
+            </div>
+           </div><br>
+            <hr>
+            <div class="inner">
+                <a href="clone.html"><h1>Black Pink White</h1>
+                <div class="img"><img src="https://www.html5webtemplates.co.uk/wp-content/uploads/2020/05/black_pink_whites.jpg"></div></a>
+                <div class="content">
+                    <p>
+                        A basic HTML template yet dramatic and warm theme which validates for html5 and CSS.
+                        <br><br>
+                        <div class="icon"><span>🔍</span>&nbsp;<span>View elements</span></div><br/><br/>
+                        <div class="icon"><span>📩</span>&nbsp;<span>View elements</span></div>
+                    </p>
+            </div>
+           </div><br><br>
+            <hr>
+            <div class="inner">
+                <h1>Simplestyle Banner</h1>
+                <div class="img"><img src="https://www.html5webtemplates.co.uk/wp-content/uploads/2020/05/simplestyle_banner.jpg"></div>
+                <div class="content">
+                    <p>
+                        A bright and crisp new theme
+                        <br><br>
+                        <div class="icon"><span>🔍</span>&nbsp;<span>View elements</span></div><br/><br/>
+                        <div class="icon"><span>📩</span>&nbsp;<span>View elements</span></div>
+                    </p>
+            </div>
+           </div><br><br>
+            <hr>
+            <div class="inner">
+                <h1>Simplestyle Purple</h1>
+                <div class="img"><img src="https://www.html5webtemplates.co.uk/wp-content/uploads/2020/05/simplestyle_purple.jpg"></div>
+                <div class="content">
+                    <p>
+                        A sleek and stylish purple simple HTML template.
+                        <br><br>
+                        <div class="icon"><span>🔍</span>&nbsp;<span>View elements</span></div><br/>
+                        <div class="icon"><span>📩</span>&nbsp;<span>View elements</span></div>
+                    </p>
+            </div>
+           </div><br>
+           
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

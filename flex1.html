@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            header{
+                width:auto;
+                /* background:linear-gradient(45deg,black,silver); */
+                background-color: silver;
+                padding:10px;
+                display: flex;
+                justify-content: space-around;
+                border-radius: 10px;
+                 
+            }
+            header a{
+                color:black;
+                font-size: 22px;
+                font-weight: 600;
+                text-decoration: none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                letter-spacing: 1px;
+                transition: 3s;
+            }
+            header a:hover{
+                color:red;
+                transform: scale(1.2);        
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <header>
+            <a href="#">Home</a>
+            <a href="#">Input Devices</a>
+            <a href="#">Output Devices</a>
+            <a href="#">Memory</a>
+            <a href="#">Stroge</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+         </header>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;box-sizing: border-box;
+    }
+.box{
+    border:3px solid red;
+    width:300px;
+    height:300px;
+    margin:5% auto;
+    background-color: black;
+    position: relative;
+    color:white;
+}
+.frame{
+    border:3px solid red;
+    width:300px;
+    height:300px;
+    background-color: brown;
+    position: absolute;
+    top:0px;
+}
+input[type="radio"]{
+    display: none;
+}
+img{
+    width: 100%;
+    height:100%;
+
+    background-size: cover;
+}
+#aa:checked ~ .frame,#a2:checked ~ .frame{
+    width:35px;
+    transform: translate(-35px) skewY(-20deg) ;
+    /* background-color: blue; */
+    transition: 3s;
+}
+</style>
+<body>
+    <div class="box">
+        <input type="radio" name="x" id="aa">
+        <h1>govind</h1>
+        <div class="frame"><label for="aa"><img src="govind4.jpg"></label></div>
+    </div>
+    <div class="box">
+        <input type="radio"  name="x" id="a2">
+        <h1>govind</h1>
+        <div class="frame"><label for="a2"><img src="govind4.jpg"></label></div>
+    </div>
+</body>
+</html>

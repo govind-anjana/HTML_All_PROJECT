@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  --><script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    *{
+        box-sizing: border-box;
+        margin:5;
+        /* background-color: black; */
+    }
+    .a1{grid-area: a1;}
+    .a2{grid-area: a2;}
+    .a3{grid-area: a3;}
+    .a4{grid-area: a4;}
+    .a5{grid-area: a5;}
+    .a6{grid-area: a6;}
+    body{
+        background-color: black;
+    }
+    #main{
+        border:0px solid white;
+        box-shadow: 0 0 20px 5px silver;
+        background-color: black;
+        width:50vw;
+        height:98vh;
+        margin:10px auto;
+        display: grid;
+        padding:0px;
+        gap:7px; 
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr 1fr 3fr;
+        grid-template-areas: 'a1 a2'
+        'a3 a4'
+        'a5 a6';
+        
+    }
+    .box{
+        /* border:2px solid red; */
+        /* overflow: hidden; */
+        text-align:center;
+        border-radius:5px;
+        background-color: white;
+        padding:6px;
+    }
+    .a5,.a6{
+        /* border:2px solid red; */
+        overflow: hidden;
+         text-align: left;
+        border-radius:10px;
+        background-color:black;
+        padding:20px 40px;
+        color:white;
+        word-break: break-all;
+    }
+    label{
+        font-size: 19px;
+        font-weight: 700;
+        
+    }
+    input[type='email'],textarea{
+        width:100%;
+        padding:10px;
+        font-size: 20px;
+        outline: none;
+        background-color: black;
+        border:none;
+        border-bottom: 2px solid white;
+        margin:2% 0px 8%;
+        color:white;
+    }
+         button{
+        width:100%;
+        padding:10px;
+        font-size: 23px;
+        outline: none;
+        background-color:orangered;
+        border:none;
+       border-radius: 20px;
+        color:white;
+        cursor:pointer;
+    }
+
+    .box i{
+        font-size: 50px;
+        color:red;
+    }
+
+    .box p{
+        text-transform: capitalize;
+        font-size: 21px;
+        font-family: sans-serif;
+    }
+    .icon i{
+        color:orangered;
+        margin-left:40px;
+        margin-top:40px;
+        cursor: pointer;
+    }
+    @media screen and (max-width:650px) {
+        body{
+            background-color: white;
+        }
+        #main{
+            width:100vw;
+            height:auto;
+            display: flex;
+            padding:10px;
+            flex-direction: column;
+            overflow-wrap: break-word;
+             
+        }
+    }
+</style>
+<body>
+      <div id="main">
+        <div class="box a1">  <ion-icon name="location-outline"></ion-icon>
+            <h3><strong>Our Main Office</strong></h3>
+            <p>soho 94 Broadway St new york,ny 1001</p></div>
+        <div class="box a2"><i class="fa fa-phone"></i><h3><strong>Phone Number</strong></h3>
+         <p>234-9876-5432<br/>888-0123-4567(Toll Free)</p></div>
+        <div class="box a3"></i>
+            <i class="fa fa-fax"></i><h3><strong>Fax</strong></h3>
+        <p>1-234-567-8900</p></div>
+        <div class="box a4"><i class="fa fa-envelope"></i><h3><strong>Email</strong></h3>
+        <p style="color:red">hello@theme.com</p></div>
+        <div class="box a5">
+            <label>Email</label><br>
+            <input type="email" placeholder="Enter a valid email address ">
+        
+            <label>Name</label><br>
+            <input type="email" placeholder="Enter your Name ">
+            <label>Name</label><br>
+            <textarea cols="50"   placeholder="Enter your Name "></textarea>
+            <button>Submit</button>
+        </div>
+        <div class="box a6"><h1>Get in touch</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam Lorem, ipsum dolor. officia consectetur sit excepturi saepe repellat eaque ullam.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque praesentium optio asperiores libero soluta sapiente expedita quis ex ipsam aliquid Lorem ipsum dolor sit amet consectetur.  </p>
+            <div class="icon"><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i></div>
+</div>
+      </div>
+</body>
+</html>

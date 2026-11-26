@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            border:0px solid black;
+        }
+        .row{
+            border:0px solid red;
+        }
+        .col,.col-12,.col-8,.col-4,.col-3,.col-12,.col-12{
+            border:0px solid pink;
+        }
+ #header{
+    background-color: orange;
+    padding:10px;
+ }
+ #nav{
+    background-color: pink;
+    padding:5px 0;
+ }
+ #nav ul {
+    list-style: none;
+    margin:0px;
+ }
+ #nav ul li{
+     display: inline;
+    
+ }
+ #content{
+    background-color:silver;
+ }
+ #side{
+    background-color: gold;
+ }
+ #footer{
+    background-color: orange;
+ }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viwport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container" >
+        <div class="row cols-12" id="header">
+            <h3>Website Name</h3>
+        </div>
+        <div class="row">
+        <div class="col-12" id="nav">
+             <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallary</li>
+                <li>Product</li>
+                <li>Setting</li>
+             </ul>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8" id="content"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam illo soluta dolorem sed iusto. Sunt vitae neque, ratione ex sed debitis quo, veniam rem itaque obcaecati exercitationem facere, recusandae repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dicta quisquam placeat praesentium neque fugit enim vitae, maxime quos iure culpa officiis officia eum. Doloribus ut voluptatem omnis similique perferendis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam illo soluta dolorem sed iusto. Sunt vitae neque, ratione ex sed debitis quo, veniam rem itaque obcaecati exercitationem facere, recusandae repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dicta quisquam placeat praesentium neque fugit enim vitae, maxime quos iure culpa officiis officia eum. Doloribus ut voluptatem omnis similique perferendis
+            </p></div>
+        
+         <div class="col-md-4" id="side">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallary</li>
+                <li>Product</li>
+                <li>Setting</li>
+             </ul>
+         </div>
+         </div>
+         <div class="row" id="footer">
+            <div class="col-12">Website Create</div>
+         </div>
+     </div>
+</body>
+</html>

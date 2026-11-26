@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;box-sizing: border-box;
+    }
+    header{
+        background-color: pink;
+        padding:10px;
+        position: relative;
+    }
+    nav{
+        width:150px;
+        height:90vh;
+        border:2px solid red;
+        position: absolute;
+        left:-150px;
+        top:0px;
+        transition: all 3s linear;
+        background-color: brown;
+        line-height: 30px;;
+        padding:10px;
+    }
+    span{
+        width:40px;
+        /* background-color: white; */
+        display: block;
+        margin:5px;
+        border:none;border-bottom: 4px solid white;
+        /* padding:1px; */
+    }
+    input[type="checkbox"]{
+        display:none;
+    }
+    #go:checked ~ .m1{color:red;left:0px;} 
+    
+    .inline{
+        float: left;
+    }
+    .right{
+        float:right;
+    }
+    .right span:nth-child(1){
+        transform:rotate(50deg);
+    }
+    .right span:nth-child(2){
+        transform:rotate(145deg)
+    }
+</style>
+<body>
+    <header>
+        <div>
+        <label for="go">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        </div>
+        <input type="checkbox" id="go">
+        <nav class="m1">
+            <p class="inline">Home</p> 
+            <p class="right"><label for="go">
+                <span></span>
+                <span></span>
+            </label></p><br>
+
+            <p>Content</p>
+            <p>gallary</p>
+            <p>Contant </p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+        </nav>
+    </header>
+    </body>
+</html>

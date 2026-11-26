@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            width:100%;
+            height:99vh;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            width:30%;
+            height:40%;    
+            border:3px solid red;
+        }
+        .first{
+            position:relative;
+        }
+       
+        label{
+            position:absolute;
+            top:36px;
+            left:10px;
+            font-size:20px;
+            transform: translateY(-50%);
+            
+        }
+        .text:focus~label,
+        .text:focus~:valid{
+            bottom:-29px;
+        }
+        input[type="text"],input[type="number"]{
+            width:70%;
+            margin:25px 10px;
+            height:20px;
+            outline:none;
+            font-size:23px;  
+        }
+        button{
+                width:90%;
+                font-size:26px;
+                color:blue;
+                background:linear-gradient(pink,orange);
+                margin-bottom: 20px;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="g"></form>
+        <div class="main">
+          <div class="form">
+            <div class="first">
+                <input type="text" class="text" required><label>Enter Your Number:</label>      
+            </div>
+            <div class="first">
+                <input type="number" id="anss" class="text"><label>Enter Otp Number:</label>  
+                <div id="ans"></div>    
+            </div>
+             <button onclick="count(4)">OTP Me</button>
+             <button>Submit Me</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function count(elem) {
+            ans=document.getElementById("anss").value;
+            var y;
+            setTimeout(()=> {    
+                var otp="";
+                for(i=1;i<=elem;i++){
+                    otp+=Math.floor(Math.random()*10);
+                }
+            alert(otp);
+            },4000)
+            
+         function change(){
+            if(y==ans){
+                console.log("succes");
+            }
+            else{
+                console.log("no");
+            }
+        }
+    }
+             
+</script>
+</html>

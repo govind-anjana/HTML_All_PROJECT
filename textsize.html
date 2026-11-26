@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="textsize.css">
+</head>
+<body >
+    
+        <div class="main">
+            <table cellspacing="10px">
+                <tr>
+                    <td width="33%"><label for="name">Enter Name:</label></td>
+                    <td><input type="text" id="name" placeholder="Enter Your Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="size">Font-Size:</label></td>
+                    <td><input type="range" min="10" max="100" onchange="range()" id="size"><span id="ra"></span></td>
+                </tr>
+                <tr>
+                    <td><label>Font-Family</label></td>
+                    <td><select id="option">
+                        <option>Select The Font-Family</option>
+                        <option value="serif">Serif</option>
+                        <option value="sans-serif">Sans-Serif</option>
+                        <option value="monospace">Monospace</option>
+                        <option value="cursive">Cursive</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Text-Shadow:</label></td>
+                    <td>
+                        <input type="number" placeholder="Px" class="shadow">
+                        <input type="number" placeholder="Px" class="shadow">
+                        <input type="number" placeholder="Blur" class="shadow">
+                        <select class="shadow" id="color">
+                            <option>Select Color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="pink">Pink</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Font-Weight:</label></td>
+                    <td>
+         <input type="radio" onchange="demo('bold')" name="g">Bold
+         <input type="radio"  onchange="demo('italic')" name="g">Italic
+         <input type="radio" onchange="demo('')" checked name="g">Default
+         <input type="radio" onchange="demo('underline')" name="g">UnderLine
+       
+    </td>
+                </tr>
+                <tr>
+                    <td><label>Font-Color:</label></td>
+                    <td><input type="color" id="colorr"></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><button id="button">Apply Effeat</button></th>
+                </tr>
+            </table>
+        </div><br>
+        <div class="main">
+            <span id="ans">Place Enter Your Name</span>
+        </div>
+        
+</body>
+<script>
+    const ans=document.getElementById("ans");
+    document.getElementById("button").addEventListener("click",()=>{
+        const name=document.getElementById("name").value;
+        if(""==name){
+            alert("Enter Your Name")
+        }
+        else{
+            
+            ans.innerHTML=name;
+            let size=document.querySelector("#size").value;
+            ans.style.fontSize=`${size}px`;
+            //option
+            const option=document.getElementById("option").value;
+            ans.style.fontFamily=`${option}`;
+           
+            //Shadow
+           const shadow=document.querySelectorAll(".shadow")
+           go=shadow[0].value;
+           go1=shadow[1].value;
+           go2=shadow[2].value;
+           go3=shadow[3].value;
+
+        ans.style.textShadow=`${go}px ${go1}px ${go2}px ${go3}`;
+
+
+        //Font
+    // font=document.getElementById("bold").value;
+    // italic=document.getElementById("italic").value;
+    // console.log(font);
+    // console.log(italic);
+    //color
+    colors=document.getElementById("colorr").value;
+    ans.style.color=colors;
+        }
+        
+    
+    })
+    function demo(x){
+       ans.style.fontWeight=x;
+       ans.style.fontStyle=x;
+       ans.style.textDecoration=x;
+    }
+    
+    function range(){ 
+        size=document.querySelector("#size").value; 
+        document.getElementById("ra").innerHTML=`${size}px`;
+    }
+
+</script>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .containtor{
+            width:100%;
+          background: radial-gradient(pink,cyan,50%,rgb(166, 76, 76));
+            height:99vh;
+            display: block;
+            
+        }
+        header{
+            min-width: 100%;
+            position: fixed;
+            z-index: 2;
+            color:white;
+           
+        }
+        marquee{
+            background-color: darkgray;
+             font-family: sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+            padding:2px;
+        }
+        .main{
+            width:1100px;
+            height:90%;
+            background-color: white;
+            border:20px solid black;
+            margin:auto;
+            padding:10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            flex-shrink: 2;
+            overflow-wrap: break-word;
+            overflow: auto;
+           position: relative;
+           top:8%;
+            border-radius: 20px;
+            box-shadow: 0 0 100px 2px white;
+        }
+        .main::-webkit-scrollbar{
+            display: none;
+        }
+        .link
+        {
+            width:38vh;
+            height:40vh;
+            overflow: hidden;
+            position: relative;
+            transition: 3s;
+            cursor: pointer;
+
+        }
+        img{
+            width:100%;
+            height:100%;
+            background-size: cover;
+        }
+        .intro{
+            position: absolute;
+            bottom:-190px;
+            width: 100%;
+            transition:2s;
+           padding:5px;
+           text-align: center;
+           font-style: italic;
+           text-transform: capitalize;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+        .link:hover .intro{
+            color:white;
+            bottom:0px;
+           background-color: silver;
+
+            
+        }
+        .link p{
+            font-size: 21px;
+            font-weight: 500;
+            color:white
+        }
+        .link h2{
+            color:red;
+        }
+         /* .link:hover{
+            transform: scale(1.1);
+         } */
+          @media screen and (max-width:600px) {
+             .main{
+                display: block;
+                flex-direction: column;
+                background-color: black;
+                height:auto;
+             }
+            .link
+        {
+            width:100%;
+            height:90vh;
+            overflow: hidden;  
+            transition: 3s;
+            cursor: pointer;
+            padding:10px;
+        text-align: center;
+        } 
+        img{
+            width:80%;
+
+        }
+          }
+    </style>
+</head>
+<body>
+    <div class="containtor">
+        <header><marquee>
+        <h2>All Prime Ministers List</h2>
+        </marquee>
+        </header>
+        <div class="main">
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Jnehru.jpg/120px-Jnehru.jpg"/>
+        <div class="intro">     
+        <h2>jawaharlal nehru</h2>
+        <p>aug 15,1947-<br/>may 27,1964</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gulzarilal_Nanda_1.jpg/330px-Gulzarilal_Nanda_1.jpg"/>
+        <div class="intro">     
+        <h2>Gulzarilal Nanda</h2>
+        <p>may 27,1964-<br/>jun 9,1964</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Lal_Bahadur_Shastri_%28from_stamp%29.jpg/330px-Lal_Bahadur_Shastri_%28from_stamp%29.jpg"/>
+        <div class="intro">     
+        <h2>Lal bahadur shastri</h2>
+        <p>jun 9,1964-<br/>jan 11,1966</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gulzarilal_Nanda_1.jpg/330px-Gulzarilal_Nanda_1.jpg"/>
+        <div class="intro">     
+        <h2>Gulzarilal Nanda</h2>
+        <p>jan 11,1966-<br/>jan 24,1966</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/IndiraGandhi.png/330px-IndiraGandhi.png"/>
+        <div class="intro">     
+        <h2>indira gandhi</h2>
+        <p>jan 24,1966-<br/>mar 24,1977</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Morarji_Desai_During_his_visit_to_the_United_States_of_America_.jpg/330px-Morarji_Desai_During_his_visit_to_the_United_States_of_America_.jpg"/>
+        <div class="intro">     
+        <h2>morarji desai</h2>
+        <p>mar 24,1977-<br/>jul 28,1979</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/PM_Charan_Singh.jpg/330px-PM_Charan_Singh.jpg"/>
+        <div class="intro">     
+        <h2>Charan singh</h2>
+        <p>jul 28,1979-<br/>jan 14,1980</p>
+        </div>
+       </div>
+      
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/IndiraGandhi.png/330px-IndiraGandhi.png"/>
+        <div class="intro">     
+        <h2>Indira Gandhi</h2>
+        <p>jan 14,1980-<br/>oct 31,1984</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Rajiv_Gandhi%2C_the_6th_PM_of_India.jpg/330px-Rajiv_Gandhi%2C_the_6th_PM_of_India.jpg"/>
+        <div class="intro">     
+        <h2>rajiv gandhi </h2>
+        <p>oct 31,1984-<br/>dec 2,1989</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Visit_of_Vishwanath_Pratap_Singh%2C_Indian_Minister_for_Trade%2C_to_the_CEC_%28cropped%29.jpg/330px-Visit_of_Vishwanath_Pratap_Singh%2C_Indian_Minister_for_Trade%2C_to_the_CEC_%28cropped%29.jpg"/>
+        <div class="intro">     
+        <h2>vishwanath pratap singh</h2>
+        <p>dec 2,1989-<br/>nov 10,1990</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Chandra_Shekhar_Singh_2010_stamp_of_India.jpg/120px-Chandra_Shekhar_Singh_2010_stamp_of_India.jpg"/>
+        <div class="intro">     
+        <h2>chandra shekhar singh</h2>
+        <p>nov 10,1990-<br/>jun 21,1991</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Visit_of_Narasimha_Rao%2C_Indian_Minister_for_Foreign_Affairs%2C_to_the_CEC_%28cropped%29%282%29.jpg/120px-Visit_of_Narasimha_Rao%2C_Indian_Minister_for_Foreign_Affairs%2C_to_the_CEC_%28cropped%29%282%29.jpg"/>
+        <div class="intro">     
+        <h2>p.v.narasimha rao</h2>
+        <p>jun 21,1991-<br/>may 16,1996</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Atal_Bihari_Vajpayee_%28crop_2%29.jpg/120px-Atal_Bihari_Vajpayee_%28crop_2%29.jpg"/>
+        <div class="intro">     
+        <h2>atal bihari vajpayee</h2>
+        <p>may 16,1996-<br/>jun 1,1996</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/H._D._Deve_Gowda_BNC.jpg/120px-H._D._Deve_Gowda_BNC.jpg"/>
+        <div class="intro">     
+        <h2>h.d.deve gowda</h2>
+        <p>jun 1,1996-<br/>apr 1,1997</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Inder_Kumar_Gujral_071.jpg/120px-Inder_Kumar_Gujral_071.jpg"/>
+        <div class="intro">     
+        <h2>inder kumar gujral</h2>
+        <p>apr 1,1997-<br/>mar 19,1998</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Atal_Bihari_Vajpayee_%28crop_2%29.jpg/120px-Atal_Bihari_Vajpayee_%28crop_2%29.jpg"/>
+        <div class="intro">     
+        <h2>Atal Bihari Vajpayee</h2>
+        <p>mar 19,1998-<br/>may 22,2004</p>
+        </div>
+       </div>
+      
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh.jpg/120px-Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh.jpg"/>
+        <div class="intro">     
+        <h2>Manmohan Singh</h2>
+        <p>may 22,2004-<br/>may 26,2014</p>
+        </div>
+       </div>
+       <div class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png/120px-Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png"/>
+        <div class="intro">     
+        <h2>king narendra modi</h2>
+        <p>may 26,2014-<br/>incumben</p>
+        </div>
+       </div>
+      
+       
+       </div>
+       </div>
+      </div>
+       
+         
+</body>
+</html>

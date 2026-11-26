@@ -1,0 +1,255 @@
+ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contaner{
+    background-color: white;
+    /* padding:1px; */
+    overflow: hidden;
+}
+  
+header{
+    width:100vw;
+    position: fixed;
+    top:0px;
+    z-index: 10;
+    /* opacity: 10.10; */
+    background-color: white;
+}
+.header{
+    margin: auto;
+    padding:10px 20px;
+     display: grid;
+      grid-template-columns: 1fr 2fr 1fr; 
+      font-size: 15px;;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header img{
+    padding-top: 10px;
+    width:60%;
+}
+.header input[type="text"]{
+    width:60%;
+    font-size: 15px;
+    outline: none;
+    border:none;
+    background-color: gainsboro;
+    padding:12px;  
+}
+.header button{
+    background-color: black;
+    color:white;
+    padding:10px;
+    font-size: 15px;
+}
+.header2{
+    width:96vw;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:20px;
+}
+.aiher a{
+    font-size: 18px;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left:30px;
+    font-weight: 500;
+}
+#select option{
+    color:red;border:2px solid red;
+    background-color: aqua;
+    font-size: 20px;
+}
+main{
+    width:99vw;
+    height:90vh;
+    position: relative;
+    margin-top: 9%;
+    /* background:url("https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20220720021618_BSA_3.jpg&w=700&c=1"); */
+    background-image: url('https://stimg.cardekho.com/images/uploadimages/1724215794915/01_BSA-Gold-Star_Desktop_1686x548px.jpg');
+   
+    padding:6%;
+    background-size: cover;
+    background-position: center;;
+    /* object-fit: cover; */
+}
+main .box{
+    width:30%; 
+    height:70vh;
+    padding:16px;
+    /* flex: 1; */
+}
+main .a1{
+    height:auto;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 18px;
+}
+main h1{font-size: 27px;}
+main button{
+    margin-top: 2%;;
+    padding:10px 25px;
+    font-size: 20px;
+    border-radius: 10px;;
+}
+main input[type="radio"]{
+    margin-top:30px;
+    margin-bottom:30px;
+    width:25px;
+    height:25px;
+    margin-right: 10px;;
+    accent-color: red;  
+}
+
+main label{
+    font-weight:500;
+    font-family:'Times New Roman', Times, serif;
+}
+main input[type="text"]{    
+    width:95%;
+    padding:10px;
+    font-size: 20px;;
+}
+main .btn1{
+    margin-top: 5%;
+    width:95%;
+    background-color: brown;
+    color:white;
+    border-radius: 10px;
+    border:none;
+}
+main .a2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+}
+main .a2 h1,main .a2 h2{
+    font-size: 25px;
+}
+
+.row{
+    width:98vw;
+    border:2px solid black;
+    margin:auto;
+    padding:10px;
+    box-shadow: 0px 0px 10px 5px silver;
+    background-color: white;
+    border-radius: 20px;
+}
+.row #main{
+    width:100%;
+    padding:0px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4,auto); */
+    gap:18px;
+    /* overflow: scroll; */
+    /* scroll-snap-type: x mandatory; */
+    border:2px solid red;
+}
+#main .box{
+    width:25%;
+    /* float: left; */
+    /* display: block; */
+    /* overflow: hidden; */
+    /* scroll-snap-align: center; */
+    border-radius: 20px;
+    margin:10px;
+    border: 2px solid pink;
+    box-shadow: 0px 0px 4px 4px gainsboro;
+}
+.box h3{
+    font-size: 20px;;
+}
+.box img{
+    width:100%;
+    height:280px;
+    background-size: cover;
+}
+.row button{
+    width:100%;
+    color:red;
+    padding:8px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:2px solid red;
+    margin-bottom: 10px;;
+}
+.row span{
+    font-size: 20px;
+    padding-right: 50px;
+}
+.h1{
+    text-align: center;padding:25px;
+    background-color:whitesmoke
+}
+hr{
+    display: none;
+}
+.row #main1{
+    width:100%;
+    padding:16px;
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    flex-wrap: wrap;
+}
+#main1 .box{
+    border:1px solid silver;
+    overflow: hidden;
+}
+#main1 img{
+    margin:auto;
+    width:90%;
+    height:150px;
+    background-size: cover;
+}
+@media screen and (max-width:600px) {
+    main{
+        height:auto;
+        overflow: hidden;
+    }
+    .header{
+    grid-template-columns: 2fr;
+     text-align: center;
+   
+    }
+        .header2 {
+                display:none ;
+        }
+    .row #main{
+        width:100%;
+        padding:10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:15px;
+    }
+    .row #main1{
+        width:100%;
+        padding:16px;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+         
+    }
+    main .box{
+        width:100%; 
+        height:66vh;
+        padding:10px
+    }
+    main .a1{
+        margin-top:40%;
+        height:auto;
+       background-color: black;
+       color:white;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+    .h1{
+        padding:20px;
+        color:orangered;
+    }
+}

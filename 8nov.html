@@ -1,0 +1,141 @@
+ <html>
+<head>
+<style>
+.ab
+{
+width:60%;
+height:90%;
+background-color:black;
+margin:auto;
+margin-top:1%;
+border-radius:20px;
+}
+input[type="text"]
+{
+width:110%;
+padding:25px;
+font-size:20px;
+background-color:pink;
+}
+.ans{
+width:70%;
+height:auto;
+margin:3px 20%;
+background-color:white;
+border-radius:20px;
+
+}
+.xyz
+{
+color:black;
+font-size:21px;
+font-weight:bold;
+text-align:left;
+padding:0px;
+padding-left:10px;
+margin:0px;
+text-transform:capitalize;
+}
+.xy
+{
+color:silver;
+font-size:21px;
+font-weight:bold;
+text-align:right;
+padding:0px;
+padding-right:10px;
+margin:0px;
+text-transform:capitalize;
+ 
+}
+span{
+padding-left:20px;
+font-size:15px;
+}
+.li:nth-child(odd)
+{
+font-size:23px;
+background-color:silver;
+}
+</style>
+</head>
+<body>
+<script>
+ function bc(x)
+ {
+ document.getElementById("ab").style.backgroundColor=x;
+ }
+function gco()
+{
+var di=document.getElementById("d").value;
+document.getElementById("ab").style.backgroundSize="cover";
+document.getElementById("ab").style.backgroundImage="url("+di+")";
+}
+</script>
+ 
+<select onchange="gco();" id="d">
+<option>Select Background Image</option>
+<option value="govind3.jpg">Govind</option>
+<option value="image.jpg">Govind</option>
+<option value="govind2.jpg">Govind</option>
+</select>
+<table align="center" cellspacing="10px" border="4px" cellpadding="4px" class="li" >
+<tr>
+<th>Select Background Color</th>
+<th><input type="radio" onclick="bc('red')" name="a">Red</th>
+<th><input type="radio" onclick="bc('green')" name="a">Green</th>
+<th><input type="radio" onclick="bc('blue')" name="a">Blue</th>
+<th><input type="radio" onclick="bc('silver')" name="a">Silver</th>
+<th><input type="radio" onclick="bc('black')" checked name="a">Default</th>
+</tR>
+</table>
+<div class="ab" id="ab">
+<table cellpadding="30px" cellspacing="5px" border="0px">
+<tr>
+<th><input type="text" id="a" onblur="first()" placeholder="My Message"></th>
+<th><input type="text" id="b" onblur="second()" placeholder="My Receive"></th>
+</tr>
+<tr>
+<td colspan="2"><div class="ans" id="ans"></div></td>
+</tr>
+</table>
+</div>
+</body>
+<script>
+var d=new Date();
+  h=d.getHours();
+  m=d.getMinutes();
+  se="AM";
+  if(h>=12)
+  {
+  se="PM";
+  }
+  if(h>=12)
+  {
+  h=h-12;
+  }
+   
+  h=h<10?"0"+h:h;
+  m=m<10?"0"+m:m;
+function first()
+{
+a=document.getElementById("a").value;
+b=document.getElementById("ans");
+c=document.createElement("p");
+c.className="xyz";
+c.innerHTML=a+"<span>"+h+":"+m+" "+se+"</span>";
+b.appendChild(c);
+document.getElementById("a").value="";
+}
+function second()
+{
+a=document.getElementById("b").value;
+b=document.getElementById("ans");
+c=document.createElement("p");
+c.className="xy";
+c.innerHTML=a+"<span>"+h+":"+m+" "+se+"</span>";
+b.appendChild(c); 
+document.getElementById("b").value="";
+}
+</script>
+</html>

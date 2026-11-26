@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tiput.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="div a1"><img src="https://www.bjp.org/files/logo_1_0.png?rnd=931796466"></div>
+            <div class="div a2"><ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#birth" class="link">Birth</a></li>
+                <li><a href="#education">Education</a></li>
+                <!-- <li><a href="#work">Work</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul></div>
+        </header>
+        <a href="tiputimage.html">
+         <div class="img">
+            <div class="content">
+              
+                <h1>PM.<span class="names">Shri Narendra Modi</span><span style="color:orange ;font-size: 55px;;">l</span></h1>
+                <h2>Prime Minister of India</h2>
+                <h3>www.narendramodi.in</h3>
+            </div>
+         </div></a>
+         <div id="birth" class="about">
+            <h1  >Birth</h1>
+            <div class="both"><mark> Narendra Damodardas Modi</mark> was born on 17 September 1950 to a Gujarati Hindu family of oil presser <strong>(Modh-Ghanchi)</strong> which is an Other Backward Class (OBC) category in Vadnagar, Mehsana district, Bombay State (present-day Gujarat). He was the third of six children born to Damodardas Mulchand Modi (c. 1915–1989) and Hiraben Modi <small>(1923–2022)</small>.</div>
+         </div><hr>
+         <div id="education" class="about">
+            <h1>qualification</h1>
+            <div class="main">
+                <div class="box a2">In 1978, Modi received a B.A. degree in political science from School of Open Learning at the University of Delhi, graduating with a third class. Five years later, in 1983, he received a Master of Arts degree in political science from Gujarat University, as an external distance learning student.</div>
+                <div class="box a1"><img src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20240129115657.jpg"></div>
+            </div>
+         </div><hr>
+         <div id="work" class="about">
+            <h1>About Narendra Modi</h1>
+            <div class="main">
+                <div class="box a1"><img src="https://www.bjp.org/files/inline-images/narendra-modi-indpendence-day-speech.jpg"></div>
+                <div class="box a2">On 26th May 2014 Narendra Modi took oath as the Prime Minister of India, becoming the first ever PM to be born after India attained Independence. Dynamic, dedicated and determined, Narendra Modi reflects the aspiration and hope of over a billion Indians. Ever since he assumed office in May 2014, PM Modi has embarked on a journey of all-round and inclusive development where every Indian can realize their hopes and aspirations. He remains deeply inspired by the principle of 'Antyodaya', of serving the last person in the queue. Through innovative ideas and initiatives, the Government has ensured that the wheels of progress move at rapid pace and the fruits of development reach every citizen. Governance has become open, easier and transparent.</div>
+            </div>
+         </div>
+    </div>
+    <footer>govind</footer>
+</body>
+<script>
+    const msg=document.querySelector(".names");
+    const str=msg.textContent;
+    let i=0;
+   const timing=()=>{
+       msg.textContent= str.substring(0,i);
+        i++;
+        if(i>str.length){
+            i=0;
+        }   
+        setTimeout(timing,100)      
+   }
+  timing()  
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            width:40%;
+            background-color: silver;
+            margin:auto;
+        }
+        input[type="radio"]
+        {
+            width:20px;
+            height:20px;
+            accent-color:red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table border="4px" cellpadding="2px" cellspacing="0px">
+    <tr>
+        <th>1</th>
+        <th>Yashpal Singh Sisodiya</th>
+        <th><input type="radio" name="r1" id="a1"  onclick="demo('y')"></th>
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>Vipin Jain</th>
+        <th><input type="radio" name="r1" id="a2"  onclick="demo('v')"></th>
+    </tr>
+    <tr>
+        <th>3</th>
+        <th>Govind Anjana</th>
+        <th><input type="radio" name="r1" id="a3"  onclick="demo('g')"></th>
+    </tr>
+    <tr bgcolor="pink">
+        <th colspan="3"  id="ans"></th>
+    </tr>
+   </table> 
+ 
+</body>
+<script>
+    function demo(x)
+    {
+        var p=document.getElementById("a1");
+        var q=document.getElementById("a2");
+        var r=document.getElementById("a3");
+        switch(x)
+        {
+            case 'y':
+                document.getElementById("ans").innerHTML="yashpal";
+               // p.disabled=true;
+                q.disabled=true;
+                r.disabled=true;
+                break;
+                case 'v':
+                document.getElementById("ans").innerHTML="vioin";
+                p.disabled=true;
+            
+                r.disabled=true;
+                break;
+
+
+        }
+    }
+</script>
+</html>

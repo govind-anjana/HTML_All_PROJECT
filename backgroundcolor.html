@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #red
+        {
+             width:10%;
+             height:130px;
+             border-radius: 50%;
+             background-color:red;
+             margin-top:5%;
+             margin-left: 20%;
+            display:inline-block;
+            cursor: pointer;
+           text-align: center;
+           color:red;
+        }
+        #pink
+        {
+            width:10%;
+            height:131px;
+            border-radius: 50%;
+            background-color:pink;
+            margin-top:0%;
+            margin-left:11%;
+            display:inline-block;
+            cursor: pointer;
+            text-align: center;
+           color:pink;
+        }
+        #silver
+        {
+            width:10%;
+            height:131px;
+            border-radius: 50%;
+            background-color:silver;
+            margin-top:5%;
+            margin-left:10%;           
+            display:inline-block;
+            cursor: pointer;
+            text-align: center;
+           color:silver;
+        }
+        #black
+        {
+           
+            width:10%;
+            height:131px;
+            border-radius: 50%;
+            background-color:black;
+            margin:5% 15%;
+            display:inline-block;
+            cursor: pointer;
+            text-align: center;
+           color:black;
+           
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div onmouseleave="demo()" id="red" value="red">red</div>
+     <div onmouseleave="dmo()" id="pink" value="pink">Pink</div><br>
+     <div onmouseleave="dem()" id="silver"  value="silver">Silver</div>
+     <div onmouseleave="de()" id="black"  value="silver">black</div>
+      
+</body>
+<script>
+    function demo()
+    {        
+    let x=document.querySelector("#red").innerHTML;     
+        document.body.style.backgroundColor=x;
+    } 
+    function dmo()
+    {        
+    let x=document.querySelector("#pink").innerHTML;     
+        document.body.style.backgroundColor=x;
+    }
+     function dem()
+    {        
+    let x=document.querySelector("#silver").innerHTML;     
+        document.body.style.backgroundColor=x;
+    }
+    function de()
+    {        
+    let x=document.querySelector("#black").innerHTML;     
+        document.body.style.backgroundColor=x;
+    }
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+ 
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <table border="3px" cellpadding="3px" cellspacing="4px">
+    <tr>
+        <th>Rate Per Hour :</th>
+        <th><input type="text" id="rh" onchange="demo()"></th>
+    </tr>
+    <tr>
+        <th>Hour per Day :</th>
+        <th><input type="text" id="hd" onchange="demo()"></th>
+    </tr>
+    <tr>
+        <th>days Worked</th>
+        <th><input type="text" id="dw" onchange="demo()"></th>
+    </tr>
+    <tr>
+        <th>Gross Salary</th>
+        <th><input type="text" readonly id="gs"></th>
+    </tr>
+ </table>
+</body>
+<script>
+ function demo()
+ {
+    let x=document.querySelector("#rh").value;
+    let y=document.querySelector("#hd").value;
+    let z=document.querySelector("#dw").value;
+    xy=x*y*z;
+    document.querySelector("#gs").value=xy;
+ }
+</script>
+</html>

@@ -1,0 +1,64 @@
+ <html>
+ <head>
+ <style>
+ .a
+ {
+ width:50%;
+ height:50%;
+ background-color:silver;
+ margin:auto;
+ margin-top:10%;
+  display:flex;;
+  justify-content:center;
+ 
+  padding:10px;
+ }
+ input[type="button"]
+ {
+ width:20%;
+ height:20%;
+ background-color:pink;
+ color:white;
+ margin:20px;
+ font-size:30px;
+ }
+ #ans
+ {
+ width:25px;
+ height:1px;
+ background-color:blue;
+ margin-top:30%;
+ }
+ #an
+ {
+ width:25px;
+ height:1px;
+ background-color:red;
+ margin-top:30%;
+ }
+ </style>
+ </head>
+ <body>
+ <div class="a">
+ <div id="ans"></div>
+ <input type="button" value="plus" onclick="plus()" >
+ <input type="button" value="Min" onclick="mi()" >
+ <div id="an"></div>
+ </div>
+ </body>
+ <script>
+ var x=0;
+ y=100;
+ function plus()
+ {
+  if(x<100)
+  document.getElementById("ans").style.height=(++x)+("px");
+  document.getElementById("an").style.height=(--y)+("px");
+ }
+ function mi()
+ {
+   document.getElementById("ans").style.height=(--x)+("px");
+  document.getElementById("ans").style.height=(++y)+("px");
+ }
+ </script>
+ </html>

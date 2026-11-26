@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .conta{
+        margin-left:35%;
+        
+       }
+        .box{
+            width:100px;
+            height:100px;
+            display:inline-block;
+            border:2px solid black;
+            cursor: pointer;
+        }
+        #gray{
+            background-color: gray;
+        }
+        #silver{
+            background-color: silver;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #white{
+            background-color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><center>Change background Color</center></h3><br>
+    <div class="conta">
+    <span id="gray" class="box"></span>
+    <span id="silver" class="box"></span>
+    <span id="pink" class="box"></span>
+    <span id="white" class="box"></span>
+    </div>
+</body>
+<script>
+   buttons=document.querySelectorAll(".box");
+   const body=document.querySelector('body');
+   buttons.forEach((button) => {
+        button.addEventListener("click",function(e){
+             console.log(e)
+             if(e.target.id==="gray")
+                document.body.style.backgroundColor=e.target.id;
+             else if(e.target.id==="silver")
+                document.body.style.backgroundColor=e.target.id;
+            else if(e.target.id==="pink")
+                document.body.style.backgroundColor=e.target.id;
+            else if(e.target.id==="white")
+                document.body.style.backgroundColor=e.target.id;
+        })
+   });
+    
+</script>
+</html>

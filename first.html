@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .ab
+        {
+            width:20%;
+            background-color: blueviolet;
+            margin:auto;
+            align-items: center;
+            justify-content: center;
+            align-items:center;
+        }
+        input[type="text"]
+        {
+            width:97%;
+            height:30px;
+            background-color:aquamarine;
+            font-size: 25px;
+            color:rgb(red, rgb(100, 128, 0), blue)
+        }
+        button
+        {
+            font-size: 24px;
+            width:45px;
+            margin:15px;
+            background-color: silver;
+            border:none; 
+            box-shadow: 3px 3px 6px #fff;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ab">
+        <input type="text" readonly id="ans"><br><br>
+        <button onclick="
+        x='';
+        document.querySelector('#ans').value=x;
+        ">Mr</button>
+        <button>Ac</button>
+        <button  
+        onclick="x=eval(x);
+        document.querySelector('#ans').value=x;
+                ";
+        >=</button>
+        <br>
+        <button onclick="fi()">1</button>
+        <button 
+        onclick="x=x+'2';
+document.querySelector('#ans').value=x;
+        ";
+        >2</button>
+        <button
+        onclick="
+        x=x+'3';
+        document.querySelector('#ans').value=x;
+        ";
+        >3</button><br>
+        <button
+        onclick="x=x+'4';
+        document.querySelector('#ans').value=x;
+                ";>4</button>
+        <button onclick="x=x+'5';
+        document.querySelector('#ans').value=x;
+                ";>5</button>
+        <button onclick="x=x+'6';
+        document.querySelector('#ans').value=x;
+                ";>6</button><br>
+        <button onclick="x=x+'7';
+        document.querySelector('#ans').value=x;
+                ";>7</button>
+        <button  onclick="x=x+'8';
+        document.querySelector('#ans').value=x;
+                ";>8</button>
+        <button onclick="x=x+'9';
+        document.querySelector('#ans').value=x;
+                ";>9</button><br>
+        <button onclick="x=x+'.';
+        document.querySelector('#ans').value=x;
+                ";>.</button>
+        <button onclick="x=x+'0';
+        document.querySelector('#ans').value=x;
+                ";>0</button>
+        <button 
+        onclick="x=x+'+';
+        document.querySelector('#ans').value=x;
+                ";
+        >+</button> 
+    </div>
+</body>
+<script>
+   let x="";
+    function fi()
+    {
+    x=x+'1';
+    document.querySelector("#ans").value=x;
+    }
+</script>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-color: silver;
+        }
+        .inputbox
+        {
+            position: relative;
+            margin: 30px 0;
+            width:300px;
+            border-bottom: 3px solid white;
+         
+        }
+        .inputbox label
+        {
+            position: absolute;
+            top:50%;
+            left:5px;
+            transform: translateY(-30%);
+            color:red;
+            font-size: 1em;
+            pointer-events: none;
+        
+
+        }
+        input:focus~label,
+        input:focus~:valid
+        {
+            top:-3px;
+
+        }
+        .inputbox input
+        {
+            width:100%;
+            height:50px;
+            background-color:pink;
+            border:none;
+            outline:none;
+            font-size: 1em;
+            color:white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <div class="inputbox">
+            <input type="email" required>
+            <label for="">Email</label>
+        </div>
+    </div>
+</body>
+</html>

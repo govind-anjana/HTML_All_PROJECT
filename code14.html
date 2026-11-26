@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    
+    <title>Document</title>
+ </head>
+ <body>
+
+ </body>
+ <script>
+             promisefoue=new Promise((resolve,reject)=>{
+                  setTimeout(function(){
+                        let err=true;
+                         if(!err){
+                        resolve({username:"govind",pass:"122"})
+                         }
+                         else{
+                              reject('Error Somethings Time error')
+                         }
+                  },1000)
+             })
+             promisefoue.then(function(user){
+                  console.log(user);
+                  return user.username;
+             }).then(function(username){
+                  console.log(username);
+             }).catch((error)=>{
+                  console.log(error);
+             }).finally(function(){
+                  console.log("no");
+             })
+
+            // async function aa(){
+            //       try{
+            //            const replode=await promisefoue;
+            //            console.log(replode);
+            //       }
+            //       catch(error){
+            //             console.log(error);
+            //       }
+            // }
+            // aa();
+ </script>
+ </html>

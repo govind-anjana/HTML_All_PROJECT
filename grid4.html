@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .b1{grid-area: head;}
+        .b2{grid-area: go1;}
+        .b3{grid-area: go2;}
+        .b4{grid-area: go3;}
+        .b5{grid-area: go4;}
+        .b6{grid-area: go5;}
+        .b7{grid-area: go6;}
+        .b8{grid-area: go7;}
+        .b9{grid-area: go8;}
+        .b10{grid-area: go9;}
+        .b11{grid-area: go10;}
+        .b12{grid-area: go11;}
+        .b13{grid-area: go12;}
+        .b14{grid-area: go13;}
+        .b15{grid-area: go14;}
+        #main{
+            border:10px solid orange;
+            width:70vw;
+            height:98vh;
+            padding:5px;
+            background-color: white;
+            margin:auto;
+            display: grid;
+            gap:5px;
+            grid-template-columns: 13vw auto auto auto auto  13vw;
+            grid-template-rows: repeat(5,auto);
+            grid-template-areas: 'head go1 go1 go1 go1 go2'
+            'go3 go1 go1 go1 go1 go4'
+            'go5 go1 go1 go1 go1 go6'
+            'go7 go1 go1 go1 go1 go8'
+            'go9 go10 go11 go12 go13 go14'
+            ;
+            box-shadow: 2px 2px 20px 10px red;;
+        }
+        .box{
+            overflow: hidden;
+        }
+        #g2 img{
+            width:45vw;
+            height:800px;
+            background-size: cover;
+        }
+       .box img{
+            width:248px;
+            height:180px;
+            background-size: cover;
+            background-position: center;
+            transition: 2s;
+        }
+        .box img:hover{
+            transform: scale(1.3);
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="box b1"><img src='https://images.pexels.com/photos/984955/pexels-photo-984955.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b2" id="g2"><img src='https://images.pexels.com/photos/1447375/pexels-photo-1447375.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b3"><img src='https://images.pexels.com/photos/627979/pexels-photo-627979.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b4"><img src='https://images.pexels.com/photos/935789/pexels-photo-935789.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b5"><img src='https://media.istockphoto.com/id/1075997304/photo/heart-shape-with-a-male-and-female-hand-clear-blue-water-as-background-freedom-in-paradise.jpg?b=1&s=612x612&w=0&k=20&c=CHzoFWDVs6AKDc7m7hsY5tAgx9pQIak-jjtKmaqfEso='></div>
+        <div class="box b6"><img src='https://images.pexels.com/photos/1382732/pexels-photo-1382732.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b7"><img src='https://images.pexels.com/photos/1667849/pexels-photo-1667849.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b8"><img src='https://images.pexels.com/photos/773124/pexels-photo-773124.jpeg?auto=compress&cs=tinysrgb&w=600'></div>
+        <div class="box b9"><img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/bouquet-of-white-roses-on-international-womens-day-free-photo.jpg?w=600&quality=80"></div>
+        <div class="box b10"><img src='https://t3.ftcdn.net/jpg/00/75/77/92/240_F_75779239_DoxwW639PhVPlKWHobrtmEkQ7Zvvv4By.jpg'></div>
+        <div class="box b12"><img src="https://images.pexels.com/photos/4065867/pexels-photo-4065867.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b11"><img src="https://images.pexels.com/photos/312552/pexels-photo-312552.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b13"><img src="https://images.pexels.com/photos/208006/pexels-photo-208006.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+        <div class="box b14"><img src="https://t3.ftcdn.net/jpg/00/68/79/86/240_F_68798609_2OQIFBXycZl330SXUBp8bBliNIxFvBBn.jpg"></div>
+        <div class="box b15"><img src="https://t3.ftcdn.net/jpg/04/07/89/98/240_F_407899828_F7e4LGnYfzNtXWYiAdbOI9uo73Bwr2wx.jpg"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Online/Ofline Checking</h2>
+    <p id="status">Status:Checking</p>
+</body>
+<script>
+  function checking(){
+ const  check= document.getElementById("status");
+   if(navigator.onLine){
+    check.textContent="Online";
+   }
+   else{
+    check.textContent="Ofline";
+   }
+    }
+    window.addEventListener("online",checking);
+    window.addEventListener("ofline",checking);
+    checking()
+</script>
+</html>

@@ -1,0 +1,49 @@
+*
+{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-image: url("coding.jpg");
+    background-position: center ;
+    background-size: cover;
+}
+#team{
+    width:300px;
+    height:500px;
+    border: 3px solid black;
+    margin: auto;
+    margin-top:20px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 10px red,0px 0px 20px green;
+}
+#charater{
+    width:100px;
+    height:100px;
+    background-color: red;
+    position: relative;
+    top:300px;
+    left:100px;
+}
+#block{
+    width:100px;
+    height:100px;
+    background-color:white;
+    animation: slice 1s linear infinite;
+    position: relative;
+}
+@keyframes slice{
+    0%{top:-100px;}
+    100%{top:500px;}
+}
+#add{
+    width:170px;
+    height:30px;
+    background-color: aqua;
+    margin:4% 6%;
+    border-radius: 20px;
+    padding:10px;
+    font-size: 26px;
+    letter-spacing: 2px;
+}

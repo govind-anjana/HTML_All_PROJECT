@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       
+        input[type=text]{
+            width:99%;
+            height:35px;
+            font-size:25px;
+            font-weight: bold;
+            border:none;
+        }
+        th{
+            padding:10px;
+            font-size:24px;
+            background-color: red;   
+            cursor: pointer; 
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">   
+        <div class="div1">
+            <input type="text" id="text">
+            <table width="100%" cellpadding="5px" >
+                <tbody >
+                    <tr>
+                        <th width="25%" class="pl-4"
+                        onclick="x.pop();
+                        document.querySelector('#text').value=x";
+                        >AC</th>
+                        <th width="25%"  onclick="x='';
+                        document.querySelector('#text').value=x";
+                        >A</th>
+                        <th width="25%"  onclick="x=x;
+                        document.querySelector('#text').value=x";
+                        >+/-</th>
+                        <th width="20%"  onclick="x=x+'/';
+                        document.querySelector('#text').value=x";
+                        >/</th>
+                    </tr>
+                    <tr>
+                        <th class="pl-4" onclick="x=x+'7';
+                        document.querySelector('#text').value=x;
+                        ">7</th>
+                        <th  onclick="x=x+'8';
+                        document.querySelector('#text').value=x";
+                        >8</th>
+                        <th  onclick="x=x+'9';
+                        document.querySelector('#text').value=x";
+                        >9</th>
+                        <th  onclick="x=x+'*';
+                        document.querySelector('#text').value=x";
+                        >*</th>
+                    </tr>
+                    <tr>
+                        <th class="pl-4"  onclick="x=x+'4';
+                        document.querySelector('#text').value=x";
+                        >4</th>
+                        <th  onclick="x=x+'5';
+                        document.querySelector('#text').value=x";
+                        >5</th>
+                        <th  onclick="x=x+'6';
+                        document.querySelector('#text').value=x";
+                        >6</th>
+                        <th  onclick="x=x+'-';
+                        document.querySelector('#text').value=x";
+                        >-</th>
+                    </tr>
+                    <tr>
+                        <th class="pl-4"  onclick="x=x+'1';
+                        document.querySelector('#text').value=x";
+                        >1</th>
+                        <th  onclick="x=x+'2';
+                        document.querySelector('#text').value=x";
+                        >2</th>
+                        <th  onclick="x=x+'3';
+                        document.querySelector('#text').value=x";
+                        >3</th>
+                        <th 
+                            onclick="x=x+'+';
+                            document.querySelector('#text').value=x";
+                            >+</th>
+                    </tr>
+                    <tr>
+                        <th class="pl-4">%</th>
+                        <th  onclick="x=x+'0';
+                        document.querySelector('#text').value=x";
+                        >0</th>
+                        <th>.</th>
+                        <th 
+                            onclick="x=eval(x);
+                            document.querySelector('#text').value=x";
+                            >=</button></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+   </div>
+</body>
+<script>
+    var x="";
+   document.querySelector("#text").value=x;
+</script>
+</html>

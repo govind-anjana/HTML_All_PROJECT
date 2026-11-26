@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .main{
+            width:100%;
+            height:99vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form{
+            width:30%;
+            height:auto;
+            background-color:silver;
+        }
+        h2{
+            text-align: center;
+            font-size:34px;
+        }
+        input{
+            width:100%;
+            margin:5px 0;
+            height:30px;
+            font-size: 20px;
+        }
+        .red{
+            background-color: antiquewhite;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">  
+        <form class="form">
+            <h2>LOGIN HERE</h2>
+            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="email" id="name" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="button" onclick="demo()" class="red" value="Submit">
+        </form>
+    </div>
+</body>
+<script>
+function demo(){
+   var form= document.querySelector(".form");
+   
+   form.addEventListener("submit",function() {
+   va= document.getElementById("name").value;
+   console.log(va);
+i.preventDefault();
+let form_val=new FormData(i.target);
+obt=Object.fromEntries(form_val);
+consol.log(obt);
+console.log(JSON.stringify(obj));
+   })
+}
+</script>
+</html>

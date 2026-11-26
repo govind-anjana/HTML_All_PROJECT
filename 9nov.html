@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        { 
+            background-color: silver;
+             
+        }      
+        .abc
+        {
+            width:30%;
+            height:50%;
+            background-color:black;
+            color:white;
+            font-size:60px;
+            margin:auto;
+            margin-top:35px;
+            text-align:center;
+            padding:10px;
+            font-weight: bold;
+            font-family:sans-serif;
+            animation:govind 5s 3s infinite;
+        }
+        .abc1
+        {
+            width:50%;
+            height:50%;
+            background-color:none;
+            color:white;
+            font-size:60px;
+            margin:auto;
+            margin-top:35px;
+            text-align:center;
+            padding:10px;
+            font-weight: bold;
+            font-family:sans-serif;
+            animation:govind 5s 3s infinite;
+        }
+        @keyframes govind {
+            0%{color:white;}
+            50%{color:red;}
+           100%{color:silver;}
+        }
+        img{
+            width:90%;
+            height:30%;
+            background-size: cover;
+            margin:10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body onload="demo()">
+    <div id="ab" class="ab">
+
+    </div>
+</body>
+<script>
+    function demo()
+    {
+    var d=new Date();
+    da=d.getDate();
+    m=d.getMonth()+1;
+    f=d.getFullYear();
+    z=da+"/"+m+"/"+f;
+    a=document.getElementById("ab");
+   d=document.createElement("p");
+ 
+   if(z=="22/11/2023")
+{
+   d.className="abc1";
+   d.innerHTML=`<img src ="image3.jpg">`+"<br>Happy Govind";
+}
+else
+if(z=="22/11/2023")
+{
+   d.className="abc";
+   d.innerHTML=`<img src ="govind2.jpg">`+"<br>Happy Dipawali";
+}
+a.appendChild(d);
+    }
+</script>
+</html>

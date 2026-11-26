@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;box-sizing: border-box;
+    }
+    .main{
+        min-height:90vh;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: beige;
+        flex-wrap: wrap;
+    }
+    .card{
+        width:220px;
+        height:300px;
+        position: relative;
+        background: silver;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+        box-shadow: 10px 0px 20px black,inset 300px 0 50px gray;
+        /* transform: perspective(2000px) rotateZ(0); */
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+
+    }
+    .cover{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: white;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+
+    }
+    .cover img{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+    }
+    .card img:nth-child(1){
+      
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .card img:nth-child(2){
+        transform: rotateY(180deg);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .card:hover{
+        transform:perspective(2000px)  rotateZ(-10deg);
+        box-shadow: 10px 0px 20px black,inset 20px 0 50px gray;
+    }
+    .card:hover .cover{
+        transform: rotateY(-130deg);
+    }
+   
+    h2{
+           text-align: center;
+    }
+    p{
+        padding:4px 14px; 
+        text-align: justify;
+        word-break: break-all;
+    }
+    @media screen and (max-width:800px) {
+            .main{
+                /* padding-left:20px;
+                padding-right:30px; */
+                /* align-items: end; */
+                flex-direction: column;
+            }
+            .card{
+        width:170px;
+        height:240px;
+            }
+              .card:hover .cover{
+        transform: rotateY(-110deg);
+    }
+    }
+</style>
+<body>
+    <div class="main">
+    <div class="card">
+        <div class="cover">
+              <img src="govind2.jpg"> 
+              <img src="govind4.jpg"> 
+        </div>
+        <div class="content">
+            <h2>Govind</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cover">
+              <img src="govind2.jpg"> 
+              <img src="govind4.jpg"> 
+        </div>
+        <div class="content">
+            <h2>Govind</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

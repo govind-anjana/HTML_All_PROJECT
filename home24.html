@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            width:30%;
+            height:auto;
+            background-color:white;
+           margin:auto;
+           margin-top:10%;
+        }
+        .field{
+            border:3px solid black;
+            
+        }
+        label{
+            font-size:26px;
+        }
+        input{
+            width:80%;
+            font-size:20px;
+            margin-bottom: 15px;
+        }
+        button{
+            width:56%;
+            font-size:20px;
+            margin-bottom: 15px;
+        }
+        .hide{
+            width:60%;
+            font-size:20px;
+            text-align:center;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <form onsubmit="return lelided()">
+             
+                
+                <label>Useraname</label><br>
+                <input type="text" id="uname">
+                <label >Paasword</label><br>
+                <input type="password" id="pass"><br>
+                <label >Conform Paasword</label><br>
+                <input type="password" id="cpass" onkeyup="dem(this);">
+                <div id="ans"></div><br>
+                 <button>Click me</button>
+           
+        </form>
+    </div>
+</body>
+<script>
+   var password= document.getElementById("paas");
+   flag=1;//1 no error and 0 error
+  function dem(elem){
+    if(elem.value.length > 0)
+    {
+        console.log(elem.value);
+        if(elem.value != password.value){
+            document.getElementById("ans").innerHTML="Conform Password is Not Match"; 
+        flag=0;
+        }
+        else{
+            document.getElementById("ans").innerHTML="";
+            flag=1;
+        }
+    }
+    else{
+        document.getElementById("ans").innerHTML="Place Conform Password";
+        flag=0;
+    }
+  }
+  function lelided(){
+    if(flag==1){
+        return true;
+    }
+    else{
+        return false;
+    }
+  }
+</script>
+</html>

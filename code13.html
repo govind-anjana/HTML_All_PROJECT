@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        main{
+            width:100%;
+            height:95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="inn">
+            <p>This is key Press</p>
+        </div>
+    </main>
+</body>
+<script>
+    const inner=document.getElementById("inn");
+    window.addEventListener("keydown",(e)=>{
+         inner.innerHTML=`<table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key===' '? 'Space':e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  </table>
+         `
+    })
+</script>
+</html>

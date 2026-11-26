@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        main{
+            width:100%;
+            height:99vh;
+            background-color: silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+        }
+        h3{
+            text-align: center;
+            font-size:50px;
+            margin:0px;
+            padding:5px;
+        }
+        .timer{
+            width:120px;
+            height:100px;    
+            background-color: aqua;
+           float:left;
+           margin:5px;
+        }
+        .time{
+            font-size: 70px;
+            display:flex;   
+            justify-content: center;
+            align-items: center;
+
+        }
+        .value{
+            width:114px;
+            display: inline-block;
+            font-size: 31px;
+            padding:3px;
+            text-align: center;
+            background-color: black;
+            color:white;
+            font-weight: bold;     
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="menu">
+        <h3 id="year">2023</h3>
+        <div class="timer"><span class="time">00</span><br><span class="value">Day</span></div>
+        <div class="timer"><span class="time">00</span><br><span class="value">Hours</span></div>
+        <div class="timer"><span class="time">00</span><br><span class="value">Minutes</span></div>
+        <div class="timer"><span class="time">00</span><br><span class="value">Seconds</span></div>
+           
+    </div></main>
+</body>
+<script>
+          var en=document.getElementById("year").innerHTML="jan 2025";
+         time= document.querySelectorAll(".time");
+          count=()=>{
+                    var d=new Date();
+                    var end=new Date(en);
+                    diff=end-d;
+                    s=1000;
+                    mi=s*60;
+                    ho=mi*60;
+                    da=ho*24;
+                    date=Math.floor(diff/da);
+                    hour=Math.floor((diff%da)/ho);
+                    mini=Math.floor((diff%ho)/mi);
+                    seco=Math.floor((diff%mi)/s);
+                     
+                    time[0].innerHTML =date<=9?"0"+date:date;
+                    time[1].innerHTML =hour<=9?"0"+hour:hour;
+                    time[2].innerHTML =mini<=9?"0"+mini:mini;
+                    time[3].innerHTML =seco<=9?"0"+seco:seco;
+          }
+         
+          setInterval(()=>{
+            count()
+          },100)
+</script>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            width:100%;
+            height:97vh;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1{
+            text-align: center;
+            border:2px solid red;
+            padding:10px;
+            color:white;
+            font-family: sans-serif;
+        }
+        input[type="text"]{
+            width:140px;
+            font-size: 20px;
+            padding:4px;
+            border:2px solid silver;
+            outline: none;
+        }
+        input[type="submit"]{  
+            font-size: 20px;
+            background-color:black;
+            color:white;
+            padding:10px 20px;      
+            cursor: pointer;
+            border-radius: 10px;
+            border:none;
+            margin-top:10px;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="div1">
+            <h2>Numer Guessing game</h2>
+            <p style="line-height: 30px;">Try and guess number random number between 1 and 100<br>
+                You have 10 attempts to guess the right number,
+            </p>
+            <h1>Guess A Number</h1>
+            <input type="text" id="guessField"><br><br><br>
+            <input type="submit" id="sum" value="Submit guess"><br>
+            <input type="submit" id="start" value="Start Game"><br>
+            <p>Previous Guesses:<span id="guess"></span></p>
+            <p>Guesses Remaining:<span id="last">10</span></p>
+            <p class="low"></p>
+        </div>
+    </div>
+</body>
+<script>
+    let guessfeild=document.querySelector("#guessField");
+    const submit=document.querySelector("#sum");
+    const preguess=document.querySelector("#guess");
+    const remaining=document.querySelector("#last");
+    const anss=document.querySelector(".low");
+   let random=Math.floor(Math.random()*100+1);
+   alert(random);
+     arr=[];
+     ad=1;
+     start=true;
+     if(start){
+        submit.addEventListener("click",function(){
+            if(start){
+                 guess=guessfeild.value;
+                 validguess(guess);
+            }
+        })
+     }
+       function validguess(guess){
+           if(isNaN(guess) || guess>100 || guess<=0) {
+            alert(`The Guess Invalid Number : ${guess}`)
+            guessfeild.value='';
+           }
+           else {
+              arr.push(guess);
+              if(ad==11){
+                displayguess(guess);
+                dispaltMess(`Game is Over The Right Answear is: ${random}`);
+                endgame();
+              }
+              else{
+                displayguess(guess)
+                checkguess(guess);
+              }
+           }
+     }
+     function checkguess(guess){
+        if(guess==random){
+            dispaltMess(`Your Game is Over ${random}`)
+            endgame();
+        }
+        else{
+            if(guess < random){
+                dispaltMess("The Guess number is Too Low");
+            }
+            else if(guess > random){
+                dispaltMess("The Guess number is Too High");
+            }
+        }
+     }
+     function displayguess(guess){
+        guessfeild.value='';
+        preguess.innerHTML +=`${guess} `;
+        ad++;
+        remaining.innerHTML=`${11-ad}`;
+     }
+     function dispaltMess(Mess){
+        anss.innerHTML=`<h2>${Mess}</h2>`;
+     }
+    function endgame(){
+         guessfeild.value='';
+         preguess.innerHTML ='';
+         remaining.innerHTML=10;
+         guessfeild.setAttribute("disabled",'');
+        start=false;
+        guessstart()
+    }
+    function guessstart(){
+    document.querySelector("#start").addEventListener("click",function(){
+        anss.innerHTML='';
+         arr=[];
+         ad=1;
+         guessfeild.removeAttribute("disabled");
+         random=Math.floor(Math.random()*100+1);
+         start=true;
+    })
+}
+</script>
+</html> 

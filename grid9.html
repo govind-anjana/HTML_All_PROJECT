@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;box-sizing: border-box;
+    }
+    .container{
+        width:90vw;
+        height:auto;
+        /* padding:10px; */
+        margin:auto;
+        background-color: silver;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 15vw auto 15vw;
+        
+    }
+    ul{
+        font-size: 24px;
+        line-height: 29px;
+        padding-left:40px;
+        font-weight: 600;
+        /* list-style: none; */
+         
+    }
+    li::marker{
+        content: " 💖 ";
+    }
+    ul a{
+        color:orchid;
+        text-decoration: none;
+    }
+    .a1{
+        grid-column:1 / span 3;
+        height:auto;
+        background-color: black;
+        display: flex;
+        padding:15px;
+        gap:40px;
+    }
+    .a1 ion-icon{
+        font-size: 21px;
+        color:white;
+        margin-right: 3px;
+    }
+    .flex1 img{
+        width: 23px;
+        height:23px; 
+        float:left;
+        margin-right: 3px;
+        
+    }
+    .aa2{
+        background-color:gainsboro;
+    }
+    .flex1 a{
+        font-size: 25px;
+        color:white;
+        text-decoration: none;
+    }
+    .manu{
+        background-color: white;
+        padding:20px;
+    }
+    .manu .p{
+        padding:14px;
+        font-family:sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        color:rgb(178, 69, 91)
+    }
+    #main1{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:12px;
+        padding:10px;
+    }
+    .box1{
+        padding:18px;
+        text-align: center;
+        background-color: white;
+        font-size: 20px;
+        color: green;
+        text-transform: capitalize;
+        box-shadow: 0px 0px 10px 2px rgba(225, 208, 203, 0.501);
+        transition: 1s;
+    }
+    .box1 p{
+        padding-top:8px;
+    
+    }
+    .box1:hover{
+        box-shadow: 0px 0px 10px 5px rgba(118, 100, 94, 0.501);
+        color:red;
+    }
+    .box1 img{
+        width:80px;
+        height:80px;
+        background-size: cover;
+    }
+    #footer{
+        background-color: forestgreen;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        padding:10px;
+        align-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="box a1">
+                <div class="flex1"><ion-icon name="home-sharp"></ion-icon><a href="">Home</a></div>
+                <div class="flex1"><ion-icon name="logo-html5"></ion-icon><a href="">HTML</a></div>
+                <div class="flex1"><a href=""><ion-icon name="logo-css3"></ion-icon>Css</a></div>
+                <div class="flex1"><img src="https://static.javatpoint.com/images/icon/xhtml.png"><a href="">XHTML</a></div>
+                <div class="flex1"><ion-icon name="logo-javascript"></ion-icon><a href="">JacaScript</a></div>
+                <div class="flex1"><img src="https://static.javatpoint.com/images/icon/bootstrap.png"><a href="">Bootsteap</a></div>
+                <div class="flex1"><img src="https://static.javatpoint.com/images/icon/jquery.png"><a href="">JQuery</a></div>
+                <div class="flex1"><img src="	https://static.javatpoint.com/images/icon/php.png"><a href="">PHP</a></div>
+                <div class="flex1"><img src="https://static.javatpoint.com/images/icon/xml.png"><a href="">XML</a></div>
+                <div class="flex1"><img src="https://static.javatpoint.com/images/icon/json.png"><a href="">Json</a></div>
+                <div class="flex1"><a href=""><ion-icon name="logo-python"></ion-icon>Python</a></div>
+            </div>
+            <div class="box aa2">
+           <ul>
+            <li><a href="">Govind-1</a></li>
+            <li><a href="">Govind-2</a></li>
+            <li><a href="">Govind-3</a></li>
+            <li><a href="">Govind-4</a></li>
+            <li><a href="">Govind-5</a></li>
+            <li><a href="">Govind-6</a></li>
+            <li><a href="">Govind-7</a></li>
+            <li><a href="">Govind-8</a></li>
+            <li><a href="">Govind-9</a></li>
+            <li><a href="">Govind-10</a></li>
+            <li><a href="">Govind-11</a></li>
+            <li><a href="">Govind-12</a></li>
+            <li><a href="">Govind-13</a></li>
+            <li><a href="">Govind-14</a></li>
+            <li><a href="">Govind-15</a></li>
+            <li><a href="">Govind-16</a></li>
+            <li><a href="">Govind-17</a></li>
+            <li><a href="">Govind-18</a></li>
+            <li><a href="">Govind-19</a></li>
+            <li><a href="">Govind-20</a></li>
+            <li><a href="">Govind-21</a></li>
+            <li><a href="">Govind-22</a></li>
+            <li><a href="">Govind-23</a></li>
+            <li><a href="">Govind-24</a></li>
+            <li><a href="">Govind-25</a></li>
+            <li><a href="">Govind-26</a></li>
+            <li><a href="">Govind-27</a></li>
+            <li><a href="">Govind-28</a></li>
+            <li><a href="">Govind-29</a></li>
+            <li><a href="">Govind-30</a></li>
+           </ul>
+            </div>
+            <div>
+            <div class="manu">
+                <p class="p">Learn Letest Tutorial</p>
+                <div class="box a3" id="main1">
+                <div class="box1 b1"><img src="https://static.javatpoint.com/images/homeicon/splunk.png"><br/><p>Splunk</p></div>
+                <div class="box1 b2"><img src="https://static.javatpoint.com/images/homeicon/spss.png"><br/><p>SPSS</p></div>
+                <div class="box1 b3"><img src="https://static.javatpoint.com/images/homeicon/swagger.png"><br/><p>Swagger</p></div>
+                <div class="box1 b4"><img src="https://static.javatpoint.com/images/homeicon/transact-sql.png"><br/><p>Transact-SQL</p></div>
+                <div class="box1 b5"><img src="https://static.javatpoint.com/images/homeicon/tumblr.png"><br/><p>Tumblr</p></div>
+                <div class="box1 b6"><img src="https://static.javatpoint.com/images/homeicon/react.png"><br/><p>reactJS</p> </div>
+                <div class="box1 b7"><img src="https://static.javatpoint.com/images/homeicon/regex.png"><br/><p>regex</p></div>
+                <div class="box1 b8"><img src="https://static.javatpoint.com/images/homeicon/react.png"><br/><p>Reinforcement <br/>Learinf</p></div>
+                <div class="box1 b9"><img src="https://static.javatpoint.com/images/homeicon/r-programming.png"><br/><p>r-Programming</a></div>
+                <div class="box1 b10"><img src="https://static.javatpoint.com/images/homeicon/rxjs.png"><br/><p>RxJS</p></div>
+                <div class="box1 b11"><img src="https://static.javatpoint.com/images/homeicon/react-native.png"><br/><p>react-native</p></div>
+                <div class="box1 b12"><img src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png"><br/><p>python-design-patterns</p></div>
+                <div class="box1 b13"><img src="https://static.javatpoint.com/images/homeicon/python-pillow.png"><br/><p>python-pillow</p></div>
+                <div class="box1 b14"><img src="https://static.javatpoint.com/images/homeicon/python-turtle.png"><br/><p>python-turtle</p></div>
+                <div class="box1 b15"><img src="https://static.javatpoint.com/images/homeicon/keras.png"><br/><p>Keras</p></div>
+            </div>
+            </div><br>
+            <div class="manu">
+                <p class="p">Preparation</p>
+                <div class="box a2" id="main1">
+                    <div class="box1"><img src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png"><p>aptitued</p></div>
+                    <div class="box1"><img src="https://static.javatpoint.com/reasoning/images/reasoning-home.png"><p>reasoning</p></div>
+                    <div class="box1"><img src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png"><p>verbal-ability</p></div>
+                    <div class="box1"><img src="https://static.javatpoint.com/images/logo/interviewhome.png"><p>interviewhome questions</p></div>
+                    <div class="box1"><img src="https://static.javatpoint.com/interview/images/company-home.jpeg"><p>conpany questions</p></div>
+                    </div>
+                    </div><br>
+                    <div class="manu">
+                        <p class="p">Trading Technologies</p>
+                        <div class="box a2" id="main1">
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png"><p>artificial intelligence</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png"><p>AWS</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/selenium.png"><p>selenium</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/cloud-computing.png"><p>cloud computing</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/hadoop.png"><p></p>hadoop</div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/reactjs.png"><p>reactJS</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/data-science.png" alt=""><p>data science</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/angular7.png" alt=""><p>angular</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt=""><p>blockchain</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/git.png" alt=""><p>git</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt=""><p>machine learning</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/devops.png" alt="govind" title="govind"><p>devOps</p></div>
+                        </div>
+                    </div><br/>
+                    <div class="manu">
+                        <p class="p">B.Tech/MCA</p>
+                        <div class="box" id="main1">
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/dbms.png"><p>DBMS</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/data-structures.png"><p>data structures</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/daa.png"><p>DAA</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/operating-system.png"><p>operating system</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/computer-network.png"><p>computer network</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/compiler-design.png"><p>compiler design</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/computer-organization.png"><p>computer organization</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png"><p>discrete mathematics</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png"><p>ethical hacking</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/computer-graphics.png"><p>computer graphics</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/software-engineering.png"><p>software engineering</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/web-technology.png"><p>web technology</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/cyber-security.png"><p>cyber security</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/automata.png"><p>automata</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/c-programming.png"><p>c-programming</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/cpp.png"><p>C++</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/new/core-java.png"><p>java</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/dot-net.png"><p>.net</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/python.png"><p>python</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/programs.png"><p>programs</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/control-system.png"><p>control system</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/data-mining.png"><p>data mining</p></div>
+                            <div class="box1"><img src="https://static.javatpoint.com/images/homeicon/data-warehouse.png"><p>data warehouse</p></div>
+                            
+                        </div>
+                    </div>
+            </div>
+            <div class="box aa2">
+                <ul>
+                    <li><a href="">Css-1</a></li>
+                    <li><a href="">Css-2</a></li>
+                    <li><a href="">Css-3</a></li>
+                    <li><a href="">Css-4</a></li>
+                    <li><a href="">Css-5</a></li>
+                    <li><a href="">Css-6</a></li>
+                    <li><a href="">Css-7</a></li>
+                    <li><a href="">Css-8</a></li>
+                    <li><a href="">Css-9</a></li>
+                    <li><a href="">Css-10</a></li>
+                    <li><a href="">Css-11</a></li>
+                    <li><a href="">Css-12</a></li>
+                    <li><a href="">Css-13</a></li>
+                    <li><a href="">Css-14</a></li>
+                    <li><a href="">Css-15</a></li>
+                    <li><a href="">Css-16</a></li>
+                    <li><a href="">Css-17</a></li>
+                    <li><a href="">Css-18</a></li>
+                    <li><a href="">Css-19</a></li>
+                    <li><a href="">Css-20</a></li>
+                    <li><a href="">Css-21</a></li>
+                    <li><a href="">Css-22</a></li>
+                    <li><a href="">Css-23</a></li>
+                    <li><a href="">Css-24</a></li>
+                    <li><a href="">Css-25</a></li>
+                    <li><a href="">Css-26</a></li>
+                    <li><a href="">Css-27</a></li>
+                    <li><a href="">Css-28</a></li>
+                    <li><a href="">Css-29</a></li>
+                    <li><a href="">Css-30</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </footer>
+</body>
+</html>

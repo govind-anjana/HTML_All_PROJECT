@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+*
+{
+margin:0px;
+padding:0px;
+}
+ body{
+       background:linear-gradient(to top left,pink,silver,green);
+       }
+        table
+		{
+		width:70%;
+		background-color:black;
+		margin:auto;
+		margin-top:2%;		 
+		border-radius:20px;
+		padding:19px;
+		}
+		input[type="submit"]{
+		
+		width:70%;
+		background-color:white;
+		color:black;
+		font-size:28px;
+		padding:17px;
+		font-weight:bold;
+		border-radius:20px;
+		}
+		
+		.sp
+		{
+		width:17%;
+		height:46%;
+		background-color:pink;
+		float:left;
+		margin:3% 3%;
+		}
+		img
+		{
+		width:96%;
+		height:75%;
+		border:4px solid balck;
+		margin:2%;	
+		}
+</style>
+ 
+</head>
+ <body>
+       <table border="0px" cellpadding="16px" cellspacing="10px">
+	   <tr>
+	   <th><input type="submit"  value="Sad" onclick="demo('a1')"></th>
+	   <th><input type="submit"  value="My Photo" onclick="demo('a2')"></th>
+	   <th><input type="submit"  value="Background" onclick="demo('a3')"></th>
+	   <th><input type="submit"  value="Weediy" onclick="demo('a4')"></th>
+	   	</tr>
+		</table>
+		 <div id="menu">
+		
+	 	 </div>
+		 </div>
+	   </body>
+	   <script>
+function demo(x)
+{
+  Men=[{"img":"image1.jpg","name":"Sad"},{"img":"image2.jpg","name":"KGF"},{"img":"image4.jpg","name":"Govt"}];
+  my=[{"img":"go.jpg","name":"Mahuwi"},{"img":"govind.jpg","name":"Mandsaur"},{"img":"govind2.jpg","name":"Mandsaur"},{"img":"govind3.jpg","name":"Kachnara"}];
+  ba=[{"img":"image3.jpg","name":"Background"},{"img":"image5.jpg","name":"Background"},{"img":"dog.jpg","name":"Background"}];
+  g=[{"img":"go.jpg","name":"Shirt"},{"img":"govind.jpg","name":"Shirt"}];
+  var main=document.getElementById("menu");
+ // var b=document.getElementById("menu").removeChild(div);
+  
+  console.log(Men.length);
+  switch(x)
+  {
+  case "a1":      
+			for(i=0;i<Men.length;i++)
+			{
+			a=document.createElement("div");
+			a.className="sp";
+			a.innerHTML=`<img src=${Men[i].img}>
+			<h1 style="text-align:center">${Men[i].name}</h1>`;
+			main.appendChild(a);
+			}
+			break;
+   case "a2":
+     
+			for(i=0;i<my.length;i++)
+			{
+			a=document.createElement("div");
+			a.className="sp";
+			a.innerHTML=`<img src=${my[i].img}>
+			 <h1 style="text-align:center">${my[i].name}</h1>`;
+			main.appendChild(a);
+			}
+			break;
+ case "a3":
+			for(i=0;i<ba.length;i++)
+			{
+			a=document.createElement("div");
+			a.className="sp";
+			a.innerHTML=`<img src=${ba[i].img}>
+			 <h1 style="text-align:center">${ba[i].name}</h1>`;
+			main.appendChild(a);
+			}
+			break;
+			
+case "a4":
+			for(i=0;i<g.length;i++)
+			{
+			a=document.createElement("div");
+			a.className="sp";
+			a.innerHTML=`<img src=${g[i].img}>
+			 <h1 style="text-align:center">${g[i].name}</h1>`;
+			main.appendChild(a);
+			}
+			break;
+			}
+}
+</script>
+</html> 

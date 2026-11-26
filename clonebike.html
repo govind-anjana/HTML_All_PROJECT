@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="bike.css">
+</head>
+<body>
+    <div class="contaner">
+        <header>
+            <div class="header">
+                <div><img src="https://bd.gaadicdn.com/pwa/img/BD-new-logo-2023.svg"> </div>
+                <div><input type="text" placeholder="Search Bike or Scooters eg. YZF R15 V3,Active 6G"><button> <i class="glyphicon glyphicon-search"></i></button></div>
+                <div style="display: flex; justify-content: center;align-items: center;">
+                    <div>
+                        English
+                        <!-- <input type="text" value="English" list="en">
+                        <datalist id="en">
+                            <option>Hindi</option>
+                            <option>English</option>
+                        </datalist> -->
+                    </div>
+                    <i class="glyphicon glyphicon-heart-empty"></i>
+                    <div style="padding-left:90px;float:right;"><i class="glyphicon glyphicon-user"></i><i class="bi bi-person-plus"></i>Login / Register</div>
+                </div>
+                 
+            </div>
+            <hr style="background-color:black">
+            <div class="header2">
+                <div class="aiher">
+                    <a href="#">Bikes</a>
+                    <a href="#">Scooters</a>
+                    <a href="#">Electric Zone</a>
+                    <a href="#">Bike Finance</a>
+                    <a href="#">Buy & Sell Used Bikes</a>
+                    <a href="#">News & Videos</a>
+                </div>
+                <div style="font-size: 20px; padding-right:10px;"> <i class="glyphicon glyphicon-map-marker"></i>  Select City</div>
+            </div>
+        </header>
+        <main>
+            <div class="box a1"><h1>Search the right bike</h1>
+            <button style="background-color: black; color:white">New Bike</button>&nbsp;
+            <button>Used Bike</button><br/>
+            <input type="radio" checked name="a1" id="a1"><label for="a1">By Brand</label> &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="a1" id="a2"> <label for="a2">By Budget</label>
+            <input type="text" list="brand" placeholder="Select Brand">
+            
+            <datalist id="brand">
+                
+                <option value="TVS">TVS</option>
+                <option value="Bajaj"></option>
+                <option value="Royal Enfield"></option>
+                <option value="Yamaha"></option>
+                <option value="Honda"></option>
+                <option value="Hero"></option>
+                <option value="Suzuki"></option>
+                 
+            </datalist>
+            <input type="text" list="brands" placeholder="Select Model">
+            <datalist id="brands">
+                <option value="Brisk">fff</option>
+                <option value="Feisty EV"></option>
+                <option value="Inspirer"></option>
+                <option value="Jaunty"></option>
+                <option value="Jaunty Plus"></option>
+                <option value="Jaunty Pro"></option>
+                <option value="Jaunty-3W"></option>
+            </datalist>
+            <button class="btn1">Search</button>
+            <div style="float: right; margin-top:2%">Advanced Search<i class="glyphicon glyphicon-arrow-right"></i></div><br/><br/>
+            </div>
+            <!-- <div class="box a2" style="color:white;">
+                <h2><u>Launched</u><br/>Iconic Retro Bike</h2>
+                <h1>BSA Gold Star</h1>
+                <h2>Know More <span style="padding:0px 9px;border:2px solid red;border-radius:50%">></span></h2>
+            </div> -->
+        </main>
+       <br>
+       
+       <div class="row  swiper">
+            <h1 class="h1">Bikes in Spotlight</h1> 
+            <div class="card-wrapper">
+        <div id="main" class="swiper-wrapper">
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Yamaha MT 15 V2</h3>
+                    <h4>&#8377;1.68-1.74 Lakh*</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/hero-motocorp/hero-motocorp-splendor/source/hero-motocorp-splendor6594efca3fa93.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3> Hero Splendor Plus</h3>
+                    <h4>&#8377;77,306-77,586 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/royal-enfield/classic350/640X309/classic35062de7da31c3db.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Royal Enfield Classic 350</h3>
+                    <h4>&#8377;1.93-2.25 Lakh*</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>   
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/honda/activa-6g/source/activa-6g65e80a97062a4.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Honda Activa 6G</h3>
+                    <h4>&#8377;76,684-82,684 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>   
+            <div class="box swiper-slide">
+                <img src="https://bd.gaadicdn.com/processedimages/honda/activa-6g/source/activa-6g65e80a97062a4.jpg?tr=w-360">
+                <div style="padding:0px 20px"> <h3>Honda Activa 6G</h3>
+                    <h4>&#8377;76,684-82,684 *</h4>
+                <button>View August Offers</button>
+            </div>
+            </div>   
+    </div>
+    </div>
+    </div>
+    </div>
+  <br>
+    <div class="row">
+        <h1 class="h1">Browse Bikes By</h1>
+        <div style="border: 1px solid silver; ">
+            <div style="border:1px solid silver;padding:10px; "><span style="color:red; ">Brands</span>
+                <span>Budget</span>
+                <span>Displacement</span></div>
+           
+            <div id="main1">
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/bajaj.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/bmw.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/hero.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/hero-electric.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/honda.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/kawasaki.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/ktm.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/royal-enfield.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/suzuki.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/tvs.webp"></div>
+                <div class="box"><img src="https://bikekharido.in/wp-content/uploads/2022/09/yamaha.webp"></div>
+                <div class="box"><img src="https://bikekharido.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/08/jawa-bikeii.png"></div>
+            </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>

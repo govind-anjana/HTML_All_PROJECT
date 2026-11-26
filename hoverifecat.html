@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin:0px; 
+            padding:3px;
+            box-sizing: border-box;
+        }
+        .contantor{
+            height:98vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(to left,purple,cyan,green);
+        }
+        .card{
+            width:500px;
+            height:300px;
+            position: relative;
+            cursor:pointer;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        img{
+            width:100%;
+            height:90%;
+            transition: all  3s;
+        }
+        .context{
+            position: absolute;
+            bottom:-100px;
+            left:13px;
+            color:white;
+        }
+        .card:hover .context{
+            bottom:10px;
+            transition: 2s;;
+        }
+        .card:hover img{
+            transition: 3s;
+          filter: brightness(0.7);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="contantor">
+        <div class="card">
+            <img src="image3.jpg">
+            <div class="context">
+                <h3>Patel Govind Anajna</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum animi consequuntur harum, quas saepe consectetur optio! Nihil harum corporis veniam.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .containor{
+            width:100%;
+            height:95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .card{
+            width:500px;
+            height:300px;
+            border:2px solid red;
+            position: relative;
+          
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+        .content{
+            position: absolute;
+            bottom:-100px;
+            left:10px;
+            color:white;
+        }
+        .card:hover .content{
+            bottom:9px;
+            transition:all 2s;
+        }
+       .card:hover img{
+        filter: brightness(0.4);
+        transition:3s;
+
+         }
+   /*    @media screen and (max-width:600px){
+        .card{
+            width:90%;
+        }
+        
+    } */
+    </style>
+    <title>Document</title>
+</head>
+<body >
+        <div class="containor">
+            <div class="card">
+                <img src="govind5.jpg">
+                <div class="content">
+                    <h3>Govind Anjana Patel</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ab dolorum iste non labore sint ad eaque quidem, amet ea.</p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+
+img{
+width:40%;
+height:70%;
+margin:4% 27%;
+}
+button
+{
+font-size:30px;
+background-color:silver;
+color:white;
+font-weight:bold;
+margin-left:25%;
+}
+</style>
+</head>
+<body>
+<img id="im" src="bulbofff.png"><br><br>
+<button onclick="demo()">Bulb On</button>
+<button onclick="dis()">Bulb Off</button>
+</body>
+<script> 
+function demo()
+{
+document.body.style.backgroundColor="silver";
+document.getElementById("im").src="bulbon.png";
+ 
+}
+function dis()
+{
+document.body.style.backgroundColor="white";
+document.getElementById("im").src="bulbofff.png";
+}
+</script>
+</html>
